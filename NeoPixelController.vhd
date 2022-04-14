@@ -69,11 +69,11 @@ begin
 		clock_enable_output_a => "BYPASS",
 		clock_enable_output_b => "BYPASS",
 		indata_reg_b => "CLOCK0",
-		init_file => "pixeldata.mif",
+		init_file => "pixelTest.mif",
 		intended_device_family => "Cyclone V",
 		lpm_type => "altsyncram",
-		numwords_a => 4,
-		numwords_b => 4,
+		numwords_a => 256,
+		numwords_b => 256,
 		operation_mode => "BIDIR_DUAL_PORT",
 		outdata_aclr_a => "NONE",
 		outdata_aclr_b => "NONE",
@@ -116,7 +116,7 @@ begin
 		
 		
 		
-		constant npix : integer := 4;
+		constant npix : integer := 255;
 
 		-- which bit in the 24 bits is being sent
 		variable bit_count   : integer range 0 to 31;
@@ -125,7 +125,7 @@ begin
 		-- counter for the reset pulse
 		variable reset_count : integer range 0 to 1000;
 		-- Counter for the current pixel
-		variable pixel_count : integer range 0 to 3;
+		variable pixel_count : integer range 0 to 255;
 		
 		
 	begin
@@ -186,6 +186,7 @@ begin
 			end if;
 			
 			
+			
 			-- This IF block controls sda
 			if reset_count > 0 then
 				-- sda is 0 during reset/latch
@@ -207,21 +208,27 @@ begin
 	
 	
 	process(clk_10M, resetn, cs_addr)
+	
+	variable keep_enable : std_logic;  --since chip select is only high for one clock cycle, store in here so it remains high until the process is finsihed. 
+	
 	begin
 		-- For this implementation, saving the memory address
 		-- doesn't require anything special.  Just latch it when
 		-- SCOMP sends it.
-		if resetn = '0' then
-			ram_write_addr <= x"00";
-		elsif rising_edge(clk_10M) then
-			-- If SCOMP is writing to the address register...
-			if (io_write = '1') and (cs_addr='1') then
-				ram_write_addr <= data_in(7 downto 0);
-			elsif wstate = storing then
-				ram_write_addr <= ram_write_addr + 1;
-			elsif (cs_data = '1') and (io_write = '0') then
-				ram_write_addr <= ram_write_addr + 1;
-			end if;
+		
+		--if Color_en = '1' then 
+			--keep_enable := Color_en;
+			
+			if resetn = '0' then
+				ram_write_addr <= x"00";
+			elsif rising_edge(clk_10M) then
+				-- If SCOMP is writing to the address register...
+				if (io_write = '1') and (cs_addr='1') then
+					ram_write_addr <= data_in(7 downto 0);
+				elsif (io_write = '1') and (wstate = storing) then
+					ram_write_addr <= ram_write_addr + 1;
+				end if;
+		
 		end if;
 	
 	
@@ -268,55 +275,6 @@ begin
 			end case;
 		end if;
 	end process;
-
-	
-	
-	
-
-	
-	
-	-- Process to handle OUTs from SCOMP
-	process(clk_10M)
-	variable count : integer range 0 to 255;
-	begin
-		if resetn = '0' then
-			count := 0;
-		elsif rising_edge(clk_10M) then 
-			if Colors_en = '1' then     
-				if count /= 255 then
-					ram_write_buffer <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000" ; --write to memory
-					ram_write_addr <= ram_write_addr + 1;
-					count := count + 1;
-				end if;
-			end if;
-		end if;
-	end process;
-		
-		
-			--if Colors_en = '1' then                   -- if this chips select is on, implement these methods
-				--ram_write_buffer <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000" ; --write to memory
-				--ram_we = 1;
-			--	for I in 0 to 255 loop                 --256 neopixels one color
-					--??? <= ram_write_buffer;
-					--ram_write_buffer <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000" ; --write to memory
-					--ram_write_addr <= ram_write_addr + 1;
-					--pixel_buffer <= ram_read_data;      --reads data from memory
-					--ram_read_addr <= I; --increment to next address
-				--end loop;
-			--end if;
-		--end if;
-	--end process;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 end internals;
