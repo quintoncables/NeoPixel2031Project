@@ -228,8 +228,8 @@ begin
 				-- If SCOMP is writing to the address register...
 				if (io_write = '1') and (cs_addr='1') then
 					ram_write_addr <= data_in(7 downto 0);
-				elsif (io_write = '1') and (wstate = storing) then
-					ram_write_addr <= ram_write_addr + 1;
+--				elsif (io_write = '1') and (wstate = storing) then
+--					ram_write_addr <= ram_write_addr + 1;
 				end if;
 		
 		end if;
@@ -287,6 +287,19 @@ begin
 			end case;
 		end if;
 	end process;
+	--our processes
+--	process(clk_10M)
 	
-	
+--	begin
+--		if rising_edge(clk_10M) then	
+--			if cs_all = '1' then
+				-- Convert RGB 565 to Neopixel format (GRB),
+				-- in this case just padding with 0s.
+--				pixel_buffer <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000" ;
+--				for I in 0 to 255 loop
+--					data_arr(I) <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000";
+--				end loop;
+--			end if;
+--		end if;
+--	end process;
 end internals;

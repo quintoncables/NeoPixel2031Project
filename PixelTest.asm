@@ -1,16 +1,16 @@
 ; Simple test for the NeoPixel peripheral
 
 ORG 0
-    LOADI	3
+; Loop:
+	LOADI	1
     OUT		PXL_Address
-Loop:
-    LOADI	140
+    LOADI	255
 	OUT		PXL_Red
-	LOADI	70
+	LOADI	0
 	OUT		PXL_Green
-	LOADI	90
+	LOADI	0
 	OUT		PXL_Blue
-    JUMP	Loop
+;    JUMP	Loop
 
 ; IO address constants
 Switches:  EQU 000
