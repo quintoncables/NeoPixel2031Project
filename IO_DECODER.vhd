@@ -18,7 +18,10 @@ ENTITY IO_DECODER IS
     HEX0_EN       : OUT STD_LOGIC;
     HEX1_EN       : OUT STD_LOGIC;
     PXL_A_EN      : OUT STD_LOGIC;
-    PXL_D_EN      : OUT STD_LOGIC
+    PXL_COLR_EN	: OUT STD_LOGIC;
+	 PXL_COLG_EN	: OUT	STD_LOGIC;
+	 PXL_COLB_EN	: OUT	STD_LOGIC;
+	 PXL_ALL_EN		: OUT	STD_LOGIC
   );
 
 END ENTITY;
@@ -37,6 +40,9 @@ begin
   HEX0_EN      <= '1' WHEN (ADDR_INT = 16#004#) and (IO_CYCLE = '1') ELSE '0';
   HEX1_EN      <= '1' WHEN (ADDR_INT = 16#005#) and (IO_CYCLE = '1') ELSE '0';
   PXL_A_EN     <= '1' WHEN (ADDR_INT = 16#0B0#) and (IO_CYCLE = '1') ELSE '0';
-  PXL_D_EN     <= '1' WHEN (ADDR_INT = 16#0B1#) and (IO_CYCLE = '1') ELSE '0';
+  PXL_COLR_EN  <= '1' WHEN (ADDR_INT = 16#0B1#) and (IO_CYCLE = '1') ELSE '0';
+  PXL_COLG_EN	<= '1' WHEN (ADDR_INT = 16#0B2#) and (IO_CYCLE = '1') ELSE '0';
+  PXL_COLB_EN	<= '1' WHEN (ADDR_INT = 16#0B3#) and (IO_CYCLE = '1') ELSE '0';
+  PXL_ALL_EN	<= '1' WHEN (ADDR_INT = 16#0B4#) and (IO_CYCLE = '1') ELSE '0';
       
 END a;
