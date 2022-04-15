@@ -17,9 +17,12 @@ entity NeoPixelController is
 		resetn    : in   std_logic;
 		io_write  : in   std_logic;
 		cs_addr   : in   std_logic;
-		cs_data   : in   std_logic;
+		cs_colr	 :	in	  std_logic;
+		cs_colg	 : in	  std_logic;
+		cs_colb	 : in	  std_logic;
+		cs_all	 : in	  std_logic;
 		data_in   : in   std_logic_vector(15 downto 0); --data coming in from the switches/asm (like 3 in the example and the value from switches)
-		Colors_en : in   std_logic;
+		-- Colors_en : in   std_logic;
 		
 		sda       : out  std_logic
 	); 
@@ -225,8 +228,8 @@ begin
 				-- If SCOMP is writing to the address register...
 				if (io_write = '1') and (cs_addr='1') then
 					ram_write_addr <= data_in(7 downto 0);
-				elsif (io_write = '1') and (wstate = storing) then
-					ram_write_addr <= ram_write_addr + 1;
+--				elsif (io_write = '1') and (wstate = storing) then
+--					ram_write_addr <= ram_write_addr + 1;
 				end if;
 		
 		end if;
@@ -253,11 +256,20 @@ begin
 		elsif rising_edge(clk_10M) then
 			case wstate is
 			when idle =>
-				if (io_write = '1') and (cs_data='1') then
+				if (io_write = '1') and (cs_addr='0') then
 					-- latch the current data into the temporary storage register,
 					-- because this is the only time it'll be available.
 					-- Convert RGB565 to 24-bit color
-					ram_write_buffer <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000";
+					-- ram_write_buffer <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000";
+					
+					if (cs_colr = '1') and (cs_colg = '0') and (cs_colb = '0') then
+						ram_write_buffer <= data_in(7 downto 0) & ram_write_buffer(15 downto 0);
+					elsif (cs_colr = '0') and (cs_colg = '1') and (cs_colb = '0') then
+						ram_write_buffer <= ram_write_buffer(23 downto 16) & data_in(7 downto 0) 
+													& ram_write_buffer(7 downto 0);
+					elsif (cs_colr = '0') and (cs_colg = '0') and (cs_colb = '1') then
+						ram_write_buffer <= ram_write_buffer(23 downto 8) & data_in(7 downto 0);
+					end if;
 					-- can raise ram_we on the upcoming transition, because data
 					-- won't be stored until next clock cycle.
 					ram_we <= '1';
@@ -275,6 +287,19 @@ begin
 			end case;
 		end if;
 	end process;
+	--our processes
+--	process(clk_10M)
 	
-	
+--	begin
+--		if rising_edge(clk_10M) then	
+--			if cs_all = '1' then
+				-- Convert RGB 565 to Neopixel format (GRB),
+				-- in this case just padding with 0s.
+--				pixel_buffer <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000" ;
+--				for I in 0 to 255 loop
+--					data_arr(I) <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000";
+--				end loop;
+--			end if;
+--		end if;
+--	end process;
 end internals;
