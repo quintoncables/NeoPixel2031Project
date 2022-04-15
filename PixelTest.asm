@@ -1,18 +1,16 @@
 ; Simple test for the NeoPixel peripheral
 
 ORG 0
-    LOADI  3
-    OUT    PXL_A
+    LOADI	3
+    OUT		PXL_Address
 Loop:
-    IN     Switches
-	AND	   Bottom3Bits
-	STORE  Blue
-	IN     Switches
-	SHIFT  -3
-	AND	   Bottom3Bits
-	STORE
-    OUT    PXL_D
-    JUMP   Loop
+    LOADI	140
+	OUT		PXL_Red
+	LOADI	70
+	OUT		PXL_Green
+	LOADI	90
+	OUT		PXL_Blue
+    JUMP	Loop
 
 ; IO address constants
 Switches:  EQU 000
@@ -20,9 +18,8 @@ LEDs:      EQU 001
 Timer:     EQU 002
 Hex0:      EQU 004
 Hex1:      EQU 005
-PXL_A:     EQU &H0B0
-PXL_D:     EQU &H0B1
-Red:	   DW  0
-Blue:	   DW  0
-Green:	   DW  0
-Bottom3Bits:	DW &B111
+PXL_Address:     EQU &H0B0
+PXL_Red:     EQU &H0B1
+PXL_Green:	EQU &H0B2
+PXL_Blue:	EQU &H0B3
+Red:		DW	&B1111100000000000
