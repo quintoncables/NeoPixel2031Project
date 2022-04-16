@@ -1,0 +1,35 @@
+-- Altera Memory Initialization File (MIF)
+
+DEPTH = 2048;
+WIDTH = 16;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+  BEGIN
+    [000..7FF] : 0000;  -- Default to NOP
+
+           000 : B801;  --     LOADI  1
+           001 : 98B0;  --     OUT    PXL_A
+           002 : 1813;  -- 	ADD   red
+           003 : 98B2;  -- 	OUT	   PXL_r_EN
+           004 : 1815;  -- 	ADD   green
+           005 : 98B4;  -- 	OUT	   PXL_g_EN
+           006 : 1814;  -- 	ADD   blue
+           007 : 98B3;  --     OUT	   PXL_b_EN
+           008 : 98B1;  --     OUT    PXL_D
+           009 : B802;  -- 	LOADI  2
+           00A : 800C;  -- 	CALL  DelayAC
+           00B : 2802;  --     JUMP   Loop
+           00C : 1012;  -- 	STORE  DelayTime   ; Save the desired delay
+           00D : 9802;  -- 	OUT    Timer       ; Reset the timer
+           00E : 9002;  -- 	IN     Timer       ; Get the current timer value
+           00F : 2012;  -- 	SUB    DelayTime
+           010 : 300E;  -- 	JNEG   WaitingLoop ; Repeat until timer = delay value
+           011 : 8800;  -- 	RETURN
+           012 : 0000;  -- DelayTime: DW 0
+           013 : 0000;  -- red:		DW &B111111110000000000000000
+           014 : 00FF;  -- blue:		DW &B000000000000000011111111
+           015 : FF00;  -- green:		DW &B000000001111111100000000
+  END;

@@ -18,39 +18,45 @@ entity NeoPixelController is
 		io_write  : in   std_logic;
 		cs_addr   : in   std_logic;
 		cs_data   : in   std_logic;
-		RB_EN 	 : in   std_logic;
-		G_EN	    : in   std_logic;
-		ALL_EN	 : in   std_logic;
-		DIR_EN	 : in	  std_logic;
-		data_in   : in   std_logic_vector(15 downto 0);
+		data_in   : in   std_logic_vector(15 downto 0); --data coming in from the switches/asm (like 3 in the example and the value from switches)
+		data_24	 : in   std_logic_vector(23 downto 0); -- 24 bit data
+		PXL_r_EN  : in   std_logic;
+		PXL_g_EN  : in   std_logic;
+		PXL_b_EN  : in   std_logic;
+		
 		sda       : out  std_logic
 	); 
 
 end entity;
 
-architecture internals of NeoPixelController is
+architecture internals of NeoPixelController is 
+	
+	
+	-- Signal to store the pixel's color data
+	signal led_buffer : std_logic_vector(23 downto 0);
+	
 	
 	-- Signals for the RAM read and write addresses
-	signal ram_read_addr, ram_write_addr : std_logic_vector(7 downto 0);
+	signal ram_read_addr, ram_write_addr : std_logic_vector(7 downto 0); --ram can read/write data that is 2^8 bits
 	-- RAM write enable
-	signal ram_we : std_logic;
-	
-	signal IncrementDirection : std_logic;
+	signal ram_we : std_logic; -- tell ram you are writing to memory
 
 	-- Signals for data coming out of memory
 	signal ram_read_data : std_logic_vector(23 downto 0);
 	-- Signal to store the current output pixel's color data
 	signal pixel_buffer : std_logic_vector(23 downto 0);
-	
-	signal data_set_all : std_logic_vector(23 downto 0);
-	signal TempColorHolder : std_logic_vector(23 downto 0);
 
 	-- Signal SCOMP will write to before it gets stored into memory
 	signal ram_write_buffer : std_logic_vector(23 downto 0);
 
 	-- RAM interface state machine signals
-	type write_states is (idle, setAll, storing);
+	type write_states is (idle, storing);
 	signal wstate: write_states;
+	
+	-- modes we change to
+	
+	--type mode_states is (red, green, blue);
+	--signal mode_state: mode_states;
 
 	
 begin
@@ -66,7 +72,7 @@ begin
 		clock_enable_output_a => "BYPASS",
 		clock_enable_output_b => "BYPASS",
 		indata_reg_b => "CLOCK0",
-		init_file => "pixeldata.mif",
+		init_file => "pixelTest.mif",
 		intended_device_family => "Cyclone V",
 		lpm_type => "altsyncram",
 		numwords_a => 256,
@@ -110,6 +116,8 @@ begin
 		constant t1h : integer := 8; -- high time for '1'
 		constant t0h : integer := 3; -- high time for '0'
 		constant ttot : integer := 12; -- total bit time
+		
+		
 		
 		constant npix : integer := 256;
 
@@ -158,7 +166,6 @@ begin
 						if pixel_count = npix-1 then -- is end of all pixels?
 							-- begin the reset period
 							reset_count := 1000;
-							
 						else
 							pixel_count := pixel_count + 1;
 						end if;
@@ -180,8 +187,7 @@ begin
 				-- increment the RAM address as each pixel ends
 				ram_read_addr <= ram_read_addr + 1;
 			end if;
-			
-			
+		
 			-- This IF block controls sda
 			if reset_count > 0 then
 				-- sda is 0 during reset/latch
@@ -201,10 +207,30 @@ begin
 	end process;
 	
 	
+	process(clk_10M, resetn, cs_addr)
 	
-process(clk_10M, resetn, cs_addr)
+	
+	--variable keep_mode : std_logic;  --since chip select is only high for one clock cycle, store in here so it remains high until the process is finsihed. 
+	
 	begin
-
+	
+		-- For this implementation, saving the memory address
+		-- doesn't require anything special.  Just latch it when
+		-- SCOMP sends it.
+		
+			
+			if resetn = '0' then
+				ram_write_addr <= x"00";
+			elsif rising_edge(clk_10M) then
+				-- If SCOMP is writing to the address register...
+				if (io_write = '1') and (cs_addr='1') then
+					ram_write_addr <= data_in(7 downto 0);
+				elsif (io_write = '1') and (wstate = storing) then
+					ram_write_addr <= ram_write_addr + 1;
+				end if;
+		
+		end if;
+	
 	
 		-- The sequnce of events needed to store data into memory will be
 		-- implemented with a state machine.
@@ -221,9 +247,6 @@ process(clk_10M, resetn, cs_addr)
 			wstate <= idle;
 			ram_we <= '0';
 			ram_write_buffer <= x"000000";
-			ram_write_addr <= x"00";
-			IncrementDirection <= '0';
-			TempColorHolder <= "000000000000000000000000";
 			-- Note that resetting this device does NOT clear the memory.
 			-- Clearing memory would require cycling through each address
 			-- and setting them all to 0.
@@ -233,124 +256,45 @@ process(clk_10M, resetn, cs_addr)
 				if (io_write = '1') and (cs_data='1') then
 					-- latch the current data into the temporary storage register,
 					-- because this is the only time it'll be available.
+					
+					-- 24 bit color
+	
+					if (pxl_r_en = '1') then
+		
+							ram_write_buffer <= ram_write_buffer(23 downto 16) & data_in(7 downto 0) & ram_write_buffer(7 downto 0);
+		
+					elsif (pxl_g_en = '1') then
+		
+							ram_write_buffer <= data_in(7 downto 0) & ram_write_buffer(15 downto 0);
+		
+					elsif (pxl_b_en = '1') then
+		
+							ram_write_buffer <= ram_write_buffer(23 downto 8) & data_in(7 downto 0);
+							
+					else
+							ram_write_buffer <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000";	
+					end if;
+		
 					-- Convert RGB565 to 24-bit color
-					ram_write_buffer <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000";
+					--ram_write_buffer <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000";
 					-- can raise ram_we on the upcoming transition, because data
 					-- won't be stored until next clock cycle.
 					ram_we <= '1';
 					-- Change state
 					wstate <= storing;
-					
-				elsif (io_write = '1') and (RB_EN = '1') then
-					TempColorHolder <= ((TempColorHolder and "111111110000000000000000") or ("00000000" & data_in(15 downto 0)));
-					ram_write_buffer <= TempColorHolder;
-					ram_we <= '1';
-					wstate <= storing;
-					
-				elsif (io_write = '1') and (G_EN = '1') then
-					TempColorHolder <= ((TempColorHolder and "000000001111111111111111") or (data_in(7 downto 0) & "0000000000000000"));
-				
-				
-					
-					
-					
-				elsif (io_write = '1') and (ALL_EN ='1') then
-					data_set_all    <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000";
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-					ram_write_buffer <= data_set_all;
-					ram_we <= '1';
-					wstate <= setAll;
-
-				
-				elsif (io_write = '1') and (cs_addr='1') then
-					ram_write_addr <= data_in(7 downto 0);
-					
-				
-				elsif (io_write = '1') and (DIR_EN='1') then
-				
-					if(IncrementDirection = '0') then
-						IncrementDirection <= '1';
-					else
-						IncrementDirection <= '0';
-					end if;
-					
-				
 				end if;
-						
-						
-						
-			
-				
-			
-			when setAll  =>
-				if(ram_write_addr = 256) then 
-					ram_we <= '0';
-					wstate <= idle;
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-					
-				elsif (io_write = '1') and (cs_data='1') then
-					wstate <= storing;
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-					ram_write_buffer  <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000";
-					
-				elsif (io_write = '1') and (cs_addr='1') then
-					wstate <= idle;
-					ram_we <= '0';
-					ram_write_addr <= data_in(7 downto 0);
-					
-					
-				elsif (io_write = '1') and (RB_EN = '1') then
-					wstate <= storing;
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-					
-					TempColorHolder <= ((TempColorHolder and "111111110000000000000000") or ("00000000" & data_in(15 downto 0)));
-					ram_write_buffer <= TempColorHolder;
-					
-					
-				elsif (io_write = '1') and (G_EN = '1') then
-					TempColorHolder <= ((TempColorHolder and "000000001111111111111111") or (data_in(7 downto 0) & "0000000000000000"));
-					ram_we <= '0';
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-					wstate <= idle;
-					
-					
-				elsif (io_write = '1') and (DIR_EN='1') then
-				
-					if(IncrementDirection = '0') then
-						IncrementDirection <= '1';
-					else
-						IncrementDirection <= '0';
-					end if;
-					
-					
-				else
-					ram_write_addr <= ram_write_addr + 1;
-					ram_write_buffer <= data_set_all;
-					
-				end if;
-				
-				
-				
 			when storing =>
 				-- All that's needed here is to lower ram_we.  The RAM will be
 				-- storing data on this clock edge, so ram_we can go low at the
 				-- same time.
-				if IncrementDirection = '0' then
-					ram_write_addr <= ram_write_addr + 1;
-				elsif IncrementDirection = '1' then
-					ram_write_addr <= ram_write_addr - 1;
-				end if;
-				
-				
 				ram_we <= '0';
 				wstate <= idle;
 			when others =>
 				wstate <= idle;
 			end case;
+			
 		end if;
 	end process;
-
 	
 	
 end internals;
-
