@@ -32,8 +32,8 @@ end entity;
 architecture internals of NeoPixelController is 
 	
 	
-	-- Signal to store the pixel's color data
-	signal led_buffer : std_logic_vector(23 downto 0);
+--	-- Signal to store the pixel's color data
+--	signal led_buffer : std_logic_vector(23 downto 0);
 	
 	
 	-- Signals for the RAM read and write addresses
@@ -265,8 +265,7 @@ begin
 					if (cs_colr = '1') and (cs_colg = '0') and (cs_colb = '0') then
 						ram_write_buffer <= data_in(7 downto 0) & ram_write_buffer(15 downto 0);
 					elsif (cs_colr = '0') and (cs_colg = '1') and (cs_colb = '0') then
-						ram_write_buffer <= ram_write_buffer(23 downto 16) & data_in(7 downto 0) 
-													& ram_write_buffer(7 downto 0);
+						ram_write_buffer <= ram_write_buffer(23 downto 16) & data_in(7 downto 0) & ram_write_buffer(7 downto 0);
 					elsif (cs_colr = '0') and (cs_colg = '0') and (cs_colb = '1') then
 						ram_write_buffer <= ram_write_buffer(23 downto 8) & data_in(7 downto 0);
 					end if;
@@ -287,6 +286,29 @@ begin
 			end case;
 		end if;
 	end process;
+	
+	`				
+	
+	-------------------------------
+	-- if (cs_colr = '1') and (cs_colg = '0') and (cs_colb = '0') then
+	-- 	buffer24(15 downto 8) <= data_in(7 downto 0);
+	--    sda = 0;
+	-- elsif (cs_colr = '0') and (cs_colg = '1') and (cs_colb = '0') then 
+	-- 	buffer24(23 downto 16) <= data_in(7 downto 0);
+	--		sda = 0;
+	-- elsif (cs_colr = '0') and (cs_colg = '0') and (cs_colb = '1') then
+	-- 	buffer24(7 downto 0) <= data_in(7 downto 0);
+	--		sda = 0;
+	--	endif;
+		
+		
+		
+	-------------------------------
+	
+	
+	
+	
+	
 	--our processes
 --	process(clk_10M)
 	
