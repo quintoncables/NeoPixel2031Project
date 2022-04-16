@@ -18,10 +18,13 @@ ENTITY IO_DECODER IS
     HEX0_EN       : OUT STD_LOGIC;
     HEX1_EN       : OUT STD_LOGIC;
     PXL_A_EN      : OUT STD_LOGIC;
-    PXL_COLR_EN	: OUT STD_LOGIC;
-	 PXL_COLG_EN	: OUT	STD_LOGIC;
-	 PXL_COLB_EN	: OUT	STD_LOGIC;
-	 PXL_ALL_EN		: OUT	STD_LOGIC
+    PXL_D_EN      : OUT STD_LOGIC;
+	 RB_EN     		: OUT STD_LOGIC;
+	 G_EN    		: OUT STD_LOGIC;
+	 ALL_EN   		: OUT STD_LOGIC;
+	 DIR_EN			: OUT STD_LOGIC;
+	 kEY0_EN			: OUT STD_LOGIC;
+	 kEY1_EN			: OUT STD_LOGIC
   );
 
 END ENTITY;
@@ -39,10 +42,15 @@ begin
   TIMER_EN     <= '1' WHEN (ADDR_INT = 16#002#) and (IO_CYCLE = '1') ELSE '0';
   HEX0_EN      <= '1' WHEN (ADDR_INT = 16#004#) and (IO_CYCLE = '1') ELSE '0';
   HEX1_EN      <= '1' WHEN (ADDR_INT = 16#005#) and (IO_CYCLE = '1') ELSE '0';
+  KEY0_EN	   <= '1' WHEN (ADDR_INT = 16#006#) and (IO_CYCLE = '1') ELSE '0';
+  KEY1_EN      <= '1' WHEN (ADDR_INT = 16#007#) and (IO_CYCLE = '1') ELSE '0';
+  
+  
+  
   PXL_A_EN     <= '1' WHEN (ADDR_INT = 16#0B0#) and (IO_CYCLE = '1') ELSE '0';
-  PXL_COLR_EN  <= '1' WHEN (ADDR_INT = 16#0B1#) and (IO_CYCLE = '1') ELSE '0';
-  PXL_COLG_EN	<= '1' WHEN (ADDR_INT = 16#0B2#) and (IO_CYCLE = '1') ELSE '0';
-  PXL_COLB_EN	<= '1' WHEN (ADDR_INT = 16#0B3#) and (IO_CYCLE = '1') ELSE '0';
-  PXL_ALL_EN	<= '1' WHEN (ADDR_INT = 16#0B4#) and (IO_CYCLE = '1') ELSE '0';
-      
+  PXL_D_EN     <= '1' WHEN (ADDR_INT = 16#0B1#) and (IO_CYCLE = '1') ELSE '0';
+  RB_EN  		<= '1' WHEN (ADDR_INT = 16#0B2#) and (IO_CYCLE = '1') ELSE '0';
+  G_EN			<= '1' WHEN (ADDR_INT = 16#0B3#) and (IO_CYCLE = '1') ELSE '0';
+  ALL_EN			<= '1' WHEN (ADDR_INT = 16#0B4#) and (IO_CYCLE = '1') ELSE '0';
+  DIR_EN			<= '1' WHEN (ADDR_INT = 16#0B5#) and (IO_CYCLE = '1') ELSE '0';
 END a;
