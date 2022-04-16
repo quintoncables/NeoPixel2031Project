@@ -1,0 +1,94 @@
+-- Altera Memory Initialization File (MIF)
+
+DEPTH = 2048;
+WIDTH = 16;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+  BEGIN
+    [000..7FF] : 0000;  -- Default to NOP
+
+           000 : B80A;  -- 	LoadI 10
+           001 : 8041;  -- 	CALL DelayAC
+           002 : B800;  --     LOADI  0
+           003 : 104E;  -- 	STORE SelectedLED
+           004 : 98B0;  --     OUT    PXL_A
+           005 : 084F;  -- 	LOAD 	White
+           006 : 98B2;  -- 	OUT RB
+           007 : 98B3;  -- 	OUT    G
+           008 : 9006;  -- 	IN Key0
+           009 : 380B;  -- 	JPOS Increment1
+           00A : 2800;  -- 	JUMP S0
+           00B : 084E;  -- 	LOAD SelectedLED
+           00C : 6801;  -- 	ADDI 1
+           00D : 104E;  -- 	STORE SelectedLED
+           00E : 98B0;  -- 	OUT PXL_A
+           00F : 084F;  -- 	LOAD White
+           010 : 98B2;  -- 	OUT RB
+           011 : 98B3;  -- 	OUT G
+           012 : 2813;  -- 	JUMP Idle
+           013 : 084E;  -- 	LOAD SelectedLED
+           014 : 98B0;  -- 	OUT PXL_A
+           015 : 084F;  -- 	LOAD White
+           016 : 98B2;  -- 	OUT RB
+           017 : 98B3;  -- 	OUT G
+           018 : 9006;  -- 	IN Key0
+           019 : 380B;  -- 	JPOS Increment1
+           01A : 2813;  -- 	Jump Idle
+           01B : B80A;  -- 	LoadI 10
+           01C : 8041;  -- 	CALL DelayAC
+           01D : 9000;  -- 	IN Switches
+           01E : 4850;  -- 	AND Last8
+           01F : 1049;  -- 	STORE Red
+           020 : 9007;  -- 	IN Key1
+           021 : 3823;  -- 	JPOS SelectG
+           022 : 281B;  -- 	JUMP SelectR
+           023 : B80A;  -- 	LoadI 10
+           024 : 8041;  -- 	CALL DelayAC
+           025 : 9000;  -- 	IN Switches
+           026 : 4850;  -- 	AND Last8
+           027 : 104B;  -- 	STORE Green
+           028 : 9007;  -- 	IN Key1
+           029 : 382B;  -- 	JPOS SelectB
+           02A : 2823;  -- 	JUMP SelectG
+           02B : B80A;  -- 	LoadI 10
+           02C : 8041;  -- 	CALL DelayAC
+           02D : 9000;  -- 	IN Switches
+           02E : 4850;  -- 	AND Last8
+           02F : 104B;  -- 	STORE Green
+           030 : 9007;  -- 	IN Key1
+           031 : 3833;  -- 	JPOS Display
+           032 : 282B;  -- 	JUMP SelectB
+           033 : B80A;  -- 	LoadI 10
+           034 : 8041;  -- 	CALL DelayAC
+           035 : 084E;  -- 	LOAD SelectedLED
+           036 : 98B0;  -- 	OUT PXL_A
+           037 : 0849;  -- 	LOAD Red
+           038 : 6008;  -- 	SHIFT 8
+           039 : 504A;  -- 	OR Blue
+           03A : 104C;  -- 	Store Out1
+           03B : 98B2;  -- 	OUT RB
+           03C : 084B;  -- 	LOAD Green
+           03D : 104D;  -- 	Store Out2
+           03E : 98B3;  -- 	OUT G
+           03F : 9007;  -- 	IN Key1
+           040 : 3800;  -- 	JPOS S0
+           041 : 1047;  -- 	STORE  DelayTime   ; Save the desired delay
+           042 : 9802;  -- 	OUT    Timer       ; Reset the timer
+           043 : 9002;  -- 	IN     Timer       ; Get the current timer value
+           044 : 2047;  -- 	SUB    DelayTime
+           045 : 3043;  -- 	JNEG   WaitingLoop ; Repeat until timer = delay value
+           046 : 8800;  -- 	RETURN
+           047 : 0000;  -- DelayTime: DW 0
+           048 : 0000;  -- Zero: DW 0
+           049 : 0000;  -- Red:	   DW  0
+           04A : 0000;  -- Blue:	   DW  0
+           04B : 0000;  -- Green:	   DW  0
+           04C : 0000;  -- Out1: DW 0
+           04D : 0000;  -- Out2: DW 0
+           04E : 0000;  -- SelectedLED: DW 0
+           04F : FFFF;  -- White: DW &B1111111111111111
+           050 : 00FF;  -- Last8: DW &B11111111
+  END;
