@@ -2,29 +2,24 @@ ORG 0
 
 ;initial mode select
 ModeSelect:
-	LOADI 30
-	CALL DelayAC
-	LOADI Zero
-	OUT PXL_A
-	OUT PXL_D
 	LOADI 1
 	OUT LEDs
 	In Switches
 	;switch values will control the mode, it is binary and only goes up to 5
 	Store SwitchVal
-	Sub 1
+	Sub One
 	JZERO FirstBullet
-	ADD 1
-	SUB 2
+	LOAD SwitchVal
+	SUB Two
 	JZERO SecondBullet
-	Add 2
-	Sub 3
+	LOAD SwitchVal
+	Sub Three
 	JZERO ThirdBullet
-	Add 3
-	SUB 4
+	LOAD SwitchVal
+	SUB Four
 	JZERO FourthBullet
-	ADD 4
-	SUB 5
+	LOAD SwitchVal
+	SUB Five
 	JZERO FifthBullet
 	JUMP ModeSelect
 	
@@ -33,45 +28,10 @@ ModeSelect:
 FirstBullet:
 	LOADI 1
 	OUT PXL_ALL
-	LOAD White
+	LOADI &B1100110010000000 ;light pink
 	OUT RB
-	LOAD Last8
+	LOADI &B10110010 ;light pink
 	OUT G
-	LoadI 20
-	CALL DelayAC
-
-FBSelectR:
-	LoadI 20
-	CALL DelayAC
-	IN Switches
-	AND Last8
-	STORE Red
-FBSelectG:
-	LoadI 20
-	CALL DelayAC
-	IN Switches
-	AND Last8
-	STORE Green
-FBSelectB:
-	LoadI 20
-	CALL DelayAC
-	IN Switches
-	AND Last8
-	STORE Blue
-
-FBDisplay:
-	LoadI 20
-	CALL DelayAC
-	LOADI 1
-	OUT PXL_ALL
-	LOAD Red
-	SHIFT 8
-	OR Blue
-	OUT RB
-	LOAD Green
-	OUT G
-	LoadI 40
-	CALL DelayAC
 	JUMP ModeSelect
 
 ; Test to select 24 bit color for a single pixel
@@ -79,71 +39,19 @@ SecondBullet: ;initial waiting loop
     LOADI  5
 	STORE SelectedLED
     OUT    PXL_A
-	LOAD 	White
+	LOADI 	&B1011011001010101 ;burnt orange
 	OUT RB
+	LOADI &B00100001
 	OUT    G
-	LoadI 20
-	CALL DelayAC
-
-SBSelectR:
-	LOAD SelectedLED
-	OUT PXL_A
-	LOADI Last8
-	SHIFT 8
-	OUT RB
-	LoadI 20
-	CALL DelayAC
-	IN Switches
-	AND Last8
-	STORE Red
-SBSelectG:
-	LOAD SelectedLED
-	OUT PXL_A
-	LOADI Last8
-	OUT G
-	LoadI 20
-	CALL DelayAC
-	IN Switches
-	AND Last8
-	STORE Green
-SBSelectB:
-	LOAD SelectedLED
-	OUT PXL_A
-	LOADI Last8
-	OUT RB
-	LoadI 20
-	CALL DelayAC
-	IN Switches
-	AND Last8
-	STORE Blue
-
-SBDisplay:
-	LoadI 20
-	CALL DelayAC
-	LOAD SelectedLED
-	OUT PXL_A
-	LOAD Red
-	SHIFT 8
-	OR Blue
-	OUT RB
-	LOAD Green
-	OUT G
-	LoadI 20
-	CALL DelayAC
 	JUMP ModeSelect
 
 ;Third Bullet
 ThirdBullet:
-	LOADI 1
-	OUT PXL_ALL
-	LOADI 0
-	OUT PXL_D
+	OUT PXL_All
 	LOADI 4
 	OUT PXL_A
 	LOADI &B0010011111000110 ;torquoise
 	OUT PXL_D
-	LOADI 50
-	CALL DelayAC
 	JUMP ModeSelect
 
 ;fourth bullet
@@ -191,6 +99,13 @@ DelayTime: DW 0
 
 ; IO address constants
 Zero: DW 0
+One: DW &B001
+Two: DW &B010
+Three: DW &B011
+Four: DW &B100
+Five: DW &B101
+Six: DW &B110
+Seven: DW &B111
 Key0: EQU 006
 Key1: EQU 007
 Switches:  EQU 000
