@@ -13,91 +13,96 @@ CONTENT
            000 : B801;  -- 	LOADI 1
            001 : 98B4;  -- 	OUT PXL_ALL
            002 : B800;  -- 	LOADI &B00000000000000000
-           003 : 9801;  -- 	OUT LEDs
-           004 : 9000;  -- 	In Switches
-           005 : 1054;  -- 	Store SwitchVal
-           006 : 204A;  -- 	Sub One
-           007 : 4015;  -- 	JZERO FirstBullet
-           008 : 0854;  -- 	LOAD SwitchVal
-           009 : 204B;  -- 	SUB Two
-           00A : 401E;  -- 	JZERO SecondBullet
-           00B : 0854;  -- 	LOAD SwitchVal
-           00C : 204C;  -- 	Sub Three
-           00D : 4028;  -- 	JZERO ThirdBullet
-           00E : 0854;  -- 	LOAD SwitchVal
-           00F : 204D;  -- 	SUB Four
-           010 : 4030;  -- 	JZERO FourthBullet
-           011 : 0854;  -- 	LOAD SwitchVal
-           012 : 204E;  -- 	SUB Five
-           013 : 4037;  -- 	JZERO FifthBullet
-           014 : 2800;  -- 	JUMP ModeSelect
-           015 : B801;  -- 	LOADI 1
-           016 : 98B4;  -- 	OUT PXL_ALL
-           017 : BCB2;  -- 	LOADI &B1100110010110010 ;light pink
-           018 : 98B2;  -- 	OUT RB
-           019 : B840;  -- 	LOADI &B01000000;light pink
-           01A : 98B3;  -- 	OUT G
-           01B : B83C;  -- 	LOADI 60
-           01C : 8041;  -- 	CALL DelayAC
-           01D : 2800;  -- 	JUMP ModeSelect
-           01E : B805;  --     LOADI  5
-           01F : 1056;  -- 	STORE SelectedLED
-           020 : 98B0;  --     OUT    PXL_A
-           021 : BE21;  -- 	LOADI 	&B1011011000100001 ;burnt orange
-           022 : 98B2;  -- 	OUT RB
-           023 : B855;  -- 	LOADI &B01010101
-           024 : 98B3;  -- 	OUT G
-           025 : B83C;  -- 	LOADI 60
-           026 : 8041;  -- 	CALL DelayAC
-           027 : 2800;  -- 	JUMP ModeSelect
-           028 : 98B4;  -- 	OUT PXL_All
-           029 : B804;  -- 	LOADI 4
-           02A : 98B0;  -- 	OUT PXL_A
-           02B : BFC6;  -- 	LOADI &B0010011111000110 ;torquoise
-           02C : 98B1;  -- 	OUT PXL_D
-           02D : B83C;  -- 	LOADI 60
-           02E : 8041;  -- 	CALL DelayAC
-           02F : 2800;  -- 	JUMP ModeSelect
-           030 : B801;  -- 	LOADI 1
-           031 : 98B4;  -- 	OUT PXL_ALL
-           032 : B906;  -- 	LOADI &B1111100100000110 ;scarlett
-           033 : 98B1;  -- 	OUT PXL_D
-           034 : B83C;  -- 	LOADI 60
-           035 : 8041;  -- 	CALL DelayAC
-           036 : 2800;  -- 	JUMP ModeSelect
-           037 : B801;  -- 	LOADI 1
-           038 : 0857;  -- 	LOAD BlueOnly
-           039 : 98B1;  -- 	OUT PXL_D
-           03A : B855;  -- 	LOADI LoopValue
-           03B : 2049;  -- 	SUB DecOne
-           03C : 1055;  -- 	STORE LoopValue
-           03D : 3838;  -- 	JPOS FifthBulletP2
-           03E : B83C;  -- 	LOADI 60
-           03F : 8041;  -- 	CALL DelayAC
-           040 : 4000;  -- 	JZero ModeSelect
-           041 : 1047;  -- 	STORE  DelayTime   ; Save the desired delay
-           042 : 9802;  -- 	OUT    Timer       ; Reset the timer
-           043 : 9002;  -- 	IN     Timer       ; Get the current timer value
-           044 : 2047;  -- 	SUB    DelayTime
-           045 : 3043;  -- 	JNEG   WaitingLoop ; Repeat until timer = delay value
-           046 : 8800;  -- 	RETURN
-           047 : 0000;  -- DelayTime: DW 0
-           048 : 0000;  -- Zero: DW 0
-           049 : 0001;  -- DecOne: DW 1
-           04A : 0001;  -- One: DW &B001
-           04B : 0002;  -- Two: DW &B010
-           04C : 0004;  -- Three: DW &B100
-           04D : 0008;  -- Four: DW &B1000
-           04E : 0010;  -- Five: DW &B10000
-           04F : 0020;  -- Six: DW &B100000
-           050 : 0040;  -- Seven: DW &B1000000
-           051 : 0000;  -- Red:	   DW  0
-           052 : 0000;  -- Blue:	   DW  0
-           053 : 0000;  -- Green:	   DW  0
-           054 : 0000;  -- SwitchVal: DW 0
-           055 : 0032;  -- LoopValue: DW 50
-           056 : 0000;  -- SelectedLED: DW 0
-           057 : 001F;  -- BlueOnly: DW &B0000000000011111
-           058 : FFFF;  -- White: DW &B1111111111111111
-           059 : 00FF;  -- Last8: DW &B11111111
+           003 : 98B1;  -- 	OUT PXL_D
+           004 : 9801;  -- 	OUT LEDs
+           005 : 9000;  -- 	In Switches
+           006 : 1059;  -- 	Store SwitchVal
+           007 : 204F;  -- 	Sub One
+           008 : 4016;  -- 	JZERO FirstBullet
+           009 : 0859;  -- 	LOAD SwitchVal
+           00A : 2050;  -- 	SUB Two
+           00B : 401F;  -- 	JZERO SecondBullet
+           00C : 0859;  -- 	LOAD SwitchVal
+           00D : 2051;  -- 	Sub Three
+           00E : 4029;  -- 	JZERO ThirdBullet
+           00F : 0859;  -- 	LOAD SwitchVal
+           010 : 2052;  -- 	SUB Four
+           011 : 4031;  -- 	JZERO FourthBullet
+           012 : 0859;  -- 	LOAD SwitchVal
+           013 : 2053;  -- 	SUB Five
+           014 : 403A;  -- 	JZERO FifthBullet
+           015 : 2800;  -- 	JUMP ModeSelect
+           016 : B801;  -- 	LOADI 1
+           017 : 98B4;  -- 	OUT PXL_ALL
+           018 : BCB2;  -- 	LOADI &B1100110010110010 ;light pink
+           019 : 98B2;  -- 	OUT RB
+           01A : B840;  -- 	LOADI &B01000000;light pink
+           01B : 98B3;  -- 	OUT G
+           01C : B83C;  -- 	LOADI 60
+           01D : 8046;  -- 	CALL DelayAC
+           01E : 2800;  -- 	JUMP ModeSelect
+           01F : B805;  --     LOADI  5
+           020 : 105B;  -- 	STORE SelectedLED
+           021 : 98B0;  --     OUT    PXL_A
+           022 : BE21;  -- 	LOADI 	&B1011011000100001 ;burnt orange
+           023 : 98B2;  -- 	OUT RB
+           024 : B855;  -- 	LOADI &B01010101
+           025 : 98B3;  -- 	OUT G
+           026 : B83C;  -- 	LOADI 60
+           027 : 8046;  -- 	CALL DelayAC
+           028 : 2800;  -- 	JUMP ModeSelect
+           029 : 98B4;  -- 	OUT PXL_All
+           02A : B804;  -- 	LOADI 4
+           02B : 98B0;  -- 	OUT PXL_A
+           02C : BFC6;  -- 	LOADI &B0010011111000110 ;torquoise
+           02D : 98B1;  -- 	OUT PXL_D
+           02E : B83C;  -- 	LOADI 60
+           02F : 8046;  -- 	CALL DelayAC
+           030 : 2800;  -- 	JUMP ModeSelect
+           031 : B800;  -- 	LOADI 0
+           032 : 98B1;  -- 	OUT PXL_D
+           033 : B84F;  -- 	LOADI One
+           034 : 98B4;  -- 	OUT PXL_ALL
+           035 : B906;  -- 	LOADI &B1111100100000110 ;scarlett
+           036 : 98B1;  -- 	OUT PXL_D
+           037 : B83C;  -- 	LOADI 60
+           038 : 8046;  -- 	CALL DelayAC
+           039 : 2800;  -- 	JUMP ModeSelect
+           03A : B801;  -- 	LOADI 1
+           03B : 085C;  -- 	LOAD BlueOnly
+           03C : 98B1;  -- 	OUT PXL_D
+           03D : B85A;  -- 	LOADI LoopValue
+           03E : 204E;  -- 	SUB DecOne
+           03F : 105A;  -- 	STORE LoopValue
+           040 : B805;  -- 	LOADI 5
+           041 : 8046;  -- 	CALL DelayAC
+           042 : 383B;  -- 	JPOS FifthBulletP2
+           043 : B83C;  -- 	LOADI 60
+           044 : 8046;  -- 	CALL DelayAC
+           045 : 4000;  -- 	JZero ModeSelect
+           046 : 104C;  -- 	STORE  DelayTime   ; Save the desired delay
+           047 : 9802;  -- 	OUT    Timer       ; Reset the timer
+           048 : 9002;  -- 	IN     Timer       ; Get the current timer value
+           049 : 204C;  -- 	SUB    DelayTime
+           04A : 3048;  -- 	JNEG   WaitingLoop ; Repeat until timer = delay value
+           04B : 8800;  -- 	RETURN
+           04C : 0000;  -- DelayTime: DW 0
+           04D : 0000;  -- Zero: DW 0
+           04E : 0001;  -- DecOne: DW 1
+           04F : 0001;  -- One: DW &B001
+           050 : 0002;  -- Two: DW &B010
+           051 : 0004;  -- Three: DW &B100
+           052 : 0008;  -- Four: DW &B1000
+           053 : 0010;  -- Five: DW &B10000
+           054 : 0020;  -- Six: DW &B100000
+           055 : 0040;  -- Seven: DW &B1000000
+           056 : 0000;  -- Red:	   DW  0
+           057 : 0000;  -- Blue:	   DW  0
+           058 : 0000;  -- Green:	   DW  0
+           059 : 0000;  -- SwitchVal: DW 0
+           05A : 0032;  -- LoopValue: DW 50
+           05B : 0000;  -- SelectedLED: DW 0
+           05C : 001F;  -- BlueOnly: DW &B0000000000011111
+           05D : FFFF;  -- White: DW &B1111111111111111
+           05E : 00FF;  -- Last8: DW &B11111111
   END;

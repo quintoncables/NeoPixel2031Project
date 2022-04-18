@@ -5,9 +5,10 @@ ModeSelect:
 	LOADI 1
 	OUT PXL_ALL
 	LOADI &B00000000000000000
+	OUT PXL_D
 	OUT LEDs
 	In Switches
-	;switch values will control the mode, it is binary and only goes up to 5
+	;switch values will control the mode
 	Store SwitchVal
 	Sub One
 	JZERO FirstBullet
@@ -49,6 +50,7 @@ SecondBullet: ;initial waiting loop
 	LOADI 60
 	CALL DelayAC
 	JUMP ModeSelect
+	;works
 
 ;Third Bullet
 ThirdBullet:
@@ -61,16 +63,20 @@ ThirdBullet:
 	LOADI 60
 	CALL DelayAC
 	JUMP ModeSelect
+	
 
 ;fourth bullet
 FourthBullet:
-	LOADI 1
+	LOADI 0
+	OUT PXL_D
+	LOADI One
 	OUT PXL_ALL
 	LOADI &B1111100100000110 ;scarlett
 	OUT PXL_D
 	LOADI 60
 	CALL DelayAC
 	JUMP ModeSelect
+;??? outputs torquoise on the first pxl
 
 ;Fifth Bullet, tests autoincrement functionality
 FifthBullet:
@@ -84,11 +90,13 @@ FifthBulletP2:
 	LOADI LoopValue
 	SUB DecOne
 	STORE LoopValue
+	LOADI 5
+	CALL DelayAC
 	JPOS FifthBulletP2
 	LOADI 60
 	CALL DelayAC
 	JZero ModeSelect
-	
+	;working
 
 DelayAC:
 	STORE  DelayTime   ; Save the desired delay
