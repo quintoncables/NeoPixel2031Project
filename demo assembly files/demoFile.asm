@@ -3,6 +3,8 @@ ORG 0
 ;initial mode select
 ModeSelect:
 	LOADI 1
+	OUT PXL_ALL
+	LOADI &B00000000000000000
 	OUT LEDs
 	In Switches
 	;switch values will control the mode, it is binary and only goes up to 5
@@ -28,30 +30,36 @@ ModeSelect:
 FirstBullet:
 	LOADI 1
 	OUT PXL_ALL
-	LOADI &B1100110010000000 ;light pink
+	LOADI &B1100110010110010 ;light pink
 	OUT RB
-	LOADI &B10110010 ;light pink
+	LOADI &B01000000;light pink
 	OUT G
+	LOADI 60
+	CALL DelayAC
 	JUMP ModeSelect
-
 ; Test to select 24 bit color for a single pixel
 SecondBullet: ;initial waiting loop
     LOADI  5
 	STORE SelectedLED
     OUT    PXL_A
-	LOADI 	&B1011011001010101 ;burnt orange
+	LOADI 	&B1011011000100001 ;burnt orange
 	OUT RB
-	LOADI &B00100001
-	OUT    G
+	LOADI &B01010101
+	OUT G
+	LOADI 60
+	CALL DelayAC
 	JUMP ModeSelect
 
 ;Third Bullet
 ThirdBullet:
+	
 	OUT PXL_All
 	LOADI 4
 	OUT PXL_A
 	LOADI &B0010011111000110 ;torquoise
 	OUT PXL_D
+	LOADI 60
+	CALL DelayAC
 	JUMP ModeSelect
 
 ;fourth bullet
@@ -60,29 +68,27 @@ FourthBullet:
 	OUT PXL_ALL
 	LOADI &B1111100100000110 ;scarlett
 	OUT PXL_D
-	LOADI 50
+	LOADI 60
 	CALL DelayAC
 	JUMP ModeSelect
 
 ;Fifth Bullet, tests autoincrement functionality
 FifthBullet:
-	LOADI 0
-	OUT PXL_ALL
-	OUT PXL_D
+	LOADI 1
+	;OUT PXL_ALL
+	;OUT PXL_D
 	
 FifthBulletP2:
 	LOAD BlueOnly
 	OUT PXL_D
 	LOADI LoopValue
-	SUB 1
+	SUB DecOne
 	STORE LoopValue
-	
-	LOAD LoopValue
 	JPOS FifthBulletP2
+	LOADI 60
+	CALL DelayAC
 	JZero ModeSelect
 	
-	
-
 
 DelayAC:
 	STORE  DelayTime   ; Save the desired delay
@@ -96,16 +102,16 @@ DelayTime: DW 0
 
 
 
-
 ; IO address constants
 Zero: DW 0
+DecOne: DW 1
 One: DW &B001
 Two: DW &B010
-Three: DW &B011
-Four: DW &B100
-Five: DW &B101
-Six: DW &B110
-Seven: DW &B111
+Three: DW &B100
+Four: DW &B1000
+Five: DW &B10000
+Six: DW &B100000
+Seven: DW &B1000000
 Key0: EQU 006
 Key1: EQU 007
 Switches:  EQU 000
