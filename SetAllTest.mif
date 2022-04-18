@@ -10,17 +10,6 @@ CONTENT
   BEGIN
     [000..7FF] : 0000;  -- Default to NOP
 
-           000 : B80A;  -- 	LOADI  10
-           001 : 98B4;  --     OUT    ALL_EN
-           002 : B80A;  -- 	LOADI  10
-           003 : B80A;  -- 	LOADI  10
-           004 : B80A;  -- 	LOADI  10
-           005 : B86F;  -- 	LOADI  &H006F
-           006 : 98B3;  -- 	OUT    G_EN
-           007 : BF00;  -- 	LOADI  &HFF00
-           008 : 98B2;  -- 	OUT    RB_EN
-           009 : B86F;  -- 	LOADI  &H006F
-           00A : 98B3;  -- 	OUT    G_EN
-           00B : BF00;  -- 	LOADI  &HFF00
-           00C : 98B2;  -- 	OUT    RB_EN
+           000 : B801;  -- LOADI 1
+           001 : 9B06;  -- OUT GT_EN
   END;
