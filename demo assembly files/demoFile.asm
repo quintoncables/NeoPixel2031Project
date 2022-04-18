@@ -1,12 +1,21 @@
 ORG 0
 
 ;initial mode select
-ModeSelect:
+Setup:
 	LOADI 1
 	OUT PXL_ALL
 	LOADI &B00000000000000000
 	OUT PXL_D
-	OUT LEDs
+	LOADI Zero
+	Store SwitchVal
+ModeSelect:
+	IN Switches
+	SUB SwitchVal
+	JZERO ModeSelect
+	LOADI 1
+	OUT PXL_ALL
+	LOADI &B00000000000000000
+	OUT PXL_D
 	In Switches
 	;switch values will control the mode
 	Store SwitchVal
@@ -24,8 +33,7 @@ ModeSelect:
 	LOAD SwitchVal
 	SUB Five
 	JZERO FifthBullet
-	JUMP ModeSelect
-	
+	JUMP ModeSelect	
 
 ;First Bullet implementation, outs all colors in a single string
 FirstBullet:
