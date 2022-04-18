@@ -1,5 +1,5 @@
 Fitter report for SCOMP
-Sun Apr 17 14:54:37 2022
+Mon Apr 18 12:57:09 2022
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -66,15 +66,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Sun Apr 17 14:54:37 2022       ;
+; Fitter Status                   ; Successful - Mon Apr 18 12:57:09 2022       ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                   ; SCOMP                                       ;
 ; Top-level Entity Name           ; SCOMP_System                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 381 / 41,910 ( < 1 % )                      ;
-; Total registers                 ; 423                                         ;
+; Logic utilization (in ALMs)     ; 375 / 41,910 ( < 1 % )                      ;
+; Total registers                 ; 424                                         ;
 ; Total pins                      ; 64 / 499 ( 13 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 38,912 / 5,662,720 ( < 1 % )                ;
@@ -158,49 +158,47 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 2           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.03        ;
+; Average used               ; 1.02        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.0%      ;
+;     Processor 2            ;   2.4%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Netlist Optimizations                                                                                                                                                                                                                                                                                         ;
-+-------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------------------------+------------------+-----------------------+
-; Node                                                                                      ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                   ; Destination Port ; Destination Port Name ;
-+-------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------------------------+------------------+-----------------------+
-; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                    ;                  ;                       ;
-; NeoPixelController:inst13|enc_count[0]                                                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; NeoPixelController:inst13|enc_count[0]~DUPLICATE   ;                  ;                       ;
-; NeoPixelController:inst13|enc_count[1]                                                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; NeoPixelController:inst13|enc_count[1]~DUPLICATE   ;                  ;                       ;
-; NeoPixelController:inst13|reset_count[2]                                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; NeoPixelController:inst13|reset_count[2]~DUPLICATE ;                  ;                       ;
-; SCOMP:inst|PC[1]                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|PC[1]~DUPLICATE                         ;                  ;                       ;
-; SCOMP:inst|PC[4]                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|PC[4]~DUPLICATE                         ;                  ;                       ;
-; SCOMP:inst|PC[5]                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|PC[5]~DUPLICATE                         ;                  ;                       ;
-; SCOMP:inst|PC[6]                                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|PC[6]~DUPLICATE                         ;                  ;                       ;
-; SCOMP:inst|PC_stack[0][10]                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|PC_stack[0][10]~DUPLICATE               ;                  ;                       ;
-; SCOMP:inst|PC_stack[3][3]                                                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|PC_stack[3][3]~DUPLICATE                ;                  ;                       ;
-; SCOMP:inst|PC_stack[4][0]                                                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|PC_stack[4][0]~DUPLICATE                ;                  ;                       ;
-; SCOMP:inst|PC_stack[8][4]                                                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|PC_stack[8][4]~DUPLICATE                ;                  ;                       ;
-; SCOMP:inst|state.decode                                                                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|state.decode~DUPLICATE                  ;                  ;                       ;
-; SCOMP:inst|state.ex_add                                                                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|state.ex_add~DUPLICATE                  ;                  ;                       ;
-; SCOMP:inst|state.ex_addi                                                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|state.ex_addi~DUPLICATE                 ;                  ;                       ;
-; SCOMP:inst|state.ex_and                                                                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|state.ex_and~DUPLICATE                  ;                  ;                       ;
-; SCOMP:inst|state.ex_iload                                                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|state.ex_iload~DUPLICATE                ;                  ;                       ;
-; SCOMP:inst|state.ex_in                                                                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|state.ex_in~DUPLICATE                   ;                  ;                       ;
-; SCOMP:inst|state.ex_shift                                                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|state.ex_shift~DUPLICATE                ;                  ;                       ;
-; TIMER:inst4|COUNT[0]                                                                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TIMER:inst4|COUNT[0]~DUPLICATE                     ;                  ;                       ;
-; TIMER:inst4|COUNT[3]                                                                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TIMER:inst4|COUNT[3]~DUPLICATE                     ;                  ;                       ;
-; TIMER:inst4|COUNT[4]                                                                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TIMER:inst4|COUNT[4]~DUPLICATE                     ;                  ;                       ;
-; TIMER:inst4|COUNT[14]                                                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TIMER:inst4|COUNT[14]~DUPLICATE                    ;                  ;                       ;
-; clk_div:inst5|count_10Hz[1]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_div:inst5|count_10Hz[1]~DUPLICATE              ;                  ;                       ;
-; clk_div:inst5|count_10Hz[3]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_div:inst5|count_10Hz[3]~DUPLICATE              ;                  ;                       ;
-; clk_div:inst5|count_10Hz[6]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_div:inst5|count_10Hz[6]~DUPLICATE              ;                  ;                       ;
-; clk_div:inst5|count_10Hz[11]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_div:inst5|count_10Hz[11]~DUPLICATE             ;                  ;                       ;
-; clk_div:inst5|count_10Hz[15]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_div:inst5|count_10Hz[15]~DUPLICATE             ;                  ;                       ;
-+-------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------------------------+------------------+-----------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Netlist Optimizations                                                                                                                                                                                                                                                                                       ;
++-------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+--------------------------------------------------+------------------+-----------------------+
+; Node                                                                                      ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                 ; Destination Port ; Destination Port Name ;
++-------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+--------------------------------------------------+------------------+-----------------------+
+; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                  ;                  ;                       ;
+; NeoPixelController:inst13|enc_count[2]                                                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; NeoPixelController:inst13|enc_count[2]~DUPLICATE ;                  ;                       ;
+; NeoPixelController:inst13|enc_count[3]                                                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; NeoPixelController:inst13|enc_count[3]~DUPLICATE ;                  ;                       ;
+; SCOMP:inst|PC_stack[0][0]                                                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|PC_stack[0][0]~DUPLICATE              ;                  ;                       ;
+; SCOMP:inst|PC_stack[0][1]                                                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|PC_stack[0][1]~DUPLICATE              ;                  ;                       ;
+; SCOMP:inst|PC_stack[0][4]                                                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|PC_stack[0][4]~DUPLICATE              ;                  ;                       ;
+; SCOMP:inst|state.ex_in2                                                                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|state.ex_in2~DUPLICATE                ;                  ;                       ;
+; SCOMP:inst|state.ex_store                                                                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|state.ex_store~DUPLICATE              ;                  ;                       ;
+; SCOMP:inst|state.fetch                                                                    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SCOMP:inst|state.fetch~DUPLICATE                 ;                  ;                       ;
+; TIMER:inst4|COUNT[0]                                                                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TIMER:inst4|COUNT[0]~DUPLICATE                   ;                  ;                       ;
+; TIMER:inst4|COUNT[1]                                                                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TIMER:inst4|COUNT[1]~DUPLICATE                   ;                  ;                       ;
+; TIMER:inst4|COUNT[4]                                                                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TIMER:inst4|COUNT[4]~DUPLICATE                   ;                  ;                       ;
+; TIMER:inst4|COUNT[6]                                                                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TIMER:inst4|COUNT[6]~DUPLICATE                   ;                  ;                       ;
+; TIMER:inst4|COUNT[9]                                                                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TIMER:inst4|COUNT[9]~DUPLICATE                   ;                  ;                       ;
+; TIMER:inst4|COUNT[11]                                                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TIMER:inst4|COUNT[11]~DUPLICATE                  ;                  ;                       ;
+; TIMER:inst4|COUNT[12]                                                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TIMER:inst4|COUNT[12]~DUPLICATE                  ;                  ;                       ;
+; TIMER:inst4|COUNT[14]                                                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TIMER:inst4|COUNT[14]~DUPLICATE                  ;                  ;                       ;
+; TIMER:inst4|COUNT[15]                                                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; TIMER:inst4|COUNT[15]~DUPLICATE                  ;                  ;                       ;
+; clk_div:inst5|count_10Hz[1]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_div:inst5|count_10Hz[1]~DUPLICATE            ;                  ;                       ;
+; clk_div:inst5|count_10Hz[3]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_div:inst5|count_10Hz[3]~DUPLICATE            ;                  ;                       ;
+; clk_div:inst5|count_10Hz[5]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_div:inst5|count_10Hz[5]~DUPLICATE            ;                  ;                       ;
+; clk_div:inst5|count_10Hz[7]                                                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_div:inst5|count_10Hz[7]~DUPLICATE            ;                  ;                       ;
+; clk_div:inst5|count_10Hz[11]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_div:inst5|count_10Hz[11]~DUPLICATE           ;                  ;                       ;
+; clk_div:inst5|count_10Hz[13]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_div:inst5|count_10Hz[13]~DUPLICATE           ;                  ;                       ;
+; clk_div:inst5|count_10Hz[15]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_div:inst5|count_10Hz[15]~DUPLICATE           ;                  ;                       ;
+; clk_div:inst5|count_10Hz[17]                                                              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_div:inst5|count_10Hz[17]~DUPLICATE           ;                  ;                       ;
++-------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+--------------------------------------------------+------------------+-----------------------+
 
 
 +----------------------------------------------------------------------------------------+
@@ -218,8 +216,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 1103 ) ; 0.00 % ( 0 / 1103 )        ; 0.00 % ( 0 / 1103 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 1103 ) ; 0.00 % ( 0 / 1103 )        ; 0.00 % ( 0 / 1103 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 1107 ) ; 0.00 % ( 0 / 1107 )        ; 0.00 % ( 0 / 1107 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 1107 ) ; 0.00 % ( 0 / 1107 )        ; 0.00 % ( 0 / 1107 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -242,7 +240,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 1094 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 1098 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 9 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -258,18 +256,18 @@ The pin-out file can be found in /Desktop/ECE2031Labs/NeoPixel2031Project/output
 +-------------------------------------------------------------+-----------------------+-------+
 ; Resource                                                    ; Usage                 ; %     ;
 +-------------------------------------------------------------+-----------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 381 / 41,910          ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 381                   ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 420 / 41,910          ; 1 %   ;
-;         [a] ALMs used for LUT logic and registers           ; 94                    ;       ;
-;         [b] ALMs used for LUT logic                         ; 222                   ;       ;
-;         [c] ALMs used for registers                         ; 104                   ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 375 / 41,910          ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 375                   ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 412 / 41,910          ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 102                   ;       ;
+;         [b] ALMs used for LUT logic                         ; 215                   ;       ;
+;         [c] ALMs used for registers                         ; 95                    ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 42 / 41,910           ; < 1 % ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 3 / 41,910            ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 41 / 41,910           ; < 1 % ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 4 / 41,910            ; < 1 % ;
 ;         [a] Due to location constrained logic               ; 0                     ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ;       ;
-;         [c] Due to LAB input limits                         ; 3                     ;       ;
+;         [c] Due to LAB input limits                         ; 4                     ;       ;
 ;         [d] Due to virtual I/Os                             ; 0                     ;       ;
 ;                                                             ;                       ;       ;
 ; Difficulty packing design                                   ; Low                   ;       ;
@@ -278,21 +276,21 @@ The pin-out file can be found in /Desktop/ECE2031Labs/NeoPixel2031Project/output
 ;     -- Logic LABs                                           ; 53                    ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ;       ;
 ;                                                             ;                       ;       ;
-; Combinational ALUT usage for logic                          ; 535                   ;       ;
-;     -- 7 input functions                                    ; 0                     ;       ;
-;     -- 6 input functions                                    ; 114                   ;       ;
-;     -- 5 input functions                                    ; 179                   ;       ;
-;     -- 4 input functions                                    ; 91                    ;       ;
-;     -- <=3 input functions                                  ; 151                   ;       ;
-; Combinational ALUT usage for route-throughs                 ; 151                   ;       ;
+; Combinational ALUT usage for logic                          ; 537                   ;       ;
+;     -- 7 input functions                                    ; 1                     ;       ;
+;     -- 6 input functions                                    ; 99                    ;       ;
+;     -- 5 input functions                                    ; 187                   ;       ;
+;     -- 4 input functions                                    ; 84                    ;       ;
+;     -- <=3 input functions                                  ; 166                   ;       ;
+; Combinational ALUT usage for route-throughs                 ; 142                   ;       ;
 ;                                                             ;                       ;       ;
-; Dedicated logic registers                                   ; 423                   ;       ;
+; Dedicated logic registers                                   ; 424                   ;       ;
 ;     -- By type:                                             ;                       ;       ;
-;         -- Primary logic registers                          ; 396 / 83,820          ; < 1 % ;
-;         -- Secondary logic registers                        ; 27 / 83,820           ; < 1 % ;
+;         -- Primary logic registers                          ; 394 / 83,820          ; < 1 % ;
+;         -- Secondary logic registers                        ; 30 / 83,820           ; < 1 % ;
 ;     -- By function:                                         ;                       ;       ;
-;         -- Design implementation registers                  ; 396                   ;       ;
-;         -- Routing optimization registers                   ; 27                    ;       ;
+;         -- Design implementation registers                  ; 399                   ;       ;
+;         -- Routing optimization registers                   ; 25                    ;       ;
 ;                                                             ;                       ;       ;
 ; Virtual pins                                                ; 0                     ;       ;
 ; I/O pins                                                    ; 64 / 499              ; 13 %  ;
@@ -353,12 +351,12 @@ The pin-out file can be found in /Desktop/ECE2031Labs/NeoPixel2031Project/output
 ; Channel PLLs                                                ; 0 / 9                 ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 4                 ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2                 ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 1.2% / 1.3% / 1.1%    ;       ;
-; Peak interconnect usage (total/H/V)                         ; 18.1% / 18.2% / 17.5% ;       ;
-; Maximum fan-out                                             ; 366                   ;       ;
-; Highest non-global fan-out                                  ; 166                   ;       ;
-; Total fan-out                                               ; 4323                  ;       ;
-; Average fan-out                                             ; 3.46                  ;       ;
+; Average interconnect usage (total/H/V)                      ; 1.0% / 1.1% / 1.0%    ;       ;
+; Peak interconnect usage (total/H/V)                         ; 15.2% / 15.5% / 14.3% ;       ;
+; Maximum fan-out                                             ; 362                   ;       ;
+; Highest non-global fan-out                                  ; 163                   ;       ;
+; Total fan-out                                               ; 4282                  ;       ;
+; Average fan-out                                             ; 3.45                  ;       ;
 +-------------------------------------------------------------+-----------------------+-------+
 
 
@@ -367,18 +365,18 @@ The pin-out file can be found in /Desktop/ECE2031Labs/NeoPixel2031Project/output
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Statistic                                                   ; Top                   ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+-----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 381 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 381                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 420 / 41910 ( 1 % )   ; 0 / 41910 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 94                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 222                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 104                   ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 375 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 375                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 412 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 102                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 215                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 95                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 42 / 41910 ( < 1 % )  ; 0 / 41910 ( 0 % )              ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 3 / 41910 ( < 1 % )   ; 0 / 41910 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 41 / 41910 ( < 1 % )  ; 0 / 41910 ( 0 % )              ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 4 / 41910 ( < 1 % )   ; 0 / 41910 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
-;         [c] Due to LAB input limits                         ; 3                     ; 0                              ;
+;         [c] Due to LAB input limits                         ; 4                     ; 0                              ;
 ;         [d] Due to virtual I/Os                             ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
@@ -387,24 +385,24 @@ The pin-out file can be found in /Desktop/ECE2031Labs/NeoPixel2031Project/output
 ;     -- Logic LABs                                           ; 53                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 535                   ; 0                              ;
-;     -- 7 input functions                                    ; 0                     ; 0                              ;
-;     -- 6 input functions                                    ; 114                   ; 0                              ;
-;     -- 5 input functions                                    ; 179                   ; 0                              ;
-;     -- 4 input functions                                    ; 91                    ; 0                              ;
-;     -- <=3 input functions                                  ; 151                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 151                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 537                   ; 0                              ;
+;     -- 7 input functions                                    ; 1                     ; 0                              ;
+;     -- 6 input functions                                    ; 99                    ; 0                              ;
+;     -- 5 input functions                                    ; 187                   ; 0                              ;
+;     -- 4 input functions                                    ; 84                    ; 0                              ;
+;     -- <=3 input functions                                  ; 166                   ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 142                   ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
-;         -- Primary logic registers                          ; 396 / 83820 ( < 1 % ) ; 0 / 83820 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 27 / 83820 ( < 1 % )  ; 0 / 83820 ( 0 % )              ;
+;         -- Primary logic registers                          ; 394 / 83820 ( < 1 % ) ; 0 / 83820 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 30 / 83820 ( < 1 % )  ; 0 / 83820 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
-;         -- Design implementation registers                  ; 396                   ; 0                              ;
-;         -- Routing optimization registers                   ; 27                    ; 0                              ;
+;         -- Design implementation registers                  ; 399                   ; 0                              ;
+;         -- Routing optimization registers                   ; 25                    ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -420,18 +418,18 @@ The pin-out file can be found in /Desktop/ECE2031Labs/NeoPixel2031Project/output
 ; PLL Reference Clock Select Block                            ; 0 / 6 ( 0 % )         ; 1 / 6 ( 16 % )                 ;
 ;                                                             ;                       ;                                ;
 ; Connections                                                 ;                       ;                                ;
-;     -- Input Connections                                    ; 532                   ; 0                              ;
-;     -- Registered Input Connections                         ; 516                   ; 0                              ;
-;     -- Output Connections                                   ; 0                     ; 532                            ;
+;     -- Input Connections                                    ; 525                   ; 0                              ;
+;     -- Registered Input Connections                         ; 508                   ; 0                              ;
+;     -- Output Connections                                   ; 0                     ; 525                            ;
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 4401                  ; 566                            ;
-;     -- Registered Connections                               ; 2337                  ; 0                              ;
+;     -- Total Connections                                    ; 4360                  ; 559                            ;
+;     -- Registered Connections                               ; 2299                  ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
-;     -- Top                                                  ; 0                     ; 532                            ;
-;     -- hard_block:auto_generated_inst                       ; 532                   ; 0                              ;
+;     -- Top                                                  ; 0                     ; 525                            ;
+;     -- hard_block:auto_generated_inst                       ; 525                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Partition Interface                                         ;                       ;                                ;
 ;     -- Input Ports                                          ; 12                    ; 2                              ;
@@ -1575,30 +1573,30 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node                ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                        ; Entity Name        ; Library Name ;
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------------------------------------------+--------------------+--------------+
-; |SCOMP_System                             ; 380.5 (19.2)         ; 420.0 (21.6)                     ; 42.5 (2.4)                                        ; 3.0 (0.0)                        ; 0.0 (0.0)            ; 535 (39)            ; 423 (0)                   ; 0 (0)         ; 38912             ; 6     ; 0          ; 64   ; 0            ; |SCOMP_System                                                                              ; SCOMP_System       ; work         ;
-;    |DIG_IN:inst7|                         ; 2.8 (2.8)            ; 3.2 (3.2)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 10 (10)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|DIG_IN:inst7                                                                 ; DIG_IN             ; work         ;
-;    |DIG_OUT:inst6|                        ; 1.0 (1.0)            ; 4.0 (4.0)                        ; 3.0 (3.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 9 (9)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|DIG_OUT:inst6                                                                ; DIG_OUT            ; work         ;
-;    |HEX_DISP_6:inst9|                     ; 23.0 (1.3)           ; 26.8 (1.7)                       ; 3.8 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 44 (2)              ; 24 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9                                                             ; HEX_DISP_6         ; work         ;
-;       |HEX_DISP:inst1|                    ; 3.3 (3.3)            ; 4.8 (4.8)                        ; 1.5 (1.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst1                                              ; HEX_DISP           ; work         ;
-;       |HEX_DISP:inst2|                    ; 3.3 (3.3)            ; 4.5 (4.5)                        ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst2                                              ; HEX_DISP           ; work         ;
-;       |HEX_DISP:inst3|                    ; 3.7 (3.7)            ; 4.4 (4.4)                        ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst3                                              ; HEX_DISP           ; work         ;
-;       |HEX_DISP:inst4|                    ; 3.8 (3.8)            ; 3.8 (3.8)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst4                                              ; HEX_DISP           ; work         ;
-;       |HEX_DISP:inst5|                    ; 3.7 (3.7)            ; 3.7 (3.7)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst5                                              ; HEX_DISP           ; work         ;
-;       |HEX_DISP:inst6|                    ; 3.7 (3.7)            ; 3.8 (3.8)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst6                                              ; HEX_DISP           ; work         ;
-;    |IO_DECODER:inst3|                     ; 2.5 (2.5)            ; 3.3 (3.3)                        ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (6)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|IO_DECODER:inst3                                                             ; IO_DECODER         ; work         ;
-;    |NeoPixelController:inst13|            ; 94.7 (94.7)          ; 115.3 (115.3)                    ; 20.7 (20.7)                                       ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 129 (129)           ; 141 (141)                 ; 0 (0)         ; 6144              ; 2     ; 0          ; 0    ; 0            ; |SCOMP_System|NeoPixelController:inst13                                                    ; NeoPixelController ; work         ;
+; |SCOMP_System                             ; 375.0 (13.0)         ; 412.0 (16.5)                     ; 40.5 (3.5)                                        ; 3.5 (0.0)                        ; 0.0 (0.0)            ; 537 (26)            ; 424 (0)                   ; 0 (0)         ; 38912             ; 6     ; 0          ; 64   ; 0            ; |SCOMP_System                                                                              ; SCOMP_System       ; work         ;
+;    |DIG_IN:inst7|                         ; 1.8 (1.8)            ; 3.5 (3.5)                        ; 1.7 (1.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 10 (10)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|DIG_IN:inst7                                                                 ; DIG_IN             ; work         ;
+;    |DIG_OUT:inst6|                        ; 2.3 (2.3)            ; 2.7 (2.7)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 9 (9)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|DIG_OUT:inst6                                                                ; DIG_OUT            ; work         ;
+;    |HEX_DISP_6:inst9|                     ; 22.8 (1.0)           ; 24.2 (1.0)                       ; 1.3 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 44 (2)              ; 24 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9                                                             ; HEX_DISP_6         ; work         ;
+;       |HEX_DISP:inst1|                    ; 3.3 (3.3)            ; 3.8 (3.8)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst1                                              ; HEX_DISP           ; work         ;
+;       |HEX_DISP:inst2|                    ; 3.3 (3.3)            ; 3.6 (3.6)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst2                                              ; HEX_DISP           ; work         ;
+;       |HEX_DISP:inst3|                    ; 3.3 (3.3)            ; 3.3 (3.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst3                                              ; HEX_DISP           ; work         ;
+;       |HEX_DISP:inst4|                    ; 3.5 (3.5)            ; 4.7 (4.7)                        ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst4                                              ; HEX_DISP           ; work         ;
+;       |HEX_DISP:inst5|                    ; 3.7 (3.7)            ; 4.5 (4.5)                        ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst5                                              ; HEX_DISP           ; work         ;
+;       |HEX_DISP:inst6|                    ; 3.3 (3.3)            ; 3.3 (3.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst6                                              ; HEX_DISP           ; work         ;
+;    |IO_DECODER:inst3|                     ; 4.8 (4.8)            ; 4.8 (4.8)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 11 (11)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|IO_DECODER:inst3                                                             ; IO_DECODER         ; work         ;
+;    |NeoPixelController:inst13|            ; 105.9 (105.9)        ; 122.8 (122.8)                    ; 16.9 (16.9)                                       ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 157 (157)           ; 143 (143)                 ; 0 (0)         ; 6144              ; 2     ; 0          ; 0    ; 0            ; |SCOMP_System|NeoPixelController:inst13                                                    ; NeoPixelController ; work         ;
 ;       |altsyncram:pixelRAM|               ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 6144              ; 2     ; 0          ; 0    ; 0            ; |SCOMP_System|NeoPixelController:inst13|altsyncram:pixelRAM                                ; altsyncram         ; work         ;
 ;          |altsyncram_2c24:auto_generated| ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 6144              ; 2     ; 0          ; 0    ; 0            ; |SCOMP_System|NeoPixelController:inst13|altsyncram:pixelRAM|altsyncram_2c24:auto_generated ; altsyncram_2c24    ; work         ;
 ;    |PLL_main:inst1|                       ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|PLL_main:inst1                                                               ; PLL_main           ; pll_main     ;
 ;       |PLL_main_0002:pll_main_inst|       ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|PLL_main:inst1|PLL_main_0002:pll_main_inst                                   ; PLL_main_0002      ; PLL_main     ;
 ;          |altera_pll:altera_pll_i|        ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i           ; altera_pll         ; work         ;
-;    |SCOMP:inst|                           ; 206.5 (186.0)        ; 219.2 (196.7)                    ; 15.7 (13.7)                                       ; 3.0 (3.0)                        ; 0.0 (0.0)            ; 259 (219)           ; 193 (193)                 ; 0 (0)         ; 32768             ; 4     ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst                                                                   ; SCOMP              ; work         ;
+;    |SCOMP:inst|                           ; 193.7 (168.7)        ; 210.7 (185.2)                    ; 20.5 (20.0)                                       ; 3.5 (3.5)                        ; 0.0 (0.0)            ; 241 (200)           ; 184 (184)                 ; 0 (0)         ; 32768             ; 4     ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst                                                                   ; SCOMP              ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 32768             ; 4     ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component                                   ; altsyncram         ; work         ;
 ;          |altsyncram_tp24:auto_generated| ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 32768             ; 4     ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated    ; altsyncram_tp24    ; work         ;
-;       |lpm_clshift:shifter|               ; 20.5 (0.0)           ; 22.5 (0.0)                       ; 2.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 40 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter                                               ; lpm_clshift        ; work         ;
-;          |lpm_clshift_fuc:auto_generated| ; 20.5 (20.5)          ; 22.5 (22.5)                      ; 2.0 (2.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 40 (40)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter|lpm_clshift_fuc:auto_generated                ; lpm_clshift_fuc    ; work         ;
-;    |TIMER:inst4|                          ; 11.8 (11.8)          ; 11.8 (11.8)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 33 (33)             ; 20 (20)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|TIMER:inst4                                                                  ; TIMER              ; work         ;
-;    |clk_div:inst5|                        ; 14.5 (14.5)          ; 14.8 (14.8)                      ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 25 (25)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|clk_div:inst5                                                                ; clk_div            ; work         ;
+;       |lpm_clshift:shifter|               ; 25.0 (0.0)           ; 25.5 (0.0)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 41 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter                                               ; lpm_clshift        ; work         ;
+;          |lpm_clshift_fuc:auto_generated| ; 25.0 (25.0)          ; 25.5 (25.5)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 41 (41)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter|lpm_clshift_fuc:auto_generated                ; lpm_clshift_fuc    ; work         ;
+;    |TIMER:inst4|                          ; 11.9 (11.9)          ; 11.9 (11.9)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 33 (33)             ; 25 (25)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|TIMER:inst4                                                                  ; TIMER              ; work         ;
+;    |clk_div:inst5|                        ; 14.5 (14.5)          ; 14.8 (14.8)                      ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 25 (25)             ; 29 (29)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |SCOMP_System|clk_div:inst5                                                                ; clk_div            ; work         ;
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1711,39 +1709,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------+----------------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                              ; Location                   ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------------------------------------------------------------+----------------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; HEX_DISP_6:inst9|inst7                                                            ; LABCELL_X29_Y27_N3         ; 16      ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; HEX_DISP_6:inst9|inst8                                                            ; LABCELL_X29_Y26_N0         ; 8       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; IO_DECODER:inst3|TIMER_EN                                                         ; LABCELL_X30_Y26_N57        ; 40      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; NeoPixelController:inst13|Equal0~2                                                ; MLABCELL_X28_Y24_N51       ; 20      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; NeoPixelController:inst13|Equal4~2                                                ; LABCELL_X30_Y22_N30        ; 8       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; NeoPixelController:inst13|all_one_color_buffer[23]~1                              ; MLABCELL_X28_Y25_N21       ; 16      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; NeoPixelController:inst13|buffer_24_grb[12]~1                                     ; LABCELL_X31_Y23_N42        ; 16      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; NeoPixelController:inst13|buffer_24_grb[17]~0                                     ; LABCELL_X31_Y23_N57        ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; NeoPixelController:inst13|pixel_buffer[23]~1                                      ; LABCELL_X37_Y25_N9         ; 23      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; NeoPixelController:inst13|pixel_buffer[3]~0                                       ; LABCELL_X33_Y25_N39        ; 23      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; NeoPixelController:inst13|pixel_count[1]~0                                        ; LABCELL_X29_Y23_N27        ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; NeoPixelController:inst13|ram_read_addr[0]~2                                      ; LABCELL_X30_Y22_N42        ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; NeoPixelController:inst13|ram_we                                                  ; FF_X31_Y23_N38             ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
-; NeoPixelController:inst13|ram_write_addr[6]~1                                     ; MLABCELL_X28_Y25_N27       ; 8       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; NeoPixelController:inst13|ram_write_addr[6]~3                                     ; MLABCELL_X28_Y25_N24       ; 8       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; NeoPixelController:inst13|ram_write_addr[6]~6                                     ; MLABCELL_X28_Y25_N54       ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; NeoPixelController:inst13|ram_write_buffer[13]~2                                  ; LABCELL_X31_Y23_N0         ; 24      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; NeoPixelController:inst13|ram_write_buffer[16]~3                                  ; LABCELL_X31_Y23_N48        ; 8       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|locked_wire[0] ; FRACTIONALPLL_X0_Y15_N0    ; 166     ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
-; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|outclk_wire[0] ; PLLOUTPUTCOUNTER_X0_Y20_N1 ; 366     ; Clock                      ; yes    ; Global Clock         ; GCLK0            ; --                        ;
-; SCOMP:inst|AC[7]~0                                                                ; LABCELL_X31_Y24_N54        ; 16      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; SCOMP:inst|IR[10]~0                                                               ; LABCELL_X27_Y28_N6         ; 11      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; SCOMP:inst|MW                                                                     ; FF_X31_Y28_N13             ; 5       ; Write enable               ; no     ; --                   ; --               ; --                        ;
-; SCOMP:inst|PC[0]~2                                                                ; MLABCELL_X28_Y28_N30       ; 15      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; SCOMP:inst|PC_stack[0][0]~0                                                       ; LABCELL_X30_Y23_N36        ; 103     ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; SCOMP:inst|PC_stack[9][0]~1                                                       ; LABCELL_X30_Y23_N30        ; 11      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; SCOMP:inst|state.ex_return                                                        ; FF_X31_Y27_N2              ; 116     ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; SCOMP:inst|state.init                                                             ; FF_X27_Y28_N41             ; 20      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; TIMER:inst4|process_0~0                                                           ; LABCELL_X30_Y26_N51        ; 20      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; clk_div:inst5|LessThan4~4                                                         ; MLABCELL_X28_Y30_N36       ; 24      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; clk_div:inst5|clock_10Hz                                                          ; FF_X31_Y26_N49             ; 20      ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; inst11                                                                            ; LABCELL_X29_Y26_N54        ; 10      ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; inst12                                                                            ; LABCELL_X29_Y26_N30        ; 9       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; HEX_DISP_6:inst9|inst7                                                            ; LABCELL_X40_Y25_N3         ; 16      ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; HEX_DISP_6:inst9|inst8                                                            ; LABCELL_X40_Y25_N6         ; 8       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; IO_DECODER:inst3|TIMER_EN                                                         ; LABCELL_X40_Y26_N48        ; 27      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; NeoPixelController:inst13|Equal0~2                                                ; LABCELL_X31_Y24_N36        ; 20      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; NeoPixelController:inst13|Equal4~2                                                ; MLABCELL_X39_Y23_N36       ; 8       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; NeoPixelController:inst13|all_one_color_buffer[23]~1                              ; LABCELL_X37_Y25_N33        ; 16      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; NeoPixelController:inst13|buffer_24_grb[18]~3                                     ; LABCELL_X37_Y25_N24        ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; NeoPixelController:inst13|buffer_24_grb[3]~4                                      ; LABCELL_X37_Y24_N39        ; 16      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; NeoPixelController:inst13|pixel_buffer[12]~0                                      ; LABCELL_X40_Y21_N57        ; 23      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; NeoPixelController:inst13|pixel_buffer[23]~1                                      ; LABCELL_X31_Y24_N3         ; 23      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; NeoPixelController:inst13|pixel_count[7]~0                                        ; MLABCELL_X39_Y23_N33       ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; NeoPixelController:inst13|ram_read_addr[0]~2                                      ; LABCELL_X37_Y26_N24        ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; NeoPixelController:inst13|ram_we                                                  ; FF_X36_Y25_N2              ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; NeoPixelController:inst13|ram_write_addr[6]~2                                     ; LABCELL_X35_Y26_N0         ; 8       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; NeoPixelController:inst13|ram_write_addr[6]~3                                     ; LABCELL_X35_Y26_N18        ; 8       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; NeoPixelController:inst13|ram_write_addr[6]~6                                     ; LABCELL_X36_Y26_N0         ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; NeoPixelController:inst13|ram_write_buffer[5]~7                                   ; MLABCELL_X34_Y25_N3        ; 24      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; NeoPixelController:inst13|temp_buffer[0]~0                                        ; LABCELL_X37_Y26_N6         ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; NeoPixelController:inst13|wstate.GT                                               ; FF_X36_Y25_N23             ; 24      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|locked_wire[0] ; FRACTIONALPLL_X0_Y15_N0    ; 163     ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
+; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|outclk_wire[0] ; PLLOUTPUTCOUNTER_X0_Y20_N1 ; 362     ; Clock                      ; yes    ; Global Clock         ; GCLK0            ; --                        ;
+; SCOMP:inst|AC[7]~0                                                                ; LABCELL_X42_Y25_N48        ; 16      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; SCOMP:inst|IR[9]~0                                                                ; LABCELL_X42_Y22_N15        ; 11      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; SCOMP:inst|MW                                                                     ; FF_X36_Y22_N49             ; 5       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; SCOMP:inst|PC[0]~2                                                                ; LABCELL_X36_Y23_N18        ; 11      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; SCOMP:inst|PC_stack[0][0]~0                                                       ; MLABCELL_X39_Y20_N12       ; 102     ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; SCOMP:inst|PC_stack[9][0]~1                                                       ; MLABCELL_X39_Y20_N9        ; 11      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; SCOMP:inst|state.ex_return                                                        ; FF_X36_Y22_N56             ; 115     ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; SCOMP:inst|state.init                                                             ; FF_X33_Y23_N14             ; 16      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; TIMER:inst4|process_0~0                                                           ; LABCELL_X40_Y26_N54        ; 25      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; clk_div:inst5|LessThan4~4                                                         ; LABCELL_X42_Y29_N12        ; 27      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; clk_div:inst5|clock_10Hz                                                          ; FF_X39_Y26_N34             ; 25      ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; inst11                                                                            ; LABCELL_X40_Y25_N39        ; 10      ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; inst12                                                                            ; LABCELL_X40_Y25_N0         ; 9       ; Clock                      ; no     ; --                   ; --               ; --                        ;
 +-----------------------------------------------------------------------------------+----------------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1752,7 +1751,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------+----------------------------+---------+----------------------+------------------+---------------------------+
 ; Name                                                                              ; Location                   ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------------------------------------------------------------+----------------------------+---------+----------------------+------------------+---------------------------+
-; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|outclk_wire[0] ; PLLOUTPUTCOUNTER_X0_Y20_N1 ; 366     ; Global Clock         ; GCLK0            ; --                        ;
+; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|outclk_wire[0] ; PLLOUTPUTCOUNTER_X0_Y20_N1 ; 362     ; Global Clock         ; GCLK0            ; --                        ;
 +-----------------------------------------------------------------------------------+----------------------------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1761,8 +1760,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+----------------+--------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
 ; Name                                                                                    ; Type ; Mode           ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M10K blocks ; MLABs ; MIF            ; Location                                                           ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs         ;
 +-----------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+----------------+--------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
-; NeoPixelController:inst13|altsyncram:pixelRAM|altsyncram_2c24:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; Single Clock ; 256          ; 24           ; 256          ; 24           ; yes                    ; no                      ; yes                    ; no                      ; 6144  ; 256                         ; 24                          ; 256                         ; 24                          ; 6144                ; 2           ; 0     ; pixeldata.mif  ; M10K_X38_Y25_N0, M10K_X26_Y25_N0                                   ; Old data             ; New data        ; New data        ; Off      ; No                     ; No - Unsupported Mode ;
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ALTSYNCRAM    ; AUTO ; Single Port    ; Single Clock ; 2048         ; 16           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 32768 ; 2048                        ; 16                          ; --                          ; --                          ; 32768               ; 4           ; 0     ; SetAllTest.mif ; M10K_X26_Y27_N0, M10K_X26_Y26_N0, M10K_X26_Y24_N0, M10K_X26_Y28_N0 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Address Too Wide ;
+; NeoPixelController:inst13|altsyncram:pixelRAM|altsyncram_2c24:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; Single Clock ; 256          ; 24           ; 256          ; 24           ; yes                    ; no                      ; yes                    ; no                      ; 6144  ; 256                         ; 24                          ; 256                         ; 24                          ; 6144                ; 2           ; 0     ; pixeldata.mif  ; M10K_X38_Y25_N0, M10K_X38_Y26_N0                                   ; Old data             ; New data        ; New data        ; Off      ; No                     ; No - Unsupported Mode ;
+; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ALTSYNCRAM    ; AUTO ; Single Port    ; Single Clock ; 2048         ; 16           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 32768 ; 2048                        ; 16                          ; --                          ; --                          ; 32768               ; 4           ; 0     ; SetAllTest.mif ; M10K_X38_Y23_N0, M10K_X41_Y23_N0, M10K_X41_Y22_N0, M10K_X38_Y22_N0 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Address Too Wide ;
 +-----------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+----------------+--------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -1773,13 +1772,13 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; Routing Resource Type                       ; Usage                     ;
 +---------------------------------------------+---------------------------+
 ; Block interconnects                         ; 1,438 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 164 / 13,420 ( 1 % )      ;
-; C2 interconnects                            ; 788 / 119,108 ( < 1 % )   ;
-; C4 interconnects                            ; 736 / 56,300 ( 1 % )      ;
+; C12 interconnects                           ; 108 / 13,420 ( < 1 % )    ;
+; C2 interconnects                            ; 756 / 119,108 ( < 1 % )   ;
+; C4 interconnects                            ; 762 / 56,300 ( 1 % )      ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )            ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )            ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )            ;
-; Direct links                                ; 92 / 289,320 ( < 1 % )    ;
+; Direct links                                ; 102 / 289,320 ( < 1 % )   ;
 ; Global clocks                               ; 1 / 16 ( 6 % )            ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )             ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )             ;
@@ -1835,12 +1834,12 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )             ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )            ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )            ;
-; Local interconnects                         ; 316 / 84,580 ( < 1 % )    ;
+; Local interconnects                         ; 274 / 84,580 ( < 1 % )    ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )            ;
-; R14 interconnects                           ; 763 / 12,676 ( 6 % )      ;
-; R14/C12 interconnect drivers                ; 890 / 20,720 ( 4 % )      ;
-; R3 interconnects                            ; 1,030 / 130,992 ( < 1 % ) ;
-; R6 interconnects                            ; 1,703 / 266,960 ( < 1 % ) ;
+; R14 interconnects                           ; 525 / 12,676 ( 4 % )      ;
+; R14/C12 interconnect drivers                ; 613 / 20,720 ( 3 % )      ;
+; R3 interconnects                            ; 1,086 / 130,992 ( < 1 % ) ;
+; R6 interconnects                            ; 1,740 / 266,960 ( < 1 % ) ;
 ; Spine clocks                                ; 2 / 360 ( < 1 % )         ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )        ;
 +---------------------------------------------+---------------------------+
@@ -2019,12 +2018,12 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+-------------------+
 ; Source Clock(s)                                                                                ; Destination Clock(s)                                                                           ; Delay Added in ns ;
 +------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+-------------------+
-; inst1|pll_main_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk                     ; inst1|pll_main_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk                     ; 457.8             ;
-; inst1|pll_main_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk,SCOMP:inst|IO_CYCLE ; inst1|pll_main_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk                     ; 339.0             ;
-; SCOMP:inst|IO_CYCLE                                                                            ; inst1|pll_main_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk                     ; 95.4              ;
-; SCOMP:inst|IO_CYCLE                                                                            ; inst1|pll_main_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk,SCOMP:inst|IO_CYCLE ; 69.8              ;
-; clk_div:inst5|clock_10Hz                                                                       ; SCOMP:inst|IO_CYCLE                                                                            ; 61.7              ;
-; inst1|pll_main_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk                     ; inst1|pll_main_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk,SCOMP:inst|IO_CYCLE ; 58.7              ;
+; inst1|pll_main_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk                     ; inst1|pll_main_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk                     ; 549.5             ;
+; inst1|pll_main_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk,SCOMP:inst|IO_CYCLE ; inst1|pll_main_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk                     ; 363.5             ;
+; SCOMP:inst|IO_CYCLE                                                                            ; inst1|pll_main_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk,SCOMP:inst|IO_CYCLE ; 64.2              ;
+; SCOMP:inst|IO_CYCLE                                                                            ; inst1|pll_main_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk                     ; 63.8              ;
+; clk_div:inst5|clock_10Hz                                                                       ; SCOMP:inst|IO_CYCLE                                                                            ; 58.1              ;
+; inst1|pll_main_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk                     ; inst1|pll_main_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk,SCOMP:inst|IO_CYCLE ; 56.8              ;
 +------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -2032,110 +2031,110 @@ This will disable optimization of problematic paths and expose them for further 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Estimated Delay Added for Hold Timing Details                                                                                                                                                                                             ;
-+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+-------------------+
-; Source Register                                                                                           ; Destination Register                                                                                      ; Delay Added in ns ;
-+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+-------------------+
-; SCOMP:inst|IO_CYCLE                                                                                       ; SCOMP:inst|IO_CYCLE                                                                                       ; 9.454             ;
-; SCOMP:inst|IR[7]                                                                                          ; SCOMP:inst|AC[5]                                                                                          ; 8.862             ;
-; SCOMP:inst|IR[5]                                                                                          ; SCOMP:inst|AC[5]                                                                                          ; 8.862             ;
-; SCOMP:inst|IR[4]                                                                                          ; SCOMP:inst|AC[5]                                                                                          ; 8.862             ;
-; SCOMP:inst|IR[6]                                                                                          ; SCOMP:inst|AC[7]                                                                                          ; 8.634             ;
-; SCOMP:inst|IR[8]                                                                                          ; SCOMP:inst|AC[7]                                                                                          ; 8.634             ;
-; SCOMP:inst|IR[1]                                                                                          ; SCOMP:inst|AC[7]                                                                                          ; 8.634             ;
-; SCOMP:inst|IR[9]                                                                                          ; SCOMP:inst|AC[7]                                                                                          ; 8.634             ;
-; SCOMP:inst|IR[2]                                                                                          ; SCOMP:inst|AC[7]                                                                                          ; 8.634             ;
-; SCOMP:inst|IR[3]                                                                                          ; SCOMP:inst|AC[7]                                                                                          ; 8.634             ;
-; SCOMP:inst|IR[0]                                                                                          ; SCOMP:inst|AC[7]                                                                                          ; 8.634             ;
-; SCOMP:inst|IR[10]                                                                                         ; SCOMP:inst|AC[7]                                                                                          ; 8.634             ;
-; DIG_IN:inst7|B_DI[0]                                                                                      ; SCOMP:inst|AC[0]                                                                                          ; 7.865             ;
-; DIG_IN:inst7|B_DI[2]                                                                                      ; SCOMP:inst|AC[2]                                                                                          ; 7.832             ;
-; DIG_IN:inst7|B_DI[1]                                                                                      ; SCOMP:inst|AC[1]                                                                                          ; 7.832             ;
-; DIG_IN:inst7|B_DI[4]                                                                                      ; SCOMP:inst|AC[4]                                                                                          ; 7.799             ;
-; DIG_IN:inst7|B_DI[7]                                                                                      ; SCOMP:inst|AC[7]                                                                                          ; 7.755             ;
-; DIG_IN:inst7|B_DI[5]                                                                                      ; SCOMP:inst|AC[5]                                                                                          ; 7.587             ;
-; TIMER:inst4|IO_COUNT[14]                                                                                  ; NeoPixelController:inst13|ram_write_buffer[14]                                                            ; 7.455             ;
-; TIMER:inst4|IO_COUNT[8]                                                                                   ; SCOMP:inst|AC[8]                                                                                          ; 7.439             ;
-; TIMER:inst4|IO_COUNT[7]                                                                                   ; SCOMP:inst|AC[7]                                                                                          ; 7.410             ;
-; TIMER:inst4|IO_COUNT[2]                                                                                   ; SCOMP:inst|AC[2]                                                                                          ; 7.405             ;
-; TIMER:inst4|IO_COUNT[4]                                                                                   ; SCOMP:inst|AC[4]                                                                                          ; 7.399             ;
-; DIG_IN:inst7|B_DI[3]                                                                                      ; NeoPixelController:inst13|buffer_24_grb[19]                                                               ; 7.373             ;
-; TIMER:inst4|IO_COUNT[13]                                                                                  ; NeoPixelController:inst13|ram_write_buffer[13]                                                            ; 7.296             ;
-; TIMER:inst4|IO_COUNT[3]                                                                                   ; SCOMP:inst|AC[3]                                                                                          ; 7.243             ;
-; TIMER:inst4|IO_COUNT[0]                                                                                   ; SCOMP:inst|AC[0]                                                                                          ; 7.215             ;
-; DIG_IN:inst7|B_DI[8]                                                                                      ; SCOMP:inst|AC[8]                                                                                          ; 7.196             ;
-; TIMER:inst4|IO_COUNT[9]                                                                                   ; NeoPixelController:inst13|ram_write_buffer[22]                                                            ; 7.194             ;
-; TIMER:inst4|IO_COUNT[6]                                                                                   ; SCOMP:inst|AC[6]                                                                                          ; 7.193             ;
-; DIG_IN:inst7|B_DI[6]                                                                                      ; NeoPixelController:inst13|ram_write_addr[6]                                                               ; 7.192             ;
-; TIMER:inst4|IO_COUNT[1]                                                                                   ; NeoPixelController:inst13|buffer_24_grb[1]                                                                ; 7.187             ;
-; TIMER:inst4|IO_COUNT[15]                                                                                  ; NeoPixelController:inst13|ram_write_buffer[15]                                                            ; 7.150             ;
-; TIMER:inst4|IO_COUNT[11]                                                                                  ; SCOMP:inst|AC[11]                                                                                         ; 7.101             ;
-; TIMER:inst4|IO_COUNT[12]                                                                                  ; NeoPixelController:inst13|buffer_24_grb[12]                                                               ; 7.090             ;
-; TIMER:inst4|IO_COUNT[5]                                                                                   ; SCOMP:inst|AC[5]                                                                                          ; 7.059             ;
-; DIG_IN:inst7|B_DI[9]                                                                                      ; NeoPixelController:inst13|ram_write_buffer[22]                                                            ; 7.008             ;
-; TIMER:inst4|IO_COUNT[10]                                                                                  ; NeoPixelController:inst13|all_one_color_buffer[23]                                                        ; 6.861             ;
-; SCOMP:inst|IO_WRITE_int                                                                                   ; NeoPixelController:inst13|ram_write_buffer[15]                                                            ; 6.441             ;
-; NeoPixelController:inst13|reset_count[1]                                                                  ; NeoPixelController:inst13|reset_count[1]                                                                  ; 5.484             ;
-; NeoPixelController:inst13|reset_count[2]                                                                  ; NeoPixelController:inst13|reset_count[1]                                                                  ; 5.238             ;
-; SCOMP:inst|AC[7]                                                                                          ; SCOMP:inst|AC[7]                                                                                          ; 4.858             ;
-; SCOMP:inst|state.ex_in2                                                                                   ; SCOMP:inst|IO_CYCLE                                                                                       ; 4.727             ;
-; SCOMP:inst|state.ex_out2                                                                                  ; SCOMP:inst|IO_CYCLE                                                                                       ; 4.727             ;
-; SCOMP:inst|AC[8]                                                                                          ; NeoPixelController:inst13|ram_write_buffer[21]                                                            ; 4.601             ;
-; SCOMP:inst|AC[2]                                                                                          ; NeoPixelController:inst13|buffer_24_grb[18]                                                               ; 4.592             ;
-; SCOMP:inst|AC[4]                                                                                          ; NeoPixelController:inst13|all_one_color_buffer[7]                                                         ; 4.582             ;
-; SCOMP:inst|AC[0]                                                                                          ; NeoPixelController:inst13|buffer_24_grb[16]                                                               ; 4.579             ;
-; SCOMP:inst|AC[9]                                                                                          ; NeoPixelController:inst13|ram_write_buffer[22]                                                            ; 4.549             ;
-; SCOMP:inst|AC[3]                                                                                          ; NeoPixelController:inst13|buffer_24_grb[19]                                                               ; 4.548             ;
-; SCOMP:inst|AC[5]                                                                                          ; NeoPixelController:inst13|ram_write_addr[5]                                                               ; 4.469             ;
-; SCOMP:inst|AC[6]                                                                                          ; NeoPixelController:inst13|ram_write_addr[6]                                                               ; 4.447             ;
-; SCOMP:inst|AC[12]                                                                                         ; NeoPixelController:inst13|buffer_24_grb[12]                                                               ; 4.428             ;
-; SCOMP:inst|AC[1]                                                                                          ; NeoPixelController:inst13|buffer_24_grb[1]                                                                ; 4.371             ;
-; SCOMP:inst|AC[14]                                                                                         ; NeoPixelController:inst13|all_one_color_buffer[14]                                                        ; 4.353             ;
-; SCOMP:inst|AC[13]                                                                                         ; NeoPixelController:inst13|buffer_24_grb[13]                                                               ; 4.346             ;
-; SCOMP:inst|AC[15]                                                                                         ; NeoPixelController:inst13|all_one_color_buffer[15]                                                        ; 4.275             ;
-; SCOMP:inst|AC[10]                                                                                         ; NeoPixelController:inst13|all_one_color_buffer[23]                                                        ; 4.204             ;
-; SCOMP:inst|AC[11]                                                                                         ; NeoPixelController:inst13|buffer_24_grb[11]                                                               ; 4.126             ;
-; TIMER:inst4|COUNT[14]                                                                                     ; TIMER:inst4|IO_COUNT[14]                                                                                  ; 3.977             ;
-; TIMER:inst4|COUNT[7]                                                                                      ; TIMER:inst4|IO_COUNT[7]                                                                                   ; 3.924             ;
-; TIMER:inst4|COUNT[11]                                                                                     ; TIMER:inst4|IO_COUNT[11]                                                                                  ; 3.913             ;
-; TIMER:inst4|COUNT[4]                                                                                      ; TIMER:inst4|IO_COUNT[4]                                                                                   ; 3.911             ;
-; TIMER:inst4|COUNT[13]                                                                                     ; TIMER:inst4|IO_COUNT[13]                                                                                  ; 3.902             ;
-; TIMER:inst4|COUNT[9]                                                                                      ; TIMER:inst4|IO_COUNT[9]                                                                                   ; 3.896             ;
-; TIMER:inst4|COUNT[3]                                                                                      ; TIMER:inst4|IO_COUNT[3]                                                                                   ; 3.866             ;
-; TIMER:inst4|COUNT[10]                                                                                     ; TIMER:inst4|IO_COUNT[10]                                                                                  ; 3.858             ;
-; TIMER:inst4|COUNT[12]                                                                                     ; TIMER:inst4|IO_COUNT[12]                                                                                  ; 3.852             ;
-; TIMER:inst4|COUNT[0]                                                                                      ; TIMER:inst4|IO_COUNT[0]                                                                                   ; 3.833             ;
-; TIMER:inst4|COUNT[5]                                                                                      ; TIMER:inst4|IO_COUNT[5]                                                                                   ; 3.812             ;
-; TIMER:inst4|COUNT[15]                                                                                     ; TIMER:inst4|IO_COUNT[15]                                                                                  ; 3.811             ;
-; TIMER:inst4|COUNT[2]                                                                                      ; TIMER:inst4|IO_COUNT[2]                                                                                   ; 3.801             ;
-; TIMER:inst4|COUNT[8]                                                                                      ; TIMER:inst4|IO_COUNT[8]                                                                                   ; 3.800             ;
-; TIMER:inst4|COUNT[6]                                                                                      ; TIMER:inst4|IO_COUNT[6]                                                                                   ; 3.797             ;
-; TIMER:inst4|COUNT[1]                                                                                      ; TIMER:inst4|IO_COUNT[1]                                                                                   ; 3.786             ;
-; NeoPixelController:inst13|reset_count[5]                                                                  ; NeoPixelController:inst13|reset_count[1]                                                                  ; 3.372             ;
-; NeoPixelController:inst13|wstate.allOneColor                                                              ; NeoPixelController:inst13|ram_write_buffer[1]                                                             ; 3.132             ;
-; NeoPixelController:inst13|wstate.idle                                                                     ; NeoPixelController:inst13|ram_write_buffer[1]                                                             ; 3.132             ;
-; NeoPixelController:inst13|reset_count[6]                                                                  ; NeoPixelController:inst13|reset_count[1]                                                                  ; 3.123             ;
-; NeoPixelController:inst13|wstate.storing                                                                  ; NeoPixelController:inst13|buffer_24_grb[17]                                                               ; 3.107             ;
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a5~porta_datain_reg0  ; SCOMP:inst|AC[5]                                                                                          ; 2.871             ;
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a5~porta_we_reg       ; SCOMP:inst|AC[5]                                                                                          ; 2.871             ;
-; SCOMP:inst|state.ex_loadi                                                                                 ; SCOMP:inst|AC[5]                                                                                          ; 2.871             ;
-; SCOMP:inst|state.ex_xor                                                                                   ; SCOMP:inst|AC[5]                                                                                          ; 2.871             ;
-; SCOMP:inst|state.ex_or                                                                                    ; SCOMP:inst|AC[5]                                                                                          ; 2.871             ;
-; SCOMP:inst|state.ex_load                                                                                  ; SCOMP:inst|AC[5]                                                                                          ; 2.871             ;
-; SCOMP:inst|state.ex_and                                                                                   ; SCOMP:inst|AC[5]                                                                                          ; 2.871             ;
-; SCOMP:inst|state.ex_shift                                                                                 ; SCOMP:inst|AC[12]                                                                                         ; 2.370             ;
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a11~porta_datain_reg0 ; SCOMP:inst|AC[11]                                                                                         ; 2.167             ;
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a11~porta_we_reg      ; SCOMP:inst|AC[11]                                                                                         ; 2.167             ;
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a14~porta_datain_reg0 ; SCOMP:inst|AC[14]                                                                                         ; 2.105             ;
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a14~porta_we_reg      ; SCOMP:inst|AC[14]                                                                                         ; 2.105             ;
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a15~porta_datain_reg0 ; SCOMP:inst|AC[15]                                                                                         ; 2.058             ;
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a15~porta_we_reg      ; SCOMP:inst|AC[15]                                                                                         ; 2.058             ;
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a12~porta_datain_reg0 ; SCOMP:inst|AC[12]                                                                                         ; 2.032             ;
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a12~porta_we_reg      ; SCOMP:inst|AC[12]                                                                                         ; 2.032             ;
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a13~porta_datain_reg0 ; SCOMP:inst|AC[13]                                                                                         ; 1.937             ;
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a13~porta_we_reg      ; SCOMP:inst|AC[13]                                                                                         ; 1.937             ;
-; SCOMP:inst|PC[8]                                                                                          ; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a4~porta_address_reg0 ; 1.861             ;
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a10~porta_datain_reg0 ; SCOMP:inst|AC[10]                                                                                         ; 1.817             ;
-+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+-------------------+
++----------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+-------------------+
+; Source Register                                                                                          ; Destination Register                                                                                       ; Delay Added in ns ;
++----------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+-------------------+
+; SCOMP:inst|IO_CYCLE                                                                                      ; NeoPixelController:inst13|wstate.idle                                                                      ; 9.079             ;
+; SCOMP:inst|IR[7]                                                                                         ; SCOMP:inst|AC[2]                                                                                           ; 8.742             ;
+; SCOMP:inst|IR[5]                                                                                         ; SCOMP:inst|AC[2]                                                                                           ; 8.742             ;
+; SCOMP:inst|IR[10]                                                                                        ; SCOMP:inst|AC[8]                                                                                           ; 8.591             ;
+; SCOMP:inst|IR[9]                                                                                         ; SCOMP:inst|AC[8]                                                                                           ; 8.591             ;
+; SCOMP:inst|IR[8]                                                                                         ; SCOMP:inst|AC[8]                                                                                           ; 8.591             ;
+; SCOMP:inst|IR[4]                                                                                         ; SCOMP:inst|AC[8]                                                                                           ; 8.591             ;
+; SCOMP:inst|IR[1]                                                                                         ; SCOMP:inst|AC[8]                                                                                           ; 8.591             ;
+; SCOMP:inst|IR[2]                                                                                         ; SCOMP:inst|AC[8]                                                                                           ; 8.591             ;
+; SCOMP:inst|IR[6]                                                                                         ; SCOMP:inst|AC[8]                                                                                           ; 8.591             ;
+; SCOMP:inst|IR[3]                                                                                         ; SCOMP:inst|AC[8]                                                                                           ; 8.591             ;
+; SCOMP:inst|IR[0]                                                                                         ; SCOMP:inst|AC[8]                                                                                           ; 8.591             ;
+; DIG_IN:inst7|B_DI[4]                                                                                     ; SCOMP:inst|AC[4]                                                                                           ; 8.178             ;
+; DIG_IN:inst7|B_DI[2]                                                                                     ; SCOMP:inst|AC[2]                                                                                           ; 7.852             ;
+; DIG_IN:inst7|B_DI[1]                                                                                     ; SCOMP:inst|AC[1]                                                                                           ; 7.852             ;
+; DIG_IN:inst7|B_DI[3]                                                                                     ; SCOMP:inst|AC[3]                                                                                           ; 7.825             ;
+; TIMER:inst4|IO_COUNT[11]                                                                                 ; NeoPixelController:inst13|all_one_color_buffer[11]                                                         ; 7.805             ;
+; DIG_IN:inst7|B_DI[7]                                                                                     ; SCOMP:inst|AC[7]                                                                                           ; 7.712             ;
+; DIG_IN:inst7|B_DI[9]                                                                                     ; SCOMP:inst|AC[9]                                                                                           ; 7.681             ;
+; TIMER:inst4|IO_COUNT[9]                                                                                  ; SCOMP:inst|AC[9]                                                                                           ; 7.681             ;
+; SCOMP:inst|IO_WRITE_int                                                                                  ; SCOMP:inst|AC[9]                                                                                           ; 7.681             ;
+; SCOMP:inst|AC[9]                                                                                         ; SCOMP:inst|AC[9]                                                                                           ; 7.681             ;
+; DIG_IN:inst7|B_DI[0]                                                                                     ; SCOMP:inst|AC[0]                                                                                           ; 7.602             ;
+; TIMER:inst4|IO_COUNT[2]                                                                                  ; SCOMP:inst|AC[2]                                                                                           ; 7.438             ;
+; TIMER:inst4|IO_COUNT[6]                                                                                  ; SCOMP:inst|AC[6]                                                                                           ; 7.402             ;
+; TIMER:inst4|IO_COUNT[8]                                                                                  ; SCOMP:inst|AC[8]                                                                                           ; 7.401             ;
+; TIMER:inst4|IO_COUNT[1]                                                                                  ; NeoPixelController:inst13|buffer_24_grb[17]                                                                ; 7.379             ;
+; TIMER:inst4|IO_COUNT[0]                                                                                  ; NeoPixelController:inst13|ram_write_buffer[3]                                                              ; 7.349             ;
+; TIMER:inst4|IO_COUNT[3]                                                                                  ; SCOMP:inst|AC[3]                                                                                           ; 7.325             ;
+; TIMER:inst4|IO_COUNT[7]                                                                                  ; SCOMP:inst|AC[7]                                                                                           ; 7.262             ;
+; TIMER:inst4|IO_COUNT[5]                                                                                  ; NeoPixelController:inst13|all_one_color_buffer[18]                                                         ; 7.260             ;
+; TIMER:inst4|IO_COUNT[4]                                                                                  ; NeoPixelController:inst13|ram_write_buffer[7]                                                              ; 7.248             ;
+; DIG_IN:inst7|B_DI[5]                                                                                     ; NeoPixelController:inst13|all_one_color_buffer[18]                                                         ; 7.207             ;
+; DIG_IN:inst7|B_DI[6]                                                                                     ; SCOMP:inst|AC[6]                                                                                           ; 7.198             ;
+; TIMER:inst4|IO_COUNT[15]                                                                                 ; NeoPixelController:inst13|all_one_color_buffer[15]                                                         ; 7.062             ;
+; DIG_IN:inst7|B_DI[8]                                                                                     ; SCOMP:inst|AC[8]                                                                                           ; 7.053             ;
+; TIMER:inst4|IO_COUNT[10]                                                                                 ; NeoPixelController:inst13|all_one_color_buffer[23]                                                         ; 6.948             ;
+; TIMER:inst4|IO_COUNT[12]                                                                                 ; SCOMP:inst|AC[12]                                                                                          ; 6.890             ;
+; TIMER:inst4|IO_COUNT[13]                                                                                 ; NeoPixelController:inst13|all_one_color_buffer[13]                                                         ; 6.852             ;
+; TIMER:inst4|IO_COUNT[14]                                                                                 ; NeoPixelController:inst13|all_one_color_buffer[14]                                                         ; 6.802             ;
+; NeoPixelController:inst13|wstate.allOneColor                                                             ; NeoPixelController:inst13|ram_write_addr[7]                                                                ; 6.037             ;
+; SCOMP:inst|state.ex_out2                                                                                 ; SCOMP:inst|IO_CYCLE                                                                                        ; 5.716             ;
+; SCOMP:inst|state.ex_in2                                                                                  ; SCOMP:inst|IO_CYCLE                                                                                        ; 5.716             ;
+; SCOMP:inst|state.decode                                                                                  ; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a10~porta_address_reg0 ; 5.649             ;
+; SCOMP:inst|AC[11]                                                                                        ; NeoPixelController:inst13|all_one_color_buffer[11]                                                         ; 4.990             ;
+; SCOMP:inst|AC[1]                                                                                         ; SCOMP:inst|AC[1]                                                                                           ; 4.834             ;
+; SCOMP:inst|AC[10]                                                                                        ; NeoPixelController:inst13|all_one_color_buffer[23]                                                         ; 4.720             ;
+; SCOMP:inst|AC[15]                                                                                        ; NeoPixelController:inst13|all_one_color_buffer[15]                                                         ; 4.705             ;
+; SCOMP:inst|AC[6]                                                                                         ; SCOMP:inst|AC[6]                                                                                           ; 4.638             ;
+; SCOMP:inst|state.ex_istore2                                                                              ; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a10~porta_address_reg0 ; 4.637             ;
+; SCOMP:inst|state.ex_iload                                                                                ; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a10~porta_address_reg0 ; 4.637             ;
+; SCOMP:inst|AC[0]                                                                                         ; NeoPixelController:inst13|ram_write_buffer[3]                                                              ; 4.619             ;
+; SCOMP:inst|AC[2]                                                                                         ; NeoPixelController:inst13|buffer_24_grb[18]                                                                ; 4.606             ;
+; SCOMP:inst|AC[3]                                                                                         ; NeoPixelController:inst13|buffer_24_grb[19]                                                                ; 4.577             ;
+; SCOMP:inst|AC[8]                                                                                         ; SCOMP:inst|AC[8]                                                                                           ; 4.560             ;
+; SCOMP:inst|PC[8]                                                                                         ; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a10~porta_address_reg0 ; 4.542             ;
+; SCOMP:inst|AC[7]                                                                                         ; NeoPixelController:inst13|buffer_24_grb[23]                                                                ; 4.539             ;
+; SCOMP:inst|PC[7]                                                                                         ; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a10~porta_address_reg0 ; 4.530             ;
+; SCOMP:inst|AC[4]                                                                                         ; NeoPixelController:inst13|ram_write_buffer[7]                                                              ; 4.530             ;
+; SCOMP:inst|AC[5]                                                                                         ; NeoPixelController:inst13|all_one_color_buffer[18]                                                         ; 4.522             ;
+; SCOMP:inst|AC[14]                                                                                        ; NeoPixelController:inst13|all_one_color_buffer[14]                                                         ; 4.451             ;
+; SCOMP:inst|AC[13]                                                                                        ; NeoPixelController:inst13|all_one_color_buffer[13]                                                         ; 4.430             ;
+; SCOMP:inst|AC[12]                                                                                        ; SCOMP:inst|AC[12]                                                                                          ; 4.411             ;
+; TIMER:inst4|COUNT[9]                                                                                     ; TIMER:inst4|IO_COUNT[9]                                                                                    ; 3.980             ;
+; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a8~porta_datain_reg0 ; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a10~porta_address_reg0 ; 3.915             ;
+; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a8~porta_we_reg      ; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a10~porta_address_reg0 ; 3.915             ;
+; SCOMP:inst|state.fetch                                                                                   ; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a10~porta_address_reg0 ; 3.915             ;
+; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a7~porta_datain_reg0 ; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a10~porta_address_reg0 ; 3.910             ;
+; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a7~porta_we_reg      ; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_tp24:auto_generated|ram_block1a10~porta_address_reg0 ; 3.910             ;
+; TIMER:inst4|COUNT[10]                                                                                    ; TIMER:inst4|IO_COUNT[10]                                                                                   ; 3.856             ;
+; TIMER:inst4|COUNT[13]                                                                                    ; TIMER:inst4|IO_COUNT[13]                                                                                   ; 3.819             ;
+; TIMER:inst4|COUNT[14]                                                                                    ; TIMER:inst4|IO_COUNT[14]                                                                                   ; 3.802             ;
+; TIMER:inst4|COUNT[7]                                                                                     ; TIMER:inst4|IO_COUNT[7]                                                                                    ; 3.698             ;
+; TIMER:inst4|COUNT[3]                                                                                     ; TIMER:inst4|IO_COUNT[3]                                                                                    ; 3.683             ;
+; TIMER:inst4|COUNT[12]                                                                                    ; TIMER:inst4|IO_COUNT[12]                                                                                   ; 3.653             ;
+; TIMER:inst4|COUNT[4]                                                                                     ; TIMER:inst4|IO_COUNT[4]                                                                                    ; 3.644             ;
+; TIMER:inst4|COUNT[2]                                                                                     ; TIMER:inst4|IO_COUNT[2]                                                                                    ; 3.598             ;
+; TIMER:inst4|COUNT[5]                                                                                     ; TIMER:inst4|IO_COUNT[5]                                                                                    ; 3.596             ;
+; TIMER:inst4|COUNT[6]                                                                                     ; TIMER:inst4|IO_COUNT[6]                                                                                    ; 3.595             ;
+; TIMER:inst4|COUNT[1]                                                                                     ; TIMER:inst4|IO_COUNT[1]                                                                                    ; 3.593             ;
+; TIMER:inst4|COUNT[8]                                                                                     ; TIMER:inst4|IO_COUNT[8]                                                                                    ; 3.527             ;
+; TIMER:inst4|COUNT[15]                                                                                    ; TIMER:inst4|IO_COUNT[15]                                                                                   ; 3.500             ;
+; TIMER:inst4|COUNT[0]                                                                                     ; TIMER:inst4|IO_COUNT[0]                                                                                    ; 3.460             ;
+; NeoPixelController:inst13|reset_count[2]                                                                 ; NeoPixelController:inst13|enc_count[0]                                                                     ; 3.400             ;
+; NeoPixelController:inst13|wstate.idle                                                                    ; NeoPixelController:inst13|ram_write_buffer[7]                                                              ; 3.354             ;
+; NeoPixelController:inst13|reset_count[0]                                                                 ; NeoPixelController:inst13|enc_count[0]                                                                     ; 3.301             ;
+; NeoPixelController:inst13|reset_count[8]                                                                 ; NeoPixelController:inst13|reset_count[2]                                                                   ; 3.201             ;
+; NeoPixelController:inst13|wstate.storing                                                                 ; NeoPixelController:inst13|ram_write_addr[7]                                                                ; 3.122             ;
+; TIMER:inst4|COUNT[11]                                                                                    ; TIMER:inst4|IO_COUNT[11]                                                                                   ; 3.075             ;
+; NeoPixelController:inst13|reset_count[4]                                                                 ; NeoPixelController:inst13|reset_count[2]                                                                   ; 3.018             ;
+; NeoPixelController:inst13|pixel_count[4]                                                                 ; NeoPixelController:inst13|sda                                                                              ; 2.861             ;
+; SCOMP:inst|state.ex_in                                                                                   ; SCOMP:inst|IO_CYCLE                                                                                        ; 2.858             ;
+; SCOMP:inst|state.init                                                                                    ; SCOMP:inst|IO_CYCLE                                                                                        ; 2.858             ;
+; SCOMP:inst|state.ex_out                                                                                  ; SCOMP:inst|IO_CYCLE                                                                                        ; 2.858             ;
+; NeoPixelController:inst13|pixel_count[5]                                                                 ; NeoPixelController:inst13|sda                                                                              ; 2.850             ;
+; NeoPixelController:inst13|wstate.GT                                                                      ; NeoPixelController:inst13|buffer_24_grb[0]                                                                 ; 2.586             ;
+; NeoPixelController:inst13|pixel_count[6]                                                                 ; NeoPixelController:inst13|sda                                                                              ; 2.462             ;
+; SCOMP:inst|state.ex_loadi                                                                                ; SCOMP:inst|AC[15]                                                                                          ; 2.293             ;
+; SCOMP:inst|state.ex_xor                                                                                  ; SCOMP:inst|AC[15]                                                                                          ; 2.293             ;
+; SCOMP:inst|state.ex_or                                                                                   ; SCOMP:inst|AC[15]                                                                                          ; 2.293             ;
++----------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+-------------------+
 Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
 
 
@@ -2152,7 +2151,7 @@ Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Ass
 Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Info (184020): Starting Fitter periphery placement operations
 Info (11178): Promoted 1 clock (1 global)
-    Info (11162): PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 with 377 fanout uses global clock CLKCTRL_G0
+    Info (11162): PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 with 380 fanout uses global clock CLKCTRL_G0
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Warning (335093): The Timing Analyzer is analyzing 16 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'SCOMP.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -2170,19 +2169,20 @@ Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "LEDR[9]" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:18
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:22
 Info (170189): Fitter placement preparation operations beginning
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:04
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:05
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 15% of the available device resources in the region that extends from location X22_Y23 to location X32_Y34
+    Info (170196): Router estimated peak interconnect usage is 13% of the available device resources in the region that extends from location X33_Y23 to location X44_Y34
+Info (188005): Design requires adding a large amount of routing delay for some signals to meet hold time requirements, and there is an excessive demand for the available routing resources. The Fitter is reducing the routing delays of some signals to help the routing algorithm converge, but doing so may cause hold time failures. For more information, refer to the "Estimated Delay Added for Hold Timing" section in the Fitter report.
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:01:21
-Info (11888): Total time spent on timing analysis during the Fitter is 2.21 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:01:36
+Info (11888): Total time spent on timing analysis during the Fitter is 2.50 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2191,10 +2191,10 @@ Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:11
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file /Desktop/ECE2031Labs/NeoPixel2031Project/output_files/SCOMP.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 6267 megabytes
-    Info: Processing ended: Sun Apr 17 14:54:41 2022
-    Info: Elapsed time: 00:02:37
-    Info: Total CPU time (on all processors): 00:02:24
+    Info: Peak virtual memory: 6171 megabytes
+    Info: Processing ended: Mon Apr 18 12:57:14 2022
+    Info: Elapsed time: 00:03:12
+    Info: Total CPU time (on all processors): 00:02:44
 
 
 +----------------------------+
