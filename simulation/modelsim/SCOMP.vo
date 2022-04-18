@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition"
 
-// DATE "04/16/2022 14:18:45"
+// DATE "04/17/2022 14:55:51"
 
 // 
 // Device: Altera 5CSXFC6D6F31C6 Package FBGA896
@@ -900,21 +900,21 @@ wire \inst13|wstate.idle~q ;
 wire \inst13|Selector26~0_combout ;
 wire \inst13|process_1~1_combout ;
 wire \inst13|Selector26~1_combout ;
-wire \inst13|wstate.setAll~q ;
+wire \inst13|wstate.allOneColor~q ;
 wire \inst13|Selector24~0_combout ;
 wire \inst13|Selector24~1_combout ;
 wire \inst13|ram_we~q ;
 wire \inst13|ram_write_buffer[13]~0_combout ;
 wire \IO_DATA[1]~1_combout ;
-wire \inst13|data_set_all[4]~feeder_combout ;
+wire \inst13|all_one_color_buffer[4]~feeder_combout ;
 wire \inst3|Equal11~0_combout ;
-wire \inst13|data_set_all[23]~0_combout ;
-wire \inst13|data_set_all[23]~1_combout ;
+wire \inst13|all_one_color_buffer[23]~0_combout ;
+wire \inst13|all_one_color_buffer[23]~1_combout ;
 wire \IO_DATA[4]~4_combout ;
-wire \inst13|TempColorHolder[4]~feeder_combout ;
+wire \inst13|buffer_24_grb[4]~feeder_combout ;
 wire \inst13|Selector27~0_combout ;
 wire \inst13|wstate.storing~q ;
-wire \inst13|TempColorHolder[12]~1_combout ;
+wire \inst13|buffer_24_grb[12]~1_combout ;
 wire \inst13|Selector19~0_combout ;
 wire \inst13|ram_write_buffer[13]~1_combout ;
 wire \inst13|ram_write_buffer[13]~2_combout ;
@@ -926,8 +926,8 @@ wire \inst13|ram_write_addr[6]~3_combout ;
 wire \inst13|ram_write_addr[6]~5_combout ;
 wire \inst13|ram_write_addr[6]~4_combout ;
 wire \inst13|ram_write_addr[6]~6_combout ;
-wire \inst13|IncrementDirection~0_combout ;
-wire \inst13|IncrementDirection~q ;
+wire \inst13|auto_inc_dir~0_combout ;
+wire \inst13|auto_inc_dir~q ;
 wire \inst13|Add5~2 ;
 wire \inst13|Add5~5_sumout ;
 wire \inst13|Add5~6 ;
@@ -971,11 +971,11 @@ wire \inst13|Add4~22 ;
 wire \inst13|Add4~25_sumout ;
 wire \inst13|Add4~26 ;
 wire \inst13|Add4~29_sumout ;
-wire \inst13|TempColorHolder[5]~feeder_combout ;
-wire \inst13|data_set_all[5]~feeder_combout ;
+wire \inst13|buffer_24_grb[5]~feeder_combout ;
+wire \inst13|all_one_color_buffer[5]~feeder_combout ;
 wire \inst13|Selector18~0_combout ;
-wire \inst13|TempColorHolder[6]~feeder_combout ;
-wire \inst13|data_set_all[6]~feeder_combout ;
+wire \inst13|buffer_24_grb[6]~feeder_combout ;
+wire \inst13|all_one_color_buffer[6]~feeder_combout ;
 wire \inst13|Selector17~0_combout ;
 wire \inst13|Selector16~0_combout ;
 wire \IO_DATA[8]~8_combout ;
@@ -983,7 +983,7 @@ wire \inst13|ram_write_buffer[16]~3_combout ;
 wire \IO_DATA[9]~9_combout ;
 wire \IO_DATA[10]~10_combout ;
 wire \IO_DATA[11]~11_combout ;
-wire \inst13|data_set_all[11]~feeder_combout ;
+wire \inst13|all_one_color_buffer[11]~feeder_combout ;
 wire \inst13|Selector12~0_combout ;
 wire \IO_DATA[12]~12_combout ;
 wire \inst13|Selector11~0_combout ;
@@ -992,24 +992,24 @@ wire \inst13|Selector10~0_combout ;
 wire \IO_DATA[14]~14_combout ;
 wire \inst13|Selector9~0_combout ;
 wire \IO_DATA[15]~15_combout ;
-wire \inst13|TempColorHolder[15]~feeder_combout ;
+wire \inst13|buffer_24_grb[15]~feeder_combout ;
 wire \inst13|Selector8~0_combout ;
-wire \inst13|TempColorHolder[16]~feeder_combout ;
-wire \inst13|TempColorHolder[17]~0_combout ;
+wire \inst13|buffer_24_grb[16]~feeder_combout ;
+wire \inst13|buffer_24_grb[17]~0_combout ;
 wire \inst13|ram_write_buffer[16]~feeder_combout ;
-wire \inst13|TempColorHolder[18]~feeder_combout ;
-wire \inst13|data_set_all[18]~feeder_combout ;
+wire \inst13|buffer_24_grb[18]~feeder_combout ;
+wire \inst13|all_one_color_buffer[18]~feeder_combout ;
 wire \inst13|Selector5~0_combout ;
-wire \inst13|data_set_all[19]~feeder_combout ;
-wire \inst13|TempColorHolder[19]~feeder_combout ;
+wire \inst13|all_one_color_buffer[19]~feeder_combout ;
+wire \inst13|buffer_24_grb[19]~feeder_combout ;
 wire \inst13|Selector4~0_combout ;
-wire \inst13|TempColorHolder[20]~feeder_combout ;
+wire \inst13|buffer_24_grb[20]~feeder_combout ;
 wire \inst13|Selector3~0_combout ;
-wire \inst13|TempColorHolder[21]~feeder_combout ;
+wire \inst13|buffer_24_grb[21]~feeder_combout ;
 wire \inst13|Selector2~0_combout ;
 wire \inst13|Selector1~0_combout ;
-wire \inst13|TempColorHolder[23]~feeder_combout ;
-wire \inst13|data_set_all[23]~feeder_combout ;
+wire \inst13|buffer_24_grb[23]~feeder_combout ;
+wire \inst13|all_one_color_buffer[23]~feeder_combout ;
 wire \inst13|Selector0~0_combout ;
 wire \inst13|pixel_buffer[23]~feeder_combout ;
 wire \inst13|pixel_buffer[22]~feeder_combout ;
@@ -1031,11 +1031,11 @@ wire \inst13|pixel_buffer[7]~feeder_combout ;
 wire \inst13|pixel_buffer[6]~feeder_combout ;
 wire \inst13|pixel_buffer[5]~feeder_combout ;
 wire \inst13|pixel_buffer[4]~feeder_combout ;
-wire \inst13|TempColorHolder[0]~feeder_combout ;
-wire \inst13|TempColorHolder[1]~feeder_combout ;
-wire \inst13|TempColorHolder[2]~feeder_combout ;
-wire \inst13|TempColorHolder[3]~feeder_combout ;
-wire \inst13|data_set_all[3]~feeder_combout ;
+wire \inst13|buffer_24_grb[0]~feeder_combout ;
+wire \inst13|buffer_24_grb[1]~feeder_combout ;
+wire \inst13|buffer_24_grb[2]~feeder_combout ;
+wire \inst13|buffer_24_grb[3]~feeder_combout ;
+wire \inst13|all_one_color_buffer[3]~feeder_combout ;
 wire \inst13|Selector20~0_combout ;
 wire \inst13|pixel_buffer[3]~feeder_combout ;
 wire \inst13|pixel_buffer[2]~feeder_combout ;
@@ -1125,8 +1125,8 @@ wire [15:0] \inst|AC ;
 wire [0:0] \inst1|pll_main_inst|altera_pll_i|fboutclk_wire ;
 wire [15:0] \inst7|B_DI ;
 wire [15:0] \inst4|COUNT ;
-wire [23:0] \inst13|data_set_all ;
-wire [23:0] \inst13|TempColorHolder ;
+wire [23:0] \inst13|all_one_color_buffer ;
+wire [23:0] \inst13|buffer_24_grb ;
 wire [15:0] \inst4|IO_COUNT ;
 wire [0:0] \inst1|pll_main_inst|altera_pll_i|locked_wire ;
 wire [0:0] \inst1|pll_main_inst|altera_pll_i|outclk_wire ;
@@ -11983,7 +11983,7 @@ defparam \inst|altsyncram_component|auto_generated|ram_block1a3 .mem_init4 = "00
 defparam \inst|altsyncram_component|auto_generated|ram_block1a3 .mem_init3 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
 defparam \inst|altsyncram_component|auto_generated|ram_block1a3 .mem_init2 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
 defparam \inst|altsyncram_component|auto_generated|ram_block1a3 .mem_init1 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
-defparam \inst|altsyncram_component|auto_generated|ram_block1a3 .mem_init0 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000016059B6059A1086C1";
+defparam \inst|altsyncram_component|auto_generated|ram_block1a3 .mem_init0 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002DFB02C0";
 // synopsys translate_on
 
 // Location: LABCELL_X27_Y28_N6
@@ -16631,7 +16631,7 @@ defparam \inst|altsyncram_component|auto_generated|ram_block1a2 .mem_init4 = "00
 defparam \inst|altsyncram_component|auto_generated|ram_block1a2 .mem_init3 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
 defparam \inst|altsyncram_component|auto_generated|ram_block1a2 .mem_init2 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
 defparam \inst|altsyncram_component|auto_generated|ram_block1a2 .mem_init1 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
-defparam \inst|altsyncram_component|auto_generated|ram_block1a2 .mem_init0 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000700207002000020";
+defparam \inst|altsyncram_component|auto_generated|ram_block1a2 .mem_init0 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040F00020";
 // synopsys translate_on
 
 // Location: FF_X31_Y26_N56
@@ -17252,7 +17252,7 @@ defparam \inst|altsyncram_component|auto_generated|ram_block1a0 .mem_init4 = "00
 defparam \inst|altsyncram_component|auto_generated|ram_block1a0 .mem_init3 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
 defparam \inst|altsyncram_component|auto_generated|ram_block1a0 .mem_init2 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
 defparam \inst|altsyncram_component|auto_generated|ram_block1a0 .mem_init1 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
-defparam \inst|altsyncram_component|auto_generated|ram_block1a0 .mem_init0 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000016F5FF6F5FFEF7ADE";
+defparam \inst|altsyncram_component|auto_generated|ram_block1a0 .mem_init0 = "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002AFFB0ADF";
 // synopsys translate_on
 
 // Location: LABCELL_X31_Y28_N36
@@ -20156,7 +20156,7 @@ defparam \inst|altsyncram_component|auto_generated|ram_block1a1 .mem_init4 = "00
 defparam \inst|altsyncram_component|auto_generated|ram_block1a1 .mem_init3 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
 defparam \inst|altsyncram_component|auto_generated|ram_block1a1 .mem_init2 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
 defparam \inst|altsyncram_component|auto_generated|ram_block1a1 .mem_init1 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
-defparam \inst|altsyncram_component|auto_generated|ram_block1a1 .mem_init0 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001004210042108401";
+defparam \inst|altsyncram_component|auto_generated|ram_block1a1 .mem_init0 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100400";
 // synopsys translate_on
 
 // Location: FF_X29_Y26_N35
@@ -20326,10 +20326,10 @@ defparam \inst13|Selector25~0 .shared_arith = "off";
 // Location: LABCELL_X31_Y23_N15
 cyclonev_lcell_comb \inst13|Selector25~1 (
 // Equation(s):
-// \inst13|Selector25~1_combout  = ( \inst13|wstate.idle~q  & ( \inst13|ram_we~0_combout  & ( (\inst13|wstate.setAll~q  & !\inst13|Selector25~0_combout ) ) ) ) # ( !\inst13|wstate.idle~q  & ( \inst13|ram_we~0_combout  ) ) # ( \inst13|wstate.idle~q  & ( 
-// !\inst13|ram_we~0_combout  & ( (\inst13|wstate.setAll~q  & !\inst13|Selector25~0_combout ) ) ) ) # ( !\inst13|wstate.idle~q  & ( !\inst13|ram_we~0_combout  & ( (\inst13|wstate.setAll~q  & !\inst13|Selector25~0_combout ) ) ) )
+// \inst13|Selector25~1_combout  = ( \inst13|wstate.idle~q  & ( \inst13|ram_we~0_combout  & ( (\inst13|wstate.allOneColor~q  & !\inst13|Selector25~0_combout ) ) ) ) # ( !\inst13|wstate.idle~q  & ( \inst13|ram_we~0_combout  ) ) # ( \inst13|wstate.idle~q  & ( 
+// !\inst13|ram_we~0_combout  & ( (\inst13|wstate.allOneColor~q  & !\inst13|Selector25~0_combout ) ) ) ) # ( !\inst13|wstate.idle~q  & ( !\inst13|ram_we~0_combout  & ( (\inst13|wstate.allOneColor~q  & !\inst13|Selector25~0_combout ) ) ) )
 
-	.dataa(!\inst13|wstate.setAll~q ),
+	.dataa(!\inst13|wstate.allOneColor~q ),
 	.datab(gnd),
 	.datac(gnd),
 	.datad(!\inst13|Selector25~0_combout ),
@@ -20418,13 +20418,13 @@ defparam \inst13|process_1~1 .shared_arith = "off";
 // Location: MLABCELL_X28_Y25_N18
 cyclonev_lcell_comb \inst13|Selector26~1 (
 // Equation(s):
-// \inst13|Selector26~1_combout  = ( !\inst13|process_1~1_combout  & ( (!\inst13|ram_write_addr[6]~2_combout  & (((!\inst13|wstate.idle~q  & \inst13|Selector26~0_combout )) # (\inst13|wstate.setAll~q ))) # (\inst13|ram_write_addr[6]~2_combout  & 
+// \inst13|Selector26~1_combout  = ( !\inst13|process_1~1_combout  & ( (!\inst13|ram_write_addr[6]~2_combout  & (((!\inst13|wstate.idle~q  & \inst13|Selector26~0_combout )) # (\inst13|wstate.allOneColor~q ))) # (\inst13|ram_write_addr[6]~2_combout  & 
 // (!\inst13|wstate.idle~q  & (\inst13|Selector26~0_combout ))) ) )
 
 	.dataa(!\inst13|ram_write_addr[6]~2_combout ),
 	.datab(!\inst13|wstate.idle~q ),
 	.datac(!\inst13|Selector26~0_combout ),
-	.datad(!\inst13|wstate.setAll~q ),
+	.datad(!\inst13|wstate.allOneColor~q ),
 	.datae(gnd),
 	.dataf(!\inst13|process_1~1_combout ),
 	.datag(gnd),
@@ -20441,7 +20441,7 @@ defparam \inst13|Selector26~1 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y25_N20
-dffeas \inst13|wstate.setAll (
+dffeas \inst13|wstate.allOneColor (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(\inst13|Selector26~1_combout ),
 	.asdata(vcc),
@@ -20452,11 +20452,11 @@ dffeas \inst13|wstate.setAll (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|wstate.setAll~q ),
+	.q(\inst13|wstate.allOneColor~q ),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|wstate.setAll .is_wysiwyg = "true";
-defparam \inst13|wstate.setAll .power_up = "low";
+defparam \inst13|wstate.allOneColor .is_wysiwyg = "true";
+defparam \inst13|wstate.allOneColor .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X31_Y23_N18
@@ -20487,11 +20487,11 @@ defparam \inst13|Selector24~0 .shared_arith = "off";
 cyclonev_lcell_comb \inst13|Selector24~1 (
 // Equation(s):
 // \inst13|Selector24~1_combout  = ( \inst13|ram_we~q  & ( \inst13|Selector24~0_combout  & ( !\inst13|wstate.idle~q  ) ) ) # ( !\inst13|ram_we~q  & ( \inst13|Selector24~0_combout  & ( (\inst13|ram_we~0_combout  & !\inst13|wstate.idle~q ) ) ) ) # ( 
-// \inst13|ram_we~q  & ( !\inst13|Selector24~0_combout  & ( (!\inst13|wstate.idle~q ) # (\inst13|wstate.setAll~q ) ) ) ) # ( !\inst13|ram_we~q  & ( !\inst13|Selector24~0_combout  & ( (\inst13|ram_we~0_combout  & !\inst13|wstate.idle~q ) ) ) )
+// \inst13|ram_we~q  & ( !\inst13|Selector24~0_combout  & ( (!\inst13|wstate.idle~q ) # (\inst13|wstate.allOneColor~q ) ) ) ) # ( !\inst13|ram_we~q  & ( !\inst13|Selector24~0_combout  & ( (\inst13|ram_we~0_combout  & !\inst13|wstate.idle~q ) ) ) )
 
 	.dataa(gnd),
 	.datab(!\inst13|ram_we~0_combout ),
-	.datac(!\inst13|wstate.setAll~q ),
+	.datac(!\inst13|wstate.allOneColor~q ),
 	.datad(!\inst13|wstate.idle~q ),
 	.datae(!\inst13|ram_we~q ),
 	.dataf(!\inst13|Selector24~0_combout ),
@@ -20577,9 +20577,9 @@ defparam \IO_DATA[1]~1 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y23_N18
-cyclonev_lcell_comb \inst13|data_set_all[4]~feeder (
+cyclonev_lcell_comb \inst13|all_one_color_buffer[4]~feeder (
 // Equation(s):
-// \inst13|data_set_all[4]~feeder_combout  = ( \IO_DATA[1]~1_combout  )
+// \inst13|all_one_color_buffer[4]~feeder_combout  = ( \IO_DATA[1]~1_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -20590,14 +20590,14 @@ cyclonev_lcell_comb \inst13|data_set_all[4]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|data_set_all[4]~feeder_combout ),
+	.combout(\inst13|all_one_color_buffer[4]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|data_set_all[4]~feeder .extended_lut = "off";
-defparam \inst13|data_set_all[4]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|data_set_all[4]~feeder .shared_arith = "off";
+defparam \inst13|all_one_color_buffer[4]~feeder .extended_lut = "off";
+defparam \inst13|all_one_color_buffer[4]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|all_one_color_buffer[4]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: LABCELL_X27_Y25_N27
@@ -20625,10 +20625,10 @@ defparam \inst3|Equal11~0 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y25_N12
-cyclonev_lcell_comb \inst13|data_set_all[23]~0 (
+cyclonev_lcell_comb \inst13|all_one_color_buffer[23]~0 (
 // Equation(s):
-// \inst13|data_set_all[23]~0_combout  = ( \inst3|Equal7~1_combout  & ( \inst13|process_1~0_combout  & ( (!\inst3|Equal7~0_combout ) # (((!\inst|IR [0] & !\inst|IR [1])) # (\inst|IR [2])) ) ) ) # ( !\inst3|Equal7~1_combout  & ( \inst13|process_1~0_combout  ) 
-// )
+// \inst13|all_one_color_buffer[23]~0_combout  = ( \inst3|Equal7~1_combout  & ( \inst13|process_1~0_combout  & ( (!\inst3|Equal7~0_combout ) # (((!\inst|IR [0] & !\inst|IR [1])) # (\inst|IR [2])) ) ) ) # ( !\inst3|Equal7~1_combout  & ( 
+// \inst13|process_1~0_combout  ) )
 
 	.dataa(!\inst|IR [0]),
 	.datab(!\inst|IR [1]),
@@ -20639,57 +20639,57 @@ cyclonev_lcell_comb \inst13|data_set_all[23]~0 (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|data_set_all[23]~0_combout ),
+	.combout(\inst13|all_one_color_buffer[23]~0_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|data_set_all[23]~0 .extended_lut = "off";
-defparam \inst13|data_set_all[23]~0 .lut_mask = 64'h00000000FFFFF8FF;
-defparam \inst13|data_set_all[23]~0 .shared_arith = "off";
+defparam \inst13|all_one_color_buffer[23]~0 .extended_lut = "off";
+defparam \inst13|all_one_color_buffer[23]~0 .lut_mask = 64'h00000000FFFFF8FF;
+defparam \inst13|all_one_color_buffer[23]~0 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y25_N21
-cyclonev_lcell_comb \inst13|data_set_all[23]~1 (
+cyclonev_lcell_comb \inst13|all_one_color_buffer[23]~1 (
 // Equation(s):
-// \inst13|data_set_all[23]~1_combout  = ( \inst13|data_set_all[23]~0_combout  & ( (!\inst13|wstate.idle~q  & (\inst3|Equal11~0_combout  & \inst1|pll_main_inst|altera_pll_i|locked_wire [0])) ) )
+// \inst13|all_one_color_buffer[23]~1_combout  = ( \inst13|all_one_color_buffer[23]~0_combout  & ( (!\inst13|wstate.idle~q  & (\inst3|Equal11~0_combout  & \inst1|pll_main_inst|altera_pll_i|locked_wire [0])) ) )
 
 	.dataa(gnd),
 	.datab(!\inst13|wstate.idle~q ),
 	.datac(!\inst3|Equal11~0_combout ),
 	.datad(!\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.datae(gnd),
-	.dataf(!\inst13|data_set_all[23]~0_combout ),
+	.dataf(!\inst13|all_one_color_buffer[23]~0_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|data_set_all[23]~1_combout ),
+	.combout(\inst13|all_one_color_buffer[23]~1_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|data_set_all[23]~1 .extended_lut = "off";
-defparam \inst13|data_set_all[23]~1 .lut_mask = 64'h00000000000C000C;
-defparam \inst13|data_set_all[23]~1 .shared_arith = "off";
+defparam \inst13|all_one_color_buffer[23]~1 .extended_lut = "off";
+defparam \inst13|all_one_color_buffer[23]~1 .lut_mask = 64'h00000000000C000C;
+defparam \inst13|all_one_color_buffer[23]~1 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y23_N20
-dffeas \inst13|data_set_all[4] (
+dffeas \inst13|all_one_color_buffer[4] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|data_set_all[4]~feeder_combout ),
+	.d(\inst13|all_one_color_buffer[4]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|data_set_all[23]~1_combout ),
+	.ena(\inst13|all_one_color_buffer[23]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|data_set_all [4]),
+	.q(\inst13|all_one_color_buffer [4]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|data_set_all[4] .is_wysiwyg = "true";
-defparam \inst13|data_set_all[4] .power_up = "low";
+defparam \inst13|all_one_color_buffer[4] .is_wysiwyg = "true";
+defparam \inst13|all_one_color_buffer[4] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y26_N12
@@ -20718,9 +20718,9 @@ defparam \IO_DATA[4]~4 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y24_N57
-cyclonev_lcell_comb \inst13|TempColorHolder[4]~feeder (
+cyclonev_lcell_comb \inst13|buffer_24_grb[4]~feeder (
 // Equation(s):
-// \inst13|TempColorHolder[4]~feeder_combout  = ( \IO_DATA[4]~4_combout  )
+// \inst13|buffer_24_grb[4]~feeder_combout  = ( \IO_DATA[4]~4_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -20731,25 +20731,25 @@ cyclonev_lcell_comb \inst13|TempColorHolder[4]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|TempColorHolder[4]~feeder_combout ),
+	.combout(\inst13|buffer_24_grb[4]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|TempColorHolder[4]~feeder .extended_lut = "off";
-defparam \inst13|TempColorHolder[4]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|TempColorHolder[4]~feeder .shared_arith = "off";
+defparam \inst13|buffer_24_grb[4]~feeder .extended_lut = "off";
+defparam \inst13|buffer_24_grb[4]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|buffer_24_grb[4]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: LABCELL_X31_Y23_N6
 cyclonev_lcell_comb \inst13|Selector27~0 (
 // Equation(s):
-// \inst13|Selector27~0_combout  = ( \inst3|Equal7~2_combout  & ( \inst13|process_1~0_combout  & ( (!\inst13|wstate.idle~q  & (!\inst|IR [1] $ (((!\inst|IR [0]))))) # (\inst13|wstate.idle~q  & (\inst13|wstate.setAll~q  & (!\inst|IR [1] $ (!\inst|IR [0])))) ) 
-// ) )
+// \inst13|Selector27~0_combout  = ( \inst3|Equal7~2_combout  & ( \inst13|process_1~0_combout  & ( (!\inst13|wstate.idle~q  & (!\inst|IR [1] $ (((!\inst|IR [0]))))) # (\inst13|wstate.idle~q  & (\inst13|wstate.allOneColor~q  & (!\inst|IR [1] $ (!\inst|IR 
+// [0])))) ) ) )
 
 	.dataa(!\inst|IR [1]),
 	.datab(!\inst13|wstate.idle~q ),
-	.datac(!\inst13|wstate.setAll~q ),
+	.datac(!\inst13|wstate.allOneColor~q ),
 	.datad(!\inst|IR [0]),
 	.datae(!\inst3|Equal7~2_combout ),
 	.dataf(!\inst13|process_1~0_combout ),
@@ -20786,9 +20786,9 @@ defparam \inst13|wstate.storing .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X31_Y23_N42
-cyclonev_lcell_comb \inst13|TempColorHolder[12]~1 (
+cyclonev_lcell_comb \inst13|buffer_24_grb[12]~1 (
 // Equation(s):
-// \inst13|TempColorHolder[12]~1_combout  = ( \inst3|Equal7~2_combout  & ( \inst13|process_1~0_combout  & ( (!\inst13|wstate.storing~q  & (\inst|IR [1] & !\inst|IR [0])) ) ) )
+// \inst13|buffer_24_grb[12]~1_combout  = ( \inst3|Equal7~2_combout  & ( \inst13|process_1~0_combout  & ( (!\inst13|wstate.storing~q  & (\inst|IR [1] & !\inst|IR [0])) ) ) )
 
 	.dataa(gnd),
 	.datab(!\inst13|wstate.storing~q ),
@@ -20799,45 +20799,45 @@ cyclonev_lcell_comb \inst13|TempColorHolder[12]~1 (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|TempColorHolder[12]~1_combout ),
+	.combout(\inst13|buffer_24_grb[12]~1_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|TempColorHolder[12]~1 .extended_lut = "off";
-defparam \inst13|TempColorHolder[12]~1 .lut_mask = 64'h0000000000000C00;
-defparam \inst13|TempColorHolder[12]~1 .shared_arith = "off";
+defparam \inst13|buffer_24_grb[12]~1 .extended_lut = "off";
+defparam \inst13|buffer_24_grb[12]~1 .lut_mask = 64'h0000000000000C00;
+defparam \inst13|buffer_24_grb[12]~1 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y24_N58
-dffeas \inst13|TempColorHolder[4] (
+dffeas \inst13|buffer_24_grb[4] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|TempColorHolder[4]~feeder_combout ),
+	.d(\inst13|buffer_24_grb[4]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|TempColorHolder[12]~1_combout ),
+	.ena(\inst13|buffer_24_grb[12]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [4]),
+	.q(\inst13|buffer_24_grb [4]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[4] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[4] .power_up = "low";
+defparam \inst13|buffer_24_grb[4] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[4] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y23_N0
 cyclonev_lcell_comb \inst13|Selector19~0 (
 // Equation(s):
-// \inst13|Selector19~0_combout  = ( \IO_DATA[1]~1_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|data_set_all [4])))) # (\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|TempColorHolder [4])) # (\inst13|process_1~1_combout ))) ) ) # 
-// ( !\IO_DATA[1]~1_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|data_set_all [4])))) # (\inst13|ram_write_buffer[13]~0_combout  & (!\inst13|process_1~1_combout  & ((\inst13|TempColorHolder [4])))) ) )
+// \inst13|Selector19~0_combout  = ( \IO_DATA[1]~1_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|all_one_color_buffer [4])))) # (\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|buffer_24_grb [4])) # (\inst13|process_1~1_combout ))) 
+// ) ) # ( !\IO_DATA[1]~1_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|all_one_color_buffer [4])))) # (\inst13|ram_write_buffer[13]~0_combout  & (!\inst13|process_1~1_combout  & ((\inst13|buffer_24_grb [4])))) ) )
 
 	.dataa(!\inst13|process_1~1_combout ),
 	.datab(!\inst13|ram_write_buffer[13]~0_combout ),
-	.datac(!\inst13|data_set_all [4]),
-	.datad(!\inst13|TempColorHolder [4]),
+	.datac(!\inst13|all_one_color_buffer [4]),
+	.datad(!\inst13|buffer_24_grb [4]),
 	.datae(gnd),
 	.dataf(!\IO_DATA[1]~1_combout ),
 	.datag(gnd),
@@ -20881,15 +20881,15 @@ defparam \inst13|ram_write_buffer[13]~1 .shared_arith = "off";
 // Location: LABCELL_X31_Y23_N0
 cyclonev_lcell_comb \inst13|ram_write_buffer[13]~2 (
 // Equation(s):
-// \inst13|ram_write_buffer[13]~2_combout  = ( \inst13|wstate.setAll~q  & ( \inst13|ram_write_buffer[13]~1_combout  & ( (!\inst13|wstate.idle~q  & \inst13|ram_we~0_combout ) ) ) ) # ( !\inst13|wstate.setAll~q  & ( \inst13|ram_write_buffer[13]~1_combout  & ( 
-// (!\inst13|wstate.idle~q  & \inst13|ram_we~0_combout ) ) ) ) # ( \inst13|wstate.setAll~q  & ( !\inst13|ram_write_buffer[13]~1_combout  ) ) # ( !\inst13|wstate.setAll~q  & ( !\inst13|ram_write_buffer[13]~1_combout  & ( (!\inst13|wstate.idle~q  & 
-// \inst13|ram_we~0_combout ) ) ) )
+// \inst13|ram_write_buffer[13]~2_combout  = ( \inst13|wstate.allOneColor~q  & ( \inst13|ram_write_buffer[13]~1_combout  & ( (!\inst13|wstate.idle~q  & \inst13|ram_we~0_combout ) ) ) ) # ( !\inst13|wstate.allOneColor~q  & ( 
+// \inst13|ram_write_buffer[13]~1_combout  & ( (!\inst13|wstate.idle~q  & \inst13|ram_we~0_combout ) ) ) ) # ( \inst13|wstate.allOneColor~q  & ( !\inst13|ram_write_buffer[13]~1_combout  ) ) # ( !\inst13|wstate.allOneColor~q  & ( 
+// !\inst13|ram_write_buffer[13]~1_combout  & ( (!\inst13|wstate.idle~q  & \inst13|ram_we~0_combout ) ) ) )
 
 	.dataa(gnd),
 	.datab(!\inst13|wstate.idle~q ),
 	.datac(!\inst13|ram_we~0_combout ),
 	.datad(gnd),
-	.datae(!\inst13|wstate.setAll~q ),
+	.datae(!\inst13|wstate.allOneColor~q ),
 	.dataf(!\inst13|ram_write_buffer[13]~1_combout ),
 	.datag(gnd),
 	.cin(gnd),
@@ -20926,10 +20926,10 @@ defparam \inst13|ram_write_buffer[4] .power_up = "low";
 // Location: MLABCELL_X28_Y25_N30
 cyclonev_lcell_comb \inst13|Add5~1 (
 // Equation(s):
-// \inst13|Add5~1_sumout  = SUM(( (!\inst13|wstate.setAll~q ) # (\inst13|ram_write_addr [0]) ) + ( (\inst13|ram_write_addr [0]) # (\inst13|wstate.setAll~q ) ) + ( !VCC ))
-// \inst13|Add5~2  = CARRY(( (!\inst13|wstate.setAll~q ) # (\inst13|ram_write_addr [0]) ) + ( (\inst13|ram_write_addr [0]) # (\inst13|wstate.setAll~q ) ) + ( !VCC ))
+// \inst13|Add5~1_sumout  = SUM(( (!\inst13|wstate.allOneColor~q ) # (\inst13|ram_write_addr [0]) ) + ( (\inst13|ram_write_addr [0]) # (\inst13|wstate.allOneColor~q ) ) + ( !VCC ))
+// \inst13|Add5~2  = CARRY(( (!\inst13|wstate.allOneColor~q ) # (\inst13|ram_write_addr [0]) ) + ( (\inst13|ram_write_addr [0]) # (\inst13|wstate.allOneColor~q ) ) + ( !VCC ))
 
-	.dataa(!\inst13|wstate.setAll~q ),
+	.dataa(!\inst13|wstate.allOneColor~q ),
 	.datab(gnd),
 	.datac(!\inst13|ram_write_addr [0]),
 	.datad(gnd),
@@ -21001,10 +21001,10 @@ defparam \inst13|ram_write_addr[6]~0 .shared_arith = "off";
 // Location: MLABCELL_X28_Y25_N27
 cyclonev_lcell_comb \inst13|ram_write_addr[6]~1 (
 // Equation(s):
-// \inst13|ram_write_addr[6]~1_combout  = ( \inst13|process_1~0_combout  & ( (!\inst13|wstate.setAll~q  & (((!\inst13|wstate.idle~q  & \inst3|Equal11~0_combout )))) # (\inst13|wstate.setAll~q  & (((!\inst13|wstate.idle~q  & \inst3|Equal11~0_combout )) # 
-// (\inst13|ram_write_addr[6]~0_combout ))) ) ) # ( !\inst13|process_1~0_combout  & ( (\inst13|wstate.setAll~q  & \inst13|ram_write_addr[6]~0_combout ) ) )
+// \inst13|ram_write_addr[6]~1_combout  = ( \inst13|process_1~0_combout  & ( (!\inst13|wstate.allOneColor~q  & (((!\inst13|wstate.idle~q  & \inst3|Equal11~0_combout )))) # (\inst13|wstate.allOneColor~q  & (((!\inst13|wstate.idle~q  & \inst3|Equal11~0_combout 
+// )) # (\inst13|ram_write_addr[6]~0_combout ))) ) ) # ( !\inst13|process_1~0_combout  & ( (\inst13|wstate.allOneColor~q  & \inst13|ram_write_addr[6]~0_combout ) ) )
 
-	.dataa(!\inst13|wstate.setAll~q ),
+	.dataa(!\inst13|wstate.allOneColor~q ),
 	.datab(!\inst13|ram_write_addr[6]~0_combout ),
 	.datac(!\inst13|wstate.idle~q ),
 	.datad(!\inst3|Equal11~0_combout ),
@@ -21026,10 +21026,10 @@ defparam \inst13|ram_write_addr[6]~1 .shared_arith = "off";
 // Location: MLABCELL_X28_Y25_N24
 cyclonev_lcell_comb \inst13|ram_write_addr[6]~3 (
 // Equation(s):
-// \inst13|ram_write_addr[6]~3_combout  = ( \inst13|ram_write_addr[6]~2_combout  & ( !\inst13|wstate.storing~q  ) ) # ( !\inst13|ram_write_addr[6]~2_combout  & ( (!\inst13|wstate.storing~q  & ((!\inst13|wstate.setAll~q ) # (\inst13|process_1~1_combout ))) ) 
-// )
+// \inst13|ram_write_addr[6]~3_combout  = ( \inst13|ram_write_addr[6]~2_combout  & ( !\inst13|wstate.storing~q  ) ) # ( !\inst13|ram_write_addr[6]~2_combout  & ( (!\inst13|wstate.storing~q  & ((!\inst13|wstate.allOneColor~q ) # (\inst13|process_1~1_combout 
+// ))) ) )
 
-	.dataa(!\inst13|wstate.setAll~q ),
+	.dataa(!\inst13|wstate.allOneColor~q ),
 	.datab(gnd),
 	.datac(!\inst13|process_1~1_combout ),
 	.datad(!\inst13|wstate.storing~q ),
@@ -21099,10 +21099,10 @@ defparam \inst13|ram_write_addr[6]~4 .shared_arith = "off";
 // Location: MLABCELL_X28_Y25_N54
 cyclonev_lcell_comb \inst13|ram_write_addr[6]~6 (
 // Equation(s):
-// \inst13|ram_write_addr[6]~6_combout  = ( \inst13|ram_write_addr[6]~4_combout  & ( (!\inst13|wstate.setAll~q ) # (!\inst13|ram_write_addr[6]~5_combout ) ) ) # ( !\inst13|ram_write_addr[6]~4_combout  & ( (\inst13|wstate.idle~q  & ((!\inst13|wstate.setAll~q 
-// ) # (!\inst13|ram_write_addr[6]~5_combout ))) ) )
+// \inst13|ram_write_addr[6]~6_combout  = ( \inst13|ram_write_addr[6]~4_combout  & ( (!\inst13|wstate.allOneColor~q ) # (!\inst13|ram_write_addr[6]~5_combout ) ) ) # ( !\inst13|ram_write_addr[6]~4_combout  & ( (\inst13|wstate.idle~q  & 
+// ((!\inst13|wstate.allOneColor~q ) # (!\inst13|ram_write_addr[6]~5_combout ))) ) )
 
-	.dataa(!\inst13|wstate.setAll~q ),
+	.dataa(!\inst13|wstate.allOneColor~q ),
 	.datab(!\inst13|wstate.idle~q ),
 	.datac(!\inst13|ram_write_addr[6]~5_combout ),
 	.datad(gnd),
@@ -21141,34 +21141,34 @@ defparam \inst13|ram_write_addr[0] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y25_N57
-cyclonev_lcell_comb \inst13|IncrementDirection~0 (
+cyclonev_lcell_comb \inst13|auto_inc_dir~0 (
 // Equation(s):
-// \inst13|IncrementDirection~0_combout  = ( \inst13|ram_write_addr[6]~5_combout  & ( !\inst13|IncrementDirection~q  $ (((!\inst13|wstate.idle~q  & ((\inst3|Equal11~0_combout ))) # (\inst13|wstate.idle~q  & (!\inst13|wstate.setAll~q )))) ) ) # ( 
-// !\inst13|ram_write_addr[6]~5_combout  & ( \inst13|IncrementDirection~q  ) )
+// \inst13|auto_inc_dir~0_combout  = ( \inst13|ram_write_addr[6]~5_combout  & ( !\inst13|auto_inc_dir~q  $ (((!\inst13|wstate.idle~q  & ((\inst3|Equal11~0_combout ))) # (\inst13|wstate.idle~q  & (!\inst13|wstate.allOneColor~q )))) ) ) # ( 
+// !\inst13|ram_write_addr[6]~5_combout  & ( \inst13|auto_inc_dir~q  ) )
 
-	.dataa(!\inst13|wstate.setAll~q ),
+	.dataa(!\inst13|wstate.allOneColor~q ),
 	.datab(!\inst13|wstate.idle~q ),
 	.datac(!\inst3|Equal11~0_combout ),
-	.datad(!\inst13|IncrementDirection~q ),
+	.datad(!\inst13|auto_inc_dir~q ),
 	.datae(gnd),
 	.dataf(!\inst13|ram_write_addr[6]~5_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|IncrementDirection~0_combout ),
+	.combout(\inst13|auto_inc_dir~0_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|IncrementDirection~0 .extended_lut = "off";
-defparam \inst13|IncrementDirection~0 .lut_mask = 64'h00FF00FFD12ED12E;
-defparam \inst13|IncrementDirection~0 .shared_arith = "off";
+defparam \inst13|auto_inc_dir~0 .extended_lut = "off";
+defparam \inst13|auto_inc_dir~0 .lut_mask = 64'h00FF00FFD12ED12E;
+defparam \inst13|auto_inc_dir~0 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y25_N59
-dffeas \inst13|IncrementDirection (
+dffeas \inst13|auto_inc_dir (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|IncrementDirection~0_combout ),
+	.d(\inst13|auto_inc_dir~0_combout ),
 	.asdata(vcc),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
@@ -21177,22 +21177,22 @@ dffeas \inst13|IncrementDirection (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|IncrementDirection~q ),
+	.q(\inst13|auto_inc_dir~q ),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|IncrementDirection .is_wysiwyg = "true";
-defparam \inst13|IncrementDirection .power_up = "low";
+defparam \inst13|auto_inc_dir .is_wysiwyg = "true";
+defparam \inst13|auto_inc_dir .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y25_N33
 cyclonev_lcell_comb \inst13|Add5~5 (
 // Equation(s):
-// \inst13|Add5~5_sumout  = SUM(( \inst13|ram_write_addr [1] ) + ( (!\inst13|wstate.setAll~q  & \inst13|IncrementDirection~q ) ) + ( \inst13|Add5~2  ))
-// \inst13|Add5~6  = CARRY(( \inst13|ram_write_addr [1] ) + ( (!\inst13|wstate.setAll~q  & \inst13|IncrementDirection~q ) ) + ( \inst13|Add5~2  ))
+// \inst13|Add5~5_sumout  = SUM(( \inst13|ram_write_addr [1] ) + ( (!\inst13|wstate.allOneColor~q  & \inst13|auto_inc_dir~q ) ) + ( \inst13|Add5~2  ))
+// \inst13|Add5~6  = CARRY(( \inst13|ram_write_addr [1] ) + ( (!\inst13|wstate.allOneColor~q  & \inst13|auto_inc_dir~q ) ) + ( \inst13|Add5~2  ))
 
-	.dataa(!\inst13|wstate.setAll~q ),
+	.dataa(!\inst13|wstate.allOneColor~q ),
 	.datab(gnd),
-	.datac(!\inst13|IncrementDirection~q ),
+	.datac(!\inst13|auto_inc_dir~q ),
 	.datad(!\inst13|ram_write_addr [1]),
 	.datae(gnd),
 	.dataf(gnd),
@@ -21231,11 +21231,11 @@ defparam \inst13|ram_write_addr[1] .power_up = "low";
 // Location: MLABCELL_X28_Y25_N36
 cyclonev_lcell_comb \inst13|Add5~9 (
 // Equation(s):
-// \inst13|Add5~9_sumout  = SUM(( \inst13|ram_write_addr [2] ) + ( (!\inst13|wstate.setAll~q  & \inst13|IncrementDirection~q ) ) + ( \inst13|Add5~6  ))
-// \inst13|Add5~10  = CARRY(( \inst13|ram_write_addr [2] ) + ( (!\inst13|wstate.setAll~q  & \inst13|IncrementDirection~q ) ) + ( \inst13|Add5~6  ))
+// \inst13|Add5~9_sumout  = SUM(( \inst13|ram_write_addr [2] ) + ( (!\inst13|wstate.allOneColor~q  & \inst13|auto_inc_dir~q ) ) + ( \inst13|Add5~6  ))
+// \inst13|Add5~10  = CARRY(( \inst13|ram_write_addr [2] ) + ( (!\inst13|wstate.allOneColor~q  & \inst13|auto_inc_dir~q ) ) + ( \inst13|Add5~6  ))
 
-	.dataa(!\inst13|wstate.setAll~q ),
-	.datab(!\inst13|IncrementDirection~q ),
+	.dataa(!\inst13|wstate.allOneColor~q ),
+	.datab(!\inst13|auto_inc_dir~q ),
 	.datac(gnd),
 	.datad(!\inst13|ram_write_addr [2]),
 	.datae(gnd),
@@ -21300,12 +21300,12 @@ defparam \inst13|ram_write_addr[2] .power_up = "low";
 // Location: MLABCELL_X28_Y25_N39
 cyclonev_lcell_comb \inst13|Add5~13 (
 // Equation(s):
-// \inst13|Add5~13_sumout  = SUM(( \inst13|ram_write_addr [3] ) + ( (!\inst13|wstate.setAll~q  & \inst13|IncrementDirection~q ) ) + ( \inst13|Add5~10  ))
-// \inst13|Add5~14  = CARRY(( \inst13|ram_write_addr [3] ) + ( (!\inst13|wstate.setAll~q  & \inst13|IncrementDirection~q ) ) + ( \inst13|Add5~10  ))
+// \inst13|Add5~13_sumout  = SUM(( \inst13|ram_write_addr [3] ) + ( (!\inst13|wstate.allOneColor~q  & \inst13|auto_inc_dir~q ) ) + ( \inst13|Add5~10  ))
+// \inst13|Add5~14  = CARRY(( \inst13|ram_write_addr [3] ) + ( (!\inst13|wstate.allOneColor~q  & \inst13|auto_inc_dir~q ) ) + ( \inst13|Add5~10  ))
 
-	.dataa(!\inst13|wstate.setAll~q ),
+	.dataa(!\inst13|wstate.allOneColor~q ),
 	.datab(gnd),
-	.datac(!\inst13|IncrementDirection~q ),
+	.datac(!\inst13|auto_inc_dir~q ),
 	.datad(!\inst13|ram_write_addr [3]),
 	.datae(gnd),
 	.dataf(gnd),
@@ -21369,11 +21369,11 @@ defparam \inst13|ram_write_addr[3] .power_up = "low";
 // Location: MLABCELL_X28_Y25_N42
 cyclonev_lcell_comb \inst13|Add5~17 (
 // Equation(s):
-// \inst13|Add5~17_sumout  = SUM(( \inst13|ram_write_addr [4] ) + ( (!\inst13|wstate.setAll~q  & \inst13|IncrementDirection~q ) ) + ( \inst13|Add5~14  ))
-// \inst13|Add5~18  = CARRY(( \inst13|ram_write_addr [4] ) + ( (!\inst13|wstate.setAll~q  & \inst13|IncrementDirection~q ) ) + ( \inst13|Add5~14  ))
+// \inst13|Add5~17_sumout  = SUM(( \inst13|ram_write_addr [4] ) + ( (!\inst13|wstate.allOneColor~q  & \inst13|auto_inc_dir~q ) ) + ( \inst13|Add5~14  ))
+// \inst13|Add5~18  = CARRY(( \inst13|ram_write_addr [4] ) + ( (!\inst13|wstate.allOneColor~q  & \inst13|auto_inc_dir~q ) ) + ( \inst13|Add5~14  ))
 
-	.dataa(!\inst13|wstate.setAll~q ),
-	.datab(!\inst13|IncrementDirection~q ),
+	.dataa(!\inst13|wstate.allOneColor~q ),
+	.datab(!\inst13|auto_inc_dir~q ),
 	.datac(gnd),
 	.datad(!\inst13|ram_write_addr [4]),
 	.datae(gnd),
@@ -21413,12 +21413,12 @@ defparam \inst13|ram_write_addr[4] .power_up = "low";
 // Location: MLABCELL_X28_Y25_N45
 cyclonev_lcell_comb \inst13|Add5~21 (
 // Equation(s):
-// \inst13|Add5~21_sumout  = SUM(( \inst13|ram_write_addr [5] ) + ( (!\inst13|wstate.setAll~q  & \inst13|IncrementDirection~q ) ) + ( \inst13|Add5~18  ))
-// \inst13|Add5~22  = CARRY(( \inst13|ram_write_addr [5] ) + ( (!\inst13|wstate.setAll~q  & \inst13|IncrementDirection~q ) ) + ( \inst13|Add5~18  ))
+// \inst13|Add5~21_sumout  = SUM(( \inst13|ram_write_addr [5] ) + ( (!\inst13|wstate.allOneColor~q  & \inst13|auto_inc_dir~q ) ) + ( \inst13|Add5~18  ))
+// \inst13|Add5~22  = CARRY(( \inst13|ram_write_addr [5] ) + ( (!\inst13|wstate.allOneColor~q  & \inst13|auto_inc_dir~q ) ) + ( \inst13|Add5~18  ))
 
-	.dataa(!\inst13|wstate.setAll~q ),
+	.dataa(!\inst13|wstate.allOneColor~q ),
 	.datab(gnd),
-	.datac(!\inst13|IncrementDirection~q ),
+	.datac(!\inst13|auto_inc_dir~q ),
 	.datad(!\inst13|ram_write_addr [5]),
 	.datae(gnd),
 	.dataf(gnd),
@@ -21482,11 +21482,11 @@ defparam \inst13|ram_write_addr[5] .power_up = "low";
 // Location: MLABCELL_X28_Y25_N48
 cyclonev_lcell_comb \inst13|Add5~25 (
 // Equation(s):
-// \inst13|Add5~25_sumout  = SUM(( \inst13|ram_write_addr [6] ) + ( (!\inst13|wstate.setAll~q  & \inst13|IncrementDirection~q ) ) + ( \inst13|Add5~22  ))
-// \inst13|Add5~26  = CARRY(( \inst13|ram_write_addr [6] ) + ( (!\inst13|wstate.setAll~q  & \inst13|IncrementDirection~q ) ) + ( \inst13|Add5~22  ))
+// \inst13|Add5~25_sumout  = SUM(( \inst13|ram_write_addr [6] ) + ( (!\inst13|wstate.allOneColor~q  & \inst13|auto_inc_dir~q ) ) + ( \inst13|Add5~22  ))
+// \inst13|Add5~26  = CARRY(( \inst13|ram_write_addr [6] ) + ( (!\inst13|wstate.allOneColor~q  & \inst13|auto_inc_dir~q ) ) + ( \inst13|Add5~22  ))
 
-	.dataa(!\inst13|wstate.setAll~q ),
-	.datab(!\inst13|IncrementDirection~q ),
+	.dataa(!\inst13|wstate.allOneColor~q ),
+	.datab(!\inst13|auto_inc_dir~q ),
 	.datac(gnd),
 	.datad(!\inst13|ram_write_addr [6]),
 	.datae(gnd),
@@ -21551,10 +21551,10 @@ defparam \inst13|ram_write_addr[6] .power_up = "low";
 // Location: MLABCELL_X28_Y25_N51
 cyclonev_lcell_comb \inst13|Add5~29 (
 // Equation(s):
-// \inst13|Add5~29_sumout  = SUM(( \inst13|ram_write_addr [7] ) + ( (!\inst13|wstate.setAll~q  & \inst13|IncrementDirection~q ) ) + ( \inst13|Add5~26  ))
+// \inst13|Add5~29_sumout  = SUM(( \inst13|ram_write_addr [7] ) + ( (!\inst13|wstate.allOneColor~q  & \inst13|auto_inc_dir~q ) ) + ( \inst13|Add5~26  ))
 
-	.dataa(!\inst13|wstate.setAll~q ),
-	.datab(!\inst13|IncrementDirection~q ),
+	.dataa(!\inst13|wstate.allOneColor~q ),
+	.datab(!\inst13|auto_inc_dir~q ),
 	.datac(gnd),
 	.datad(!\inst13|ram_write_addr [7]),
 	.datae(gnd),
@@ -22195,9 +22195,9 @@ defparam \inst13|ram_read_addr[7] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y24_N54
-cyclonev_lcell_comb \inst13|TempColorHolder[5]~feeder (
+cyclonev_lcell_comb \inst13|buffer_24_grb[5]~feeder (
 // Equation(s):
-// \inst13|TempColorHolder[5]~feeder_combout  = ( \IO_DATA[5]~5_combout  )
+// \inst13|buffer_24_grb[5]~feeder_combout  = ( \IO_DATA[5]~5_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -22208,39 +22208,39 @@ cyclonev_lcell_comb \inst13|TempColorHolder[5]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|TempColorHolder[5]~feeder_combout ),
+	.combout(\inst13|buffer_24_grb[5]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|TempColorHolder[5]~feeder .extended_lut = "off";
-defparam \inst13|TempColorHolder[5]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|TempColorHolder[5]~feeder .shared_arith = "off";
+defparam \inst13|buffer_24_grb[5]~feeder .extended_lut = "off";
+defparam \inst13|buffer_24_grb[5]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|buffer_24_grb[5]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y24_N56
-dffeas \inst13|TempColorHolder[5] (
+dffeas \inst13|buffer_24_grb[5] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|TempColorHolder[5]~feeder_combout ),
+	.d(\inst13|buffer_24_grb[5]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|TempColorHolder[12]~1_combout ),
+	.ena(\inst13|buffer_24_grb[12]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [5]),
+	.q(\inst13|buffer_24_grb [5]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[5] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[5] .power_up = "low";
+defparam \inst13|buffer_24_grb[5] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[5] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y23_N51
-cyclonev_lcell_comb \inst13|data_set_all[5]~feeder (
+cyclonev_lcell_comb \inst13|all_one_color_buffer[5]~feeder (
 // Equation(s):
-// \inst13|data_set_all[5]~feeder_combout  = ( \IO_DATA[2]~2_combout  )
+// \inst13|all_one_color_buffer[5]~feeder_combout  = ( \IO_DATA[2]~2_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -22251,47 +22251,47 @@ cyclonev_lcell_comb \inst13|data_set_all[5]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|data_set_all[5]~feeder_combout ),
+	.combout(\inst13|all_one_color_buffer[5]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|data_set_all[5]~feeder .extended_lut = "off";
-defparam \inst13|data_set_all[5]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|data_set_all[5]~feeder .shared_arith = "off";
+defparam \inst13|all_one_color_buffer[5]~feeder .extended_lut = "off";
+defparam \inst13|all_one_color_buffer[5]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|all_one_color_buffer[5]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y23_N53
-dffeas \inst13|data_set_all[5] (
+dffeas \inst13|all_one_color_buffer[5] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|data_set_all[5]~feeder_combout ),
+	.d(\inst13|all_one_color_buffer[5]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|data_set_all[23]~1_combout ),
+	.ena(\inst13|all_one_color_buffer[23]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|data_set_all [5]),
+	.q(\inst13|all_one_color_buffer [5]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|data_set_all[5] .is_wysiwyg = "true";
-defparam \inst13|data_set_all[5] .power_up = "low";
+defparam \inst13|all_one_color_buffer[5] .is_wysiwyg = "true";
+defparam \inst13|all_one_color_buffer[5] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y23_N9
 cyclonev_lcell_comb \inst13|Selector18~0 (
 // Equation(s):
-// \inst13|Selector18~0_combout  = ( \inst13|process_1~1_combout  & ( \IO_DATA[2]~2_combout  & ( (\inst13|data_set_all [5]) # (\inst13|ram_write_buffer[13]~0_combout ) ) ) ) # ( !\inst13|process_1~1_combout  & ( \IO_DATA[2]~2_combout  & ( 
-// (!\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|data_set_all [5]))) # (\inst13|ram_write_buffer[13]~0_combout  & (\inst13|TempColorHolder [5])) ) ) ) # ( \inst13|process_1~1_combout  & ( !\IO_DATA[2]~2_combout  & ( 
-// (!\inst13|ram_write_buffer[13]~0_combout  & \inst13|data_set_all [5]) ) ) ) # ( !\inst13|process_1~1_combout  & ( !\IO_DATA[2]~2_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|data_set_all [5]))) # 
-// (\inst13|ram_write_buffer[13]~0_combout  & (\inst13|TempColorHolder [5])) ) ) )
+// \inst13|Selector18~0_combout  = ( \inst13|process_1~1_combout  & ( \IO_DATA[2]~2_combout  & ( (\inst13|all_one_color_buffer [5]) # (\inst13|ram_write_buffer[13]~0_combout ) ) ) ) # ( !\inst13|process_1~1_combout  & ( \IO_DATA[2]~2_combout  & ( 
+// (!\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|all_one_color_buffer [5]))) # (\inst13|ram_write_buffer[13]~0_combout  & (\inst13|buffer_24_grb [5])) ) ) ) # ( \inst13|process_1~1_combout  & ( !\IO_DATA[2]~2_combout  & ( 
+// (!\inst13|ram_write_buffer[13]~0_combout  & \inst13|all_one_color_buffer [5]) ) ) ) # ( !\inst13|process_1~1_combout  & ( !\IO_DATA[2]~2_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|all_one_color_buffer [5]))) # 
+// (\inst13|ram_write_buffer[13]~0_combout  & (\inst13|buffer_24_grb [5])) ) ) )
 
-	.dataa(!\inst13|TempColorHolder [5]),
+	.dataa(!\inst13|buffer_24_grb [5]),
 	.datab(gnd),
 	.datac(!\inst13|ram_write_buffer[13]~0_combout ),
-	.datad(!\inst13|data_set_all [5]),
+	.datad(!\inst13|all_one_color_buffer [5]),
 	.datae(!\inst13|process_1~1_combout ),
 	.dataf(!\IO_DATA[2]~2_combout ),
 	.datag(gnd),
@@ -22327,9 +22327,9 @@ defparam \inst13|ram_write_buffer[5] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y24_N0
-cyclonev_lcell_comb \inst13|TempColorHolder[6]~feeder (
+cyclonev_lcell_comb \inst13|buffer_24_grb[6]~feeder (
 // Equation(s):
-// \inst13|TempColorHolder[6]~feeder_combout  = ( \IO_DATA[6]~6_combout  )
+// \inst13|buffer_24_grb[6]~feeder_combout  = ( \IO_DATA[6]~6_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -22340,39 +22340,39 @@ cyclonev_lcell_comb \inst13|TempColorHolder[6]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|TempColorHolder[6]~feeder_combout ),
+	.combout(\inst13|buffer_24_grb[6]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|TempColorHolder[6]~feeder .extended_lut = "off";
-defparam \inst13|TempColorHolder[6]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|TempColorHolder[6]~feeder .shared_arith = "off";
+defparam \inst13|buffer_24_grb[6]~feeder .extended_lut = "off";
+defparam \inst13|buffer_24_grb[6]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|buffer_24_grb[6]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y24_N2
-dffeas \inst13|TempColorHolder[6] (
+dffeas \inst13|buffer_24_grb[6] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|TempColorHolder[6]~feeder_combout ),
+	.d(\inst13|buffer_24_grb[6]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|TempColorHolder[12]~1_combout ),
+	.ena(\inst13|buffer_24_grb[12]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [6]),
+	.q(\inst13|buffer_24_grb [6]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[6] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[6] .power_up = "low";
+defparam \inst13|buffer_24_grb[6] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[6] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y23_N48
-cyclonev_lcell_comb \inst13|data_set_all[6]~feeder (
+cyclonev_lcell_comb \inst13|all_one_color_buffer[6]~feeder (
 // Equation(s):
-// \inst13|data_set_all[6]~feeder_combout  = ( \IO_DATA[3]~3_combout  )
+// \inst13|all_one_color_buffer[6]~feeder_combout  = ( \IO_DATA[3]~3_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -22383,46 +22383,46 @@ cyclonev_lcell_comb \inst13|data_set_all[6]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|data_set_all[6]~feeder_combout ),
+	.combout(\inst13|all_one_color_buffer[6]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|data_set_all[6]~feeder .extended_lut = "off";
-defparam \inst13|data_set_all[6]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|data_set_all[6]~feeder .shared_arith = "off";
+defparam \inst13|all_one_color_buffer[6]~feeder .extended_lut = "off";
+defparam \inst13|all_one_color_buffer[6]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|all_one_color_buffer[6]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y23_N50
-dffeas \inst13|data_set_all[6] (
+dffeas \inst13|all_one_color_buffer[6] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|data_set_all[6]~feeder_combout ),
+	.d(\inst13|all_one_color_buffer[6]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|data_set_all[23]~1_combout ),
+	.ena(\inst13|all_one_color_buffer[23]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|data_set_all [6]),
+	.q(\inst13|all_one_color_buffer [6]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|data_set_all[6] .is_wysiwyg = "true";
-defparam \inst13|data_set_all[6] .power_up = "low";
+defparam \inst13|all_one_color_buffer[6] .is_wysiwyg = "true";
+defparam \inst13|all_one_color_buffer[6] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y23_N54
 cyclonev_lcell_comb \inst13|Selector17~0 (
 // Equation(s):
-// \inst13|Selector17~0_combout  = ( \inst13|process_1~1_combout  & ( \IO_DATA[3]~3_combout  & ( (\inst13|data_set_all [6]) # (\inst13|ram_write_buffer[13]~0_combout ) ) ) ) # ( !\inst13|process_1~1_combout  & ( \IO_DATA[3]~3_combout  & ( 
-// (!\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|data_set_all [6]))) # (\inst13|ram_write_buffer[13]~0_combout  & (\inst13|TempColorHolder [6])) ) ) ) # ( \inst13|process_1~1_combout  & ( !\IO_DATA[3]~3_combout  & ( 
-// (!\inst13|ram_write_buffer[13]~0_combout  & \inst13|data_set_all [6]) ) ) ) # ( !\inst13|process_1~1_combout  & ( !\IO_DATA[3]~3_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|data_set_all [6]))) # 
-// (\inst13|ram_write_buffer[13]~0_combout  & (\inst13|TempColorHolder [6])) ) ) )
+// \inst13|Selector17~0_combout  = ( \inst13|process_1~1_combout  & ( \IO_DATA[3]~3_combout  & ( (\inst13|all_one_color_buffer [6]) # (\inst13|ram_write_buffer[13]~0_combout ) ) ) ) # ( !\inst13|process_1~1_combout  & ( \IO_DATA[3]~3_combout  & ( 
+// (!\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|all_one_color_buffer [6]))) # (\inst13|ram_write_buffer[13]~0_combout  & (\inst13|buffer_24_grb [6])) ) ) ) # ( \inst13|process_1~1_combout  & ( !\IO_DATA[3]~3_combout  & ( 
+// (!\inst13|ram_write_buffer[13]~0_combout  & \inst13|all_one_color_buffer [6]) ) ) ) # ( !\inst13|process_1~1_combout  & ( !\IO_DATA[3]~3_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|all_one_color_buffer [6]))) # 
+// (\inst13|ram_write_buffer[13]~0_combout  & (\inst13|buffer_24_grb [6])) ) ) )
 
-	.dataa(!\inst13|TempColorHolder [6]),
+	.dataa(!\inst13|buffer_24_grb [6]),
 	.datab(!\inst13|ram_write_buffer[13]~0_combout ),
-	.datac(!\inst13|data_set_all [6]),
+	.datac(!\inst13|all_one_color_buffer [6]),
 	.datad(gnd),
 	.datae(!\inst13|process_1~1_combout ),
 	.dataf(!\IO_DATA[3]~3_combout ),
@@ -22459,7 +22459,7 @@ defparam \inst13|ram_write_buffer[6] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X28_Y26_N49
-dffeas \inst13|data_set_all[7] (
+dffeas \inst13|all_one_color_buffer[7] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\IO_DATA[4]~4_combout ),
@@ -22467,18 +22467,18 @@ dffeas \inst13|data_set_all[7] (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\inst13|data_set_all[23]~1_combout ),
+	.ena(\inst13|all_one_color_buffer[23]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|data_set_all [7]),
+	.q(\inst13|all_one_color_buffer [7]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|data_set_all[7] .is_wysiwyg = "true";
-defparam \inst13|data_set_all[7] .power_up = "low";
+defparam \inst13|all_one_color_buffer[7] .is_wysiwyg = "true";
+defparam \inst13|all_one_color_buffer[7] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X33_Y27_N16
-dffeas \inst13|TempColorHolder[7] (
+dffeas \inst13|buffer_24_grb[7] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\IO_DATA[7]~7_combout ),
@@ -22486,29 +22486,29 @@ dffeas \inst13|TempColorHolder[7] (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\inst13|TempColorHolder[12]~1_combout ),
+	.ena(\inst13|buffer_24_grb[12]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [7]),
+	.q(\inst13|buffer_24_grb [7]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[7] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[7] .power_up = "low";
+defparam \inst13|buffer_24_grb[7] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[7] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y27_N9
 cyclonev_lcell_comb \inst13|Selector16~0 (
 // Equation(s):
-// \inst13|Selector16~0_combout  = ( \inst13|TempColorHolder [7] & ( \inst13|process_1~1_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (\inst13|data_set_all [7])) # (\inst13|ram_write_buffer[13]~0_combout  & ((\IO_DATA[4]~4_combout ))) ) ) ) # ( 
-// !\inst13|TempColorHolder [7] & ( \inst13|process_1~1_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (\inst13|data_set_all [7])) # (\inst13|ram_write_buffer[13]~0_combout  & ((\IO_DATA[4]~4_combout ))) ) ) ) # ( \inst13|TempColorHolder [7] & ( 
-// !\inst13|process_1~1_combout  & ( (\inst13|ram_write_buffer[13]~0_combout ) # (\inst13|data_set_all [7]) ) ) ) # ( !\inst13|TempColorHolder [7] & ( !\inst13|process_1~1_combout  & ( (\inst13|data_set_all [7] & !\inst13|ram_write_buffer[13]~0_combout ) ) ) 
-// )
+// \inst13|Selector16~0_combout  = ( \inst13|buffer_24_grb [7] & ( \inst13|process_1~1_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (\inst13|all_one_color_buffer [7])) # (\inst13|ram_write_buffer[13]~0_combout  & ((\IO_DATA[4]~4_combout ))) ) ) ) 
+// # ( !\inst13|buffer_24_grb [7] & ( \inst13|process_1~1_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (\inst13|all_one_color_buffer [7])) # (\inst13|ram_write_buffer[13]~0_combout  & ((\IO_DATA[4]~4_combout ))) ) ) ) # ( \inst13|buffer_24_grb 
+// [7] & ( !\inst13|process_1~1_combout  & ( (\inst13|ram_write_buffer[13]~0_combout ) # (\inst13|all_one_color_buffer [7]) ) ) ) # ( !\inst13|buffer_24_grb [7] & ( !\inst13|process_1~1_combout  & ( (\inst13|all_one_color_buffer [7] & 
+// !\inst13|ram_write_buffer[13]~0_combout ) ) ) )
 
-	.dataa(!\inst13|data_set_all [7]),
+	.dataa(!\inst13|all_one_color_buffer [7]),
 	.datab(!\inst13|ram_write_buffer[13]~0_combout ),
 	.datac(gnd),
 	.datad(!\IO_DATA[4]~4_combout ),
-	.datae(!\inst13|TempColorHolder [7]),
+	.datae(!\inst13|buffer_24_grb [7]),
 	.dataf(!\inst13|process_1~1_combout ),
 	.datag(gnd),
 	.cin(gnd),
@@ -22568,7 +22568,7 @@ defparam \IO_DATA[8]~8 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X33_Y27_N58
-dffeas \inst13|TempColorHolder[8] (
+dffeas \inst13|buffer_24_grb[8] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\IO_DATA[8]~8_combout ),
@@ -22576,28 +22576,28 @@ dffeas \inst13|TempColorHolder[8] (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\inst13|TempColorHolder[12]~1_combout ),
+	.ena(\inst13|buffer_24_grb[12]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [8]),
+	.q(\inst13|buffer_24_grb [8]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[8] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[8] .power_up = "low";
+defparam \inst13|buffer_24_grb[8] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[8] .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X31_Y23_N48
 cyclonev_lcell_comb \inst13|ram_write_buffer[16]~3 (
 // Equation(s):
-// \inst13|ram_write_buffer[16]~3_combout  = ( \inst13|wstate.setAll~q  & ( \inst13|wstate.idle~q  & ( (!\inst13|process_1~0_combout ) # (((!\inst|IR [1]) # (!\inst3|Equal7~2_combout )) # (\inst|IR [0])) ) ) ) # ( \inst13|wstate.setAll~q  & ( 
-// !\inst13|wstate.idle~q  & ( (!\inst13|process_1~0_combout ) # (((!\inst|IR [1]) # (!\inst3|Equal7~2_combout )) # (\inst|IR [0])) ) ) ) # ( !\inst13|wstate.setAll~q  & ( !\inst13|wstate.idle~q  & ( (!\inst13|process_1~0_combout ) # (((!\inst|IR [1]) # 
+// \inst13|ram_write_buffer[16]~3_combout  = ( \inst13|wstate.allOneColor~q  & ( \inst13|wstate.idle~q  & ( (!\inst13|process_1~0_combout ) # (((!\inst|IR [1]) # (!\inst3|Equal7~2_combout )) # (\inst|IR [0])) ) ) ) # ( \inst13|wstate.allOneColor~q  & ( 
+// !\inst13|wstate.idle~q  & ( (!\inst13|process_1~0_combout ) # (((!\inst|IR [1]) # (!\inst3|Equal7~2_combout )) # (\inst|IR [0])) ) ) ) # ( !\inst13|wstate.allOneColor~q  & ( !\inst13|wstate.idle~q  & ( (!\inst13|process_1~0_combout ) # (((!\inst|IR [1]) # 
 // (!\inst3|Equal7~2_combout )) # (\inst|IR [0])) ) ) )
 
 	.dataa(!\inst13|process_1~0_combout ),
 	.datab(!\inst|IR [0]),
 	.datac(!\inst|IR [1]),
 	.datad(!\inst3|Equal7~2_combout ),
-	.datae(!\inst13|wstate.setAll~q ),
+	.datae(!\inst13|wstate.allOneColor~q ),
 	.dataf(!\inst13|wstate.idle~q ),
 	.datag(gnd),
 	.cin(gnd),
@@ -22616,7 +22616,7 @@ defparam \inst13|ram_write_buffer[16]~3 .shared_arith = "off";
 dffeas \inst13|ram_write_buffer[8] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
-	.asdata(\inst13|TempColorHolder [8]),
+	.asdata(\inst13|buffer_24_grb [8]),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(\inst13|ram_write_buffer[16]~3_combout ),
@@ -22657,7 +22657,7 @@ defparam \IO_DATA[9]~9 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X33_Y27_N40
-dffeas \inst13|TempColorHolder[9] (
+dffeas \inst13|buffer_24_grb[9] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\IO_DATA[9]~9_combout ),
@@ -22665,21 +22665,21 @@ dffeas \inst13|TempColorHolder[9] (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\inst13|TempColorHolder[12]~1_combout ),
+	.ena(\inst13|buffer_24_grb[12]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [9]),
+	.q(\inst13|buffer_24_grb [9]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[9] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[9] .power_up = "low";
+defparam \inst13|buffer_24_grb[9] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[9] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X31_Y25_N55
 dffeas \inst13|ram_write_buffer[9] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
-	.asdata(\inst13|TempColorHolder [9]),
+	.asdata(\inst13|buffer_24_grb [9]),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(\inst13|ram_write_buffer[16]~3_combout ),
@@ -22719,7 +22719,7 @@ defparam \IO_DATA[10]~10 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X33_Y27_N4
-dffeas \inst13|TempColorHolder[10] (
+dffeas \inst13|buffer_24_grb[10] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\IO_DATA[10]~10_combout ),
@@ -22727,21 +22727,21 @@ dffeas \inst13|TempColorHolder[10] (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\inst13|TempColorHolder[12]~1_combout ),
+	.ena(\inst13|buffer_24_grb[12]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [10]),
+	.q(\inst13|buffer_24_grb [10]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[10] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[10] .power_up = "low";
+defparam \inst13|buffer_24_grb[10] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[10] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X31_Y25_N13
 dffeas \inst13|ram_write_buffer[10] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
-	.asdata(\inst13|TempColorHolder [10]),
+	.asdata(\inst13|buffer_24_grb [10]),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(\inst13|ram_write_buffer[16]~3_combout ),
@@ -22781,7 +22781,7 @@ defparam \IO_DATA[11]~11 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X33_Y27_N22
-dffeas \inst13|TempColorHolder[11] (
+dffeas \inst13|buffer_24_grb[11] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\IO_DATA[11]~11_combout ),
@@ -22789,20 +22789,20 @@ dffeas \inst13|TempColorHolder[11] (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\inst13|TempColorHolder[12]~1_combout ),
+	.ena(\inst13|buffer_24_grb[12]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [11]),
+	.q(\inst13|buffer_24_grb [11]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[11] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[11] .power_up = "low";
+defparam \inst13|buffer_24_grb[11] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[11] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y23_N27
-cyclonev_lcell_comb \inst13|data_set_all[11]~feeder (
+cyclonev_lcell_comb \inst13|all_one_color_buffer[11]~feeder (
 // Equation(s):
-// \inst13|data_set_all[11]~feeder_combout  = ( \IO_DATA[11]~11_combout  )
+// \inst13|all_one_color_buffer[11]~feeder_combout  = ( \IO_DATA[11]~11_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -22813,47 +22813,47 @@ cyclonev_lcell_comb \inst13|data_set_all[11]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|data_set_all[11]~feeder_combout ),
+	.combout(\inst13|all_one_color_buffer[11]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|data_set_all[11]~feeder .extended_lut = "off";
-defparam \inst13|data_set_all[11]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|data_set_all[11]~feeder .shared_arith = "off";
+defparam \inst13|all_one_color_buffer[11]~feeder .extended_lut = "off";
+defparam \inst13|all_one_color_buffer[11]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|all_one_color_buffer[11]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y23_N29
-dffeas \inst13|data_set_all[11] (
+dffeas \inst13|all_one_color_buffer[11] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|data_set_all[11]~feeder_combout ),
+	.d(\inst13|all_one_color_buffer[11]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|data_set_all[23]~1_combout ),
+	.ena(\inst13|all_one_color_buffer[23]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|data_set_all [11]),
+	.q(\inst13|all_one_color_buffer [11]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|data_set_all[11] .is_wysiwyg = "true";
-defparam \inst13|data_set_all[11] .power_up = "low";
+defparam \inst13|all_one_color_buffer[11] .is_wysiwyg = "true";
+defparam \inst13|all_one_color_buffer[11] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y23_N30
 cyclonev_lcell_comb \inst13|Selector12~0 (
 // Equation(s):
-// \inst13|Selector12~0_combout  = ( \inst13|data_set_all [11] & ( \inst13|process_1~1_combout  & ( ((!\inst13|ram_write_buffer[13]~0_combout ) # (\IO_DATA[11]~26_combout )) # (\IO_DATA[11]~25_combout ) ) ) ) # ( !\inst13|data_set_all [11] & ( 
-// \inst13|process_1~1_combout  & ( (\inst13|ram_write_buffer[13]~0_combout  & ((\IO_DATA[11]~26_combout ) # (\IO_DATA[11]~25_combout ))) ) ) ) # ( \inst13|data_set_all [11] & ( !\inst13|process_1~1_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout ) # 
-// (\inst13|TempColorHolder [11]) ) ) ) # ( !\inst13|data_set_all [11] & ( !\inst13|process_1~1_combout  & ( (\inst13|TempColorHolder [11] & \inst13|ram_write_buffer[13]~0_combout ) ) ) )
+// \inst13|Selector12~0_combout  = ( \inst13|all_one_color_buffer [11] & ( \inst13|process_1~1_combout  & ( ((!\inst13|ram_write_buffer[13]~0_combout ) # (\IO_DATA[11]~26_combout )) # (\IO_DATA[11]~25_combout ) ) ) ) # ( !\inst13|all_one_color_buffer [11] & 
+// ( \inst13|process_1~1_combout  & ( (\inst13|ram_write_buffer[13]~0_combout  & ((\IO_DATA[11]~26_combout ) # (\IO_DATA[11]~25_combout ))) ) ) ) # ( \inst13|all_one_color_buffer [11] & ( !\inst13|process_1~1_combout  & ( 
+// (!\inst13|ram_write_buffer[13]~0_combout ) # (\inst13|buffer_24_grb [11]) ) ) ) # ( !\inst13|all_one_color_buffer [11] & ( !\inst13|process_1~1_combout  & ( (\inst13|buffer_24_grb [11] & \inst13|ram_write_buffer[13]~0_combout ) ) ) )
 
 	.dataa(!\IO_DATA[11]~25_combout ),
 	.datab(!\IO_DATA[11]~26_combout ),
-	.datac(!\inst13|TempColorHolder [11]),
+	.datac(!\inst13|buffer_24_grb [11]),
 	.datad(!\inst13|ram_write_buffer[13]~0_combout ),
-	.datae(!\inst13|data_set_all [11]),
+	.datae(!\inst13|all_one_color_buffer [11]),
 	.dataf(!\inst13|process_1~1_combout ),
 	.datag(gnd),
 	.cin(gnd),
@@ -22912,7 +22912,7 @@ defparam \IO_DATA[12]~12 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X30_Y27_N26
-dffeas \inst13|data_set_all[12] (
+dffeas \inst13|all_one_color_buffer[12] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\IO_DATA[12]~12_combout ),
@@ -22920,18 +22920,18 @@ dffeas \inst13|data_set_all[12] (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\inst13|data_set_all[23]~1_combout ),
+	.ena(\inst13|all_one_color_buffer[23]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|data_set_all [12]),
+	.q(\inst13|all_one_color_buffer [12]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|data_set_all[12] .is_wysiwyg = "true";
-defparam \inst13|data_set_all[12] .power_up = "low";
+defparam \inst13|all_one_color_buffer[12] .is_wysiwyg = "true";
+defparam \inst13|all_one_color_buffer[12] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X30_Y27_N22
-dffeas \inst13|TempColorHolder[12] (
+dffeas \inst13|buffer_24_grb[12] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\IO_DATA[12]~12_combout ),
@@ -22939,27 +22939,27 @@ dffeas \inst13|TempColorHolder[12] (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\inst13|TempColorHolder[12]~1_combout ),
+	.ena(\inst13|buffer_24_grb[12]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [12]),
+	.q(\inst13|buffer_24_grb [12]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[12] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[12] .power_up = "low";
+defparam \inst13|buffer_24_grb[12] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[12] .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X30_Y23_N24
 cyclonev_lcell_comb \inst13|Selector11~0 (
 // Equation(s):
 // \inst13|Selector11~0_combout  = ( \inst13|ram_write_buffer[13]~0_combout  & ( \inst13|process_1~1_combout  & ( (\IO_DATA[12]~27_combout ) # (\IO_DATA[12]~28_combout ) ) ) ) # ( !\inst13|ram_write_buffer[13]~0_combout  & ( \inst13|process_1~1_combout  & ( 
-// \inst13|data_set_all [12] ) ) ) # ( \inst13|ram_write_buffer[13]~0_combout  & ( !\inst13|process_1~1_combout  & ( \inst13|TempColorHolder [12] ) ) ) # ( !\inst13|ram_write_buffer[13]~0_combout  & ( !\inst13|process_1~1_combout  & ( \inst13|data_set_all 
-// [12] ) ) )
+// \inst13|all_one_color_buffer [12] ) ) ) # ( \inst13|ram_write_buffer[13]~0_combout  & ( !\inst13|process_1~1_combout  & ( \inst13|buffer_24_grb [12] ) ) ) # ( !\inst13|ram_write_buffer[13]~0_combout  & ( !\inst13|process_1~1_combout  & ( 
+// \inst13|all_one_color_buffer [12] ) ) )
 
 	.dataa(!\IO_DATA[12]~28_combout ),
 	.datab(!\IO_DATA[12]~27_combout ),
-	.datac(!\inst13|data_set_all [12]),
-	.datad(!\inst13|TempColorHolder [12]),
+	.datac(!\inst13|all_one_color_buffer [12]),
+	.datad(!\inst13|buffer_24_grb [12]),
 	.datae(!\inst13|ram_write_buffer[13]~0_combout ),
 	.dataf(!\inst13|process_1~1_combout ),
 	.datag(gnd),
@@ -23019,7 +23019,7 @@ defparam \IO_DATA[13]~13 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X30_Y25_N46
-dffeas \inst13|data_set_all[13] (
+dffeas \inst13|all_one_color_buffer[13] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\IO_DATA[13]~13_combout ),
@@ -23027,18 +23027,18 @@ dffeas \inst13|data_set_all[13] (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\inst13|data_set_all[23]~1_combout ),
+	.ena(\inst13|all_one_color_buffer[23]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|data_set_all [13]),
+	.q(\inst13|all_one_color_buffer [13]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|data_set_all[13] .is_wysiwyg = "true";
-defparam \inst13|data_set_all[13] .power_up = "low";
+defparam \inst13|all_one_color_buffer[13] .is_wysiwyg = "true";
+defparam \inst13|all_one_color_buffer[13] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X30_Y27_N16
-dffeas \inst13|TempColorHolder[13] (
+dffeas \inst13|buffer_24_grb[13] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\IO_DATA[13]~13_combout ),
@@ -23046,27 +23046,27 @@ dffeas \inst13|TempColorHolder[13] (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\inst13|TempColorHolder[12]~1_combout ),
+	.ena(\inst13|buffer_24_grb[12]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [13]),
+	.q(\inst13|buffer_24_grb [13]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[13] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[13] .power_up = "low";
+defparam \inst13|buffer_24_grb[13] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[13] .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X31_Y25_N48
 cyclonev_lcell_comb \inst13|Selector10~0 (
 // Equation(s):
-// \inst13|Selector10~0_combout  = ( \inst13|ram_write_buffer[13]~0_combout  & ( \IO_DATA[13]~30_combout  & ( (\inst13|TempColorHolder [13]) # (\inst13|process_1~1_combout ) ) ) ) # ( !\inst13|ram_write_buffer[13]~0_combout  & ( \IO_DATA[13]~30_combout  & ( 
-// \inst13|data_set_all [13] ) ) ) # ( \inst13|ram_write_buffer[13]~0_combout  & ( !\IO_DATA[13]~30_combout  & ( (!\inst13|process_1~1_combout  & ((\inst13|TempColorHolder [13]))) # (\inst13|process_1~1_combout  & (\IO_DATA[13]~29_combout )) ) ) ) # ( 
-// !\inst13|ram_write_buffer[13]~0_combout  & ( !\IO_DATA[13]~30_combout  & ( \inst13|data_set_all [13] ) ) )
+// \inst13|Selector10~0_combout  = ( \inst13|ram_write_buffer[13]~0_combout  & ( \IO_DATA[13]~30_combout  & ( (\inst13|buffer_24_grb [13]) # (\inst13|process_1~1_combout ) ) ) ) # ( !\inst13|ram_write_buffer[13]~0_combout  & ( \IO_DATA[13]~30_combout  & ( 
+// \inst13|all_one_color_buffer [13] ) ) ) # ( \inst13|ram_write_buffer[13]~0_combout  & ( !\IO_DATA[13]~30_combout  & ( (!\inst13|process_1~1_combout  & ((\inst13|buffer_24_grb [13]))) # (\inst13|process_1~1_combout  & (\IO_DATA[13]~29_combout )) ) ) ) # ( 
+// !\inst13|ram_write_buffer[13]~0_combout  & ( !\IO_DATA[13]~30_combout  & ( \inst13|all_one_color_buffer [13] ) ) )
 
 	.dataa(!\inst13|process_1~1_combout ),
-	.datab(!\inst13|data_set_all [13]),
+	.datab(!\inst13|all_one_color_buffer [13]),
 	.datac(!\IO_DATA[13]~29_combout ),
-	.datad(!\inst13|TempColorHolder [13]),
+	.datad(!\inst13|buffer_24_grb [13]),
 	.datae(!\inst13|ram_write_buffer[13]~0_combout ),
 	.dataf(!\IO_DATA[13]~30_combout ),
 	.datag(gnd),
@@ -23126,7 +23126,7 @@ defparam \IO_DATA[14]~14 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X30_Y27_N1
-dffeas \inst13|data_set_all[14] (
+dffeas \inst13|all_one_color_buffer[14] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\IO_DATA[14]~14_combout ),
@@ -23134,18 +23134,18 @@ dffeas \inst13|data_set_all[14] (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\inst13|data_set_all[23]~1_combout ),
+	.ena(\inst13|all_one_color_buffer[23]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|data_set_all [14]),
+	.q(\inst13|all_one_color_buffer [14]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|data_set_all[14] .is_wysiwyg = "true";
-defparam \inst13|data_set_all[14] .power_up = "low";
+defparam \inst13|all_one_color_buffer[14] .is_wysiwyg = "true";
+defparam \inst13|all_one_color_buffer[14] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X33_Y27_N52
-dffeas \inst13|TempColorHolder[14] (
+dffeas \inst13|buffer_24_grb[14] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\IO_DATA[14]~14_combout ),
@@ -23153,26 +23153,26 @@ dffeas \inst13|TempColorHolder[14] (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\inst13|TempColorHolder[12]~1_combout ),
+	.ena(\inst13|buffer_24_grb[12]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [14]),
+	.q(\inst13|buffer_24_grb [14]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[14] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[14] .power_up = "low";
+defparam \inst13|buffer_24_grb[14] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[14] .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X29_Y26_N18
 cyclonev_lcell_comb \inst13|Selector9~0 (
 // Equation(s):
 // \inst13|Selector9~0_combout  = ( \inst13|ram_write_buffer[13]~0_combout  & ( \inst13|process_1~1_combout  & ( (\IO_DATA[14]~31_combout ) # (\IO_DATA[14]~32_combout ) ) ) ) # ( !\inst13|ram_write_buffer[13]~0_combout  & ( \inst13|process_1~1_combout  & ( 
-// \inst13|data_set_all [14] ) ) ) # ( \inst13|ram_write_buffer[13]~0_combout  & ( !\inst13|process_1~1_combout  & ( \inst13|TempColorHolder [14] ) ) ) # ( !\inst13|ram_write_buffer[13]~0_combout  & ( !\inst13|process_1~1_combout  & ( \inst13|data_set_all 
-// [14] ) ) )
+// \inst13|all_one_color_buffer [14] ) ) ) # ( \inst13|ram_write_buffer[13]~0_combout  & ( !\inst13|process_1~1_combout  & ( \inst13|buffer_24_grb [14] ) ) ) # ( !\inst13|ram_write_buffer[13]~0_combout  & ( !\inst13|process_1~1_combout  & ( 
+// \inst13|all_one_color_buffer [14] ) ) )
 
-	.dataa(!\inst13|data_set_all [14]),
+	.dataa(!\inst13|all_one_color_buffer [14]),
 	.datab(!\IO_DATA[14]~32_combout ),
-	.datac(!\inst13|TempColorHolder [14]),
+	.datac(!\inst13|buffer_24_grb [14]),
 	.datad(!\IO_DATA[14]~31_combout ),
 	.datae(!\inst13|ram_write_buffer[13]~0_combout ),
 	.dataf(!\inst13|process_1~1_combout ),
@@ -23233,9 +23233,9 @@ defparam \IO_DATA[15]~15 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: MLABCELL_X34_Y25_N6
-cyclonev_lcell_comb \inst13|TempColorHolder[15]~feeder (
+cyclonev_lcell_comb \inst13|buffer_24_grb[15]~feeder (
 // Equation(s):
-// \inst13|TempColorHolder[15]~feeder_combout  = ( \IO_DATA[15]~15_combout  )
+// \inst13|buffer_24_grb[15]~feeder_combout  = ( \IO_DATA[15]~15_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -23246,37 +23246,37 @@ cyclonev_lcell_comb \inst13|TempColorHolder[15]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|TempColorHolder[15]~feeder_combout ),
+	.combout(\inst13|buffer_24_grb[15]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|TempColorHolder[15]~feeder .extended_lut = "off";
-defparam \inst13|TempColorHolder[15]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|TempColorHolder[15]~feeder .shared_arith = "off";
+defparam \inst13|buffer_24_grb[15]~feeder .extended_lut = "off";
+defparam \inst13|buffer_24_grb[15]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|buffer_24_grb[15]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X34_Y25_N7
-dffeas \inst13|TempColorHolder[15] (
+dffeas \inst13|buffer_24_grb[15] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|TempColorHolder[15]~feeder_combout ),
+	.d(\inst13|buffer_24_grb[15]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|TempColorHolder[12]~1_combout ),
+	.ena(\inst13|buffer_24_grb[12]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [15]),
+	.q(\inst13|buffer_24_grb [15]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[15] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[15] .power_up = "low";
+defparam \inst13|buffer_24_grb[15] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[15] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X30_Y27_N35
-dffeas \inst13|data_set_all[15] (
+dffeas \inst13|all_one_color_buffer[15] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\IO_DATA[15]~15_combout ),
@@ -23284,27 +23284,27 @@ dffeas \inst13|data_set_all[15] (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\inst13|data_set_all[23]~1_combout ),
+	.ena(\inst13|all_one_color_buffer[23]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|data_set_all [15]),
+	.q(\inst13|all_one_color_buffer [15]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|data_set_all[15] .is_wysiwyg = "true";
-defparam \inst13|data_set_all[15] .power_up = "low";
+defparam \inst13|all_one_color_buffer[15] .is_wysiwyg = "true";
+defparam \inst13|all_one_color_buffer[15] .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X31_Y25_N30
 cyclonev_lcell_comb \inst13|Selector8~0 (
 // Equation(s):
-// \inst13|Selector8~0_combout  = ( \inst13|ram_write_buffer[13]~0_combout  & ( \IO_DATA[15]~34_combout  & ( (\inst13|TempColorHolder [15]) # (\inst13|process_1~1_combout ) ) ) ) # ( !\inst13|ram_write_buffer[13]~0_combout  & ( \IO_DATA[15]~34_combout  & ( 
-// \inst13|data_set_all [15] ) ) ) # ( \inst13|ram_write_buffer[13]~0_combout  & ( !\IO_DATA[15]~34_combout  & ( (!\inst13|process_1~1_combout  & ((\inst13|TempColorHolder [15]))) # (\inst13|process_1~1_combout  & (\IO_DATA[15]~33_combout )) ) ) ) # ( 
-// !\inst13|ram_write_buffer[13]~0_combout  & ( !\IO_DATA[15]~34_combout  & ( \inst13|data_set_all [15] ) ) )
+// \inst13|Selector8~0_combout  = ( \inst13|ram_write_buffer[13]~0_combout  & ( \IO_DATA[15]~34_combout  & ( (\inst13|buffer_24_grb [15]) # (\inst13|process_1~1_combout ) ) ) ) # ( !\inst13|ram_write_buffer[13]~0_combout  & ( \IO_DATA[15]~34_combout  & ( 
+// \inst13|all_one_color_buffer [15] ) ) ) # ( \inst13|ram_write_buffer[13]~0_combout  & ( !\IO_DATA[15]~34_combout  & ( (!\inst13|process_1~1_combout  & ((\inst13|buffer_24_grb [15]))) # (\inst13|process_1~1_combout  & (\IO_DATA[15]~33_combout )) ) ) ) # ( 
+// !\inst13|ram_write_buffer[13]~0_combout  & ( !\IO_DATA[15]~34_combout  & ( \inst13|all_one_color_buffer [15] ) ) )
 
 	.dataa(!\IO_DATA[15]~33_combout ),
 	.datab(!\inst13|process_1~1_combout ),
-	.datac(!\inst13|TempColorHolder [15]),
-	.datad(!\inst13|data_set_all [15]),
+	.datac(!\inst13|buffer_24_grb [15]),
+	.datad(!\inst13|all_one_color_buffer [15]),
 	.datae(!\inst13|ram_write_buffer[13]~0_combout ),
 	.dataf(!\IO_DATA[15]~34_combout ),
 	.datag(gnd),
@@ -23340,9 +23340,9 @@ defparam \inst13|ram_write_buffer[15] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y24_N30
-cyclonev_lcell_comb \inst13|TempColorHolder[16]~feeder (
+cyclonev_lcell_comb \inst13|buffer_24_grb[16]~feeder (
 // Equation(s):
-// \inst13|TempColorHolder[16]~feeder_combout  = ( \IO_DATA[0]~0_combout  )
+// \inst13|buffer_24_grb[16]~feeder_combout  = ( \IO_DATA[0]~0_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -23353,20 +23353,20 @@ cyclonev_lcell_comb \inst13|TempColorHolder[16]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|TempColorHolder[16]~feeder_combout ),
+	.combout(\inst13|buffer_24_grb[16]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|TempColorHolder[16]~feeder .extended_lut = "off";
-defparam \inst13|TempColorHolder[16]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|TempColorHolder[16]~feeder .shared_arith = "off";
+defparam \inst13|buffer_24_grb[16]~feeder .extended_lut = "off";
+defparam \inst13|buffer_24_grb[16]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|buffer_24_grb[16]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: LABCELL_X31_Y23_N57
-cyclonev_lcell_comb \inst13|TempColorHolder[17]~0 (
+cyclonev_lcell_comb \inst13|buffer_24_grb[17]~0 (
 // Equation(s):
-// \inst13|TempColorHolder[17]~0_combout  = ( \inst3|Equal7~2_combout  & ( \inst13|process_1~0_combout  & ( (\inst|IR [1] & (!\inst13|wstate.storing~q  & \inst|IR [0])) ) ) )
+// \inst13|buffer_24_grb[17]~0_combout  = ( \inst3|Equal7~2_combout  & ( \inst13|process_1~0_combout  & ( (\inst|IR [1] & (!\inst13|wstate.storing~q  & \inst|IR [0])) ) ) )
 
 	.dataa(!\inst|IR [1]),
 	.datab(!\inst13|wstate.storing~q ),
@@ -23377,46 +23377,46 @@ cyclonev_lcell_comb \inst13|TempColorHolder[17]~0 (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|TempColorHolder[17]~0_combout ),
+	.combout(\inst13|buffer_24_grb[17]~0_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|TempColorHolder[17]~0 .extended_lut = "off";
-defparam \inst13|TempColorHolder[17]~0 .lut_mask = 64'h0000000000000404;
-defparam \inst13|TempColorHolder[17]~0 .shared_arith = "off";
+defparam \inst13|buffer_24_grb[17]~0 .extended_lut = "off";
+defparam \inst13|buffer_24_grb[17]~0 .lut_mask = 64'h0000000000000404;
+defparam \inst13|buffer_24_grb[17]~0 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y24_N31
-dffeas \inst13|TempColorHolder[16] (
+dffeas \inst13|buffer_24_grb[16] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|TempColorHolder[16]~feeder_combout ),
+	.d(\inst13|buffer_24_grb[16]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|TempColorHolder[17]~0_combout ),
+	.ena(\inst13|buffer_24_grb[17]~0_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [16]),
+	.q(\inst13|buffer_24_grb [16]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[16] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[16] .power_up = "low";
+defparam \inst13|buffer_24_grb[16] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[16] .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X33_Y24_N51
 cyclonev_lcell_comb \inst13|ram_write_buffer[16]~feeder (
 // Equation(s):
-// \inst13|ram_write_buffer[16]~feeder_combout  = ( \inst13|TempColorHolder [16] )
+// \inst13|ram_write_buffer[16]~feeder_combout  = ( \inst13|buffer_24_grb [16] )
 
 	.dataa(gnd),
 	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
 	.datae(gnd),
-	.dataf(!\inst13|TempColorHolder [16]),
+	.dataf(!\inst13|buffer_24_grb [16]),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -23450,7 +23450,7 @@ defparam \inst13|ram_write_buffer[16] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X31_Y23_N34
-dffeas \inst13|TempColorHolder[17] (
+dffeas \inst13|buffer_24_grb[17] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\IO_DATA[1]~1_combout ),
@@ -23458,21 +23458,21 @@ dffeas \inst13|TempColorHolder[17] (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\inst13|TempColorHolder[17]~0_combout ),
+	.ena(\inst13|buffer_24_grb[17]~0_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [17]),
+	.q(\inst13|buffer_24_grb [17]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[17] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[17] .power_up = "low";
+defparam \inst13|buffer_24_grb[17] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[17] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X31_Y23_N28
 dffeas \inst13|ram_write_buffer[17] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
-	.asdata(\inst13|TempColorHolder [17]),
+	.asdata(\inst13|buffer_24_grb [17]),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(\inst13|ram_write_buffer[16]~3_combout ),
@@ -23488,9 +23488,9 @@ defparam \inst13|ram_write_buffer[17] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y24_N9
-cyclonev_lcell_comb \inst13|TempColorHolder[18]~feeder (
+cyclonev_lcell_comb \inst13|buffer_24_grb[18]~feeder (
 // Equation(s):
-// \inst13|TempColorHolder[18]~feeder_combout  = ( \IO_DATA[2]~2_combout  )
+// \inst13|buffer_24_grb[18]~feeder_combout  = ( \IO_DATA[2]~2_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -23501,39 +23501,39 @@ cyclonev_lcell_comb \inst13|TempColorHolder[18]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|TempColorHolder[18]~feeder_combout ),
+	.combout(\inst13|buffer_24_grb[18]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|TempColorHolder[18]~feeder .extended_lut = "off";
-defparam \inst13|TempColorHolder[18]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|TempColorHolder[18]~feeder .shared_arith = "off";
+defparam \inst13|buffer_24_grb[18]~feeder .extended_lut = "off";
+defparam \inst13|buffer_24_grb[18]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|buffer_24_grb[18]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y24_N11
-dffeas \inst13|TempColorHolder[18] (
+dffeas \inst13|buffer_24_grb[18] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|TempColorHolder[18]~feeder_combout ),
+	.d(\inst13|buffer_24_grb[18]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|TempColorHolder[17]~0_combout ),
+	.ena(\inst13|buffer_24_grb[17]~0_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [18]),
+	.q(\inst13|buffer_24_grb [18]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[18] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[18] .power_up = "low";
+defparam \inst13|buffer_24_grb[18] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[18] .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X27_Y24_N33
-cyclonev_lcell_comb \inst13|data_set_all[18]~feeder (
+cyclonev_lcell_comb \inst13|all_one_color_buffer[18]~feeder (
 // Equation(s):
-// \inst13|data_set_all[18]~feeder_combout  = ( \IO_DATA[5]~5_combout  )
+// \inst13|all_one_color_buffer[18]~feeder_combout  = ( \IO_DATA[5]~5_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -23544,47 +23544,47 @@ cyclonev_lcell_comb \inst13|data_set_all[18]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|data_set_all[18]~feeder_combout ),
+	.combout(\inst13|all_one_color_buffer[18]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|data_set_all[18]~feeder .extended_lut = "off";
-defparam \inst13|data_set_all[18]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|data_set_all[18]~feeder .shared_arith = "off";
+defparam \inst13|all_one_color_buffer[18]~feeder .extended_lut = "off";
+defparam \inst13|all_one_color_buffer[18]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|all_one_color_buffer[18]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X27_Y24_N34
-dffeas \inst13|data_set_all[18] (
+dffeas \inst13|all_one_color_buffer[18] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|data_set_all[18]~feeder_combout ),
+	.d(\inst13|all_one_color_buffer[18]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|data_set_all[23]~1_combout ),
+	.ena(\inst13|all_one_color_buffer[23]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|data_set_all [18]),
+	.q(\inst13|all_one_color_buffer [18]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|data_set_all[18] .is_wysiwyg = "true";
-defparam \inst13|data_set_all[18] .power_up = "low";
+defparam \inst13|all_one_color_buffer[18] .is_wysiwyg = "true";
+defparam \inst13|all_one_color_buffer[18] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X34_Y25_N15
 cyclonev_lcell_comb \inst13|Selector5~0 (
 // Equation(s):
-// \inst13|Selector5~0_combout  = ( \IO_DATA[5]~5_combout  & ( \inst13|process_1~1_combout  & ( (\inst13|data_set_all [18]) # (\inst13|ram_write_buffer[13]~0_combout ) ) ) ) # ( !\IO_DATA[5]~5_combout  & ( \inst13|process_1~1_combout  & ( 
-// (!\inst13|ram_write_buffer[13]~0_combout  & \inst13|data_set_all [18]) ) ) ) # ( \IO_DATA[5]~5_combout  & ( !\inst13|process_1~1_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|data_set_all [18]))) # 
-// (\inst13|ram_write_buffer[13]~0_combout  & (\inst13|TempColorHolder [18])) ) ) ) # ( !\IO_DATA[5]~5_combout  & ( !\inst13|process_1~1_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|data_set_all [18]))) # 
-// (\inst13|ram_write_buffer[13]~0_combout  & (\inst13|TempColorHolder [18])) ) ) )
+// \inst13|Selector5~0_combout  = ( \IO_DATA[5]~5_combout  & ( \inst13|process_1~1_combout  & ( (\inst13|all_one_color_buffer [18]) # (\inst13|ram_write_buffer[13]~0_combout ) ) ) ) # ( !\IO_DATA[5]~5_combout  & ( \inst13|process_1~1_combout  & ( 
+// (!\inst13|ram_write_buffer[13]~0_combout  & \inst13|all_one_color_buffer [18]) ) ) ) # ( \IO_DATA[5]~5_combout  & ( !\inst13|process_1~1_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|all_one_color_buffer [18]))) # 
+// (\inst13|ram_write_buffer[13]~0_combout  & (\inst13|buffer_24_grb [18])) ) ) ) # ( !\IO_DATA[5]~5_combout  & ( !\inst13|process_1~1_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|all_one_color_buffer [18]))) # 
+// (\inst13|ram_write_buffer[13]~0_combout  & (\inst13|buffer_24_grb [18])) ) ) )
 
 	.dataa(gnd),
 	.datab(!\inst13|ram_write_buffer[13]~0_combout ),
-	.datac(!\inst13|TempColorHolder [18]),
-	.datad(!\inst13|data_set_all [18]),
+	.datac(!\inst13|buffer_24_grb [18]),
+	.datad(!\inst13|all_one_color_buffer [18]),
 	.datae(!\IO_DATA[5]~5_combout ),
 	.dataf(!\inst13|process_1~1_combout ),
 	.datag(gnd),
@@ -23620,9 +23620,9 @@ defparam \inst13|ram_write_buffer[18] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y23_N36
-cyclonev_lcell_comb \inst13|data_set_all[19]~feeder (
+cyclonev_lcell_comb \inst13|all_one_color_buffer[19]~feeder (
 // Equation(s):
-// \inst13|data_set_all[19]~feeder_combout  = ( \IO_DATA[6]~6_combout  )
+// \inst13|all_one_color_buffer[19]~feeder_combout  = ( \IO_DATA[6]~6_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -23633,39 +23633,39 @@ cyclonev_lcell_comb \inst13|data_set_all[19]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|data_set_all[19]~feeder_combout ),
+	.combout(\inst13|all_one_color_buffer[19]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|data_set_all[19]~feeder .extended_lut = "off";
-defparam \inst13|data_set_all[19]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|data_set_all[19]~feeder .shared_arith = "off";
+defparam \inst13|all_one_color_buffer[19]~feeder .extended_lut = "off";
+defparam \inst13|all_one_color_buffer[19]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|all_one_color_buffer[19]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y23_N38
-dffeas \inst13|data_set_all[19] (
+dffeas \inst13|all_one_color_buffer[19] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|data_set_all[19]~feeder_combout ),
+	.d(\inst13|all_one_color_buffer[19]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|data_set_all[23]~1_combout ),
+	.ena(\inst13|all_one_color_buffer[23]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|data_set_all [19]),
+	.q(\inst13|all_one_color_buffer [19]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|data_set_all[19] .is_wysiwyg = "true";
-defparam \inst13|data_set_all[19] .power_up = "low";
+defparam \inst13|all_one_color_buffer[19] .is_wysiwyg = "true";
+defparam \inst13|all_one_color_buffer[19] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y24_N6
-cyclonev_lcell_comb \inst13|TempColorHolder[19]~feeder (
+cyclonev_lcell_comb \inst13|buffer_24_grb[19]~feeder (
 // Equation(s):
-// \inst13|TempColorHolder[19]~feeder_combout  = ( \IO_DATA[3]~3_combout  )
+// \inst13|buffer_24_grb[19]~feeder_combout  = ( \IO_DATA[3]~3_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -23676,46 +23676,46 @@ cyclonev_lcell_comb \inst13|TempColorHolder[19]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|TempColorHolder[19]~feeder_combout ),
+	.combout(\inst13|buffer_24_grb[19]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|TempColorHolder[19]~feeder .extended_lut = "off";
-defparam \inst13|TempColorHolder[19]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|TempColorHolder[19]~feeder .shared_arith = "off";
+defparam \inst13|buffer_24_grb[19]~feeder .extended_lut = "off";
+defparam \inst13|buffer_24_grb[19]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|buffer_24_grb[19]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y24_N7
-dffeas \inst13|TempColorHolder[19] (
+dffeas \inst13|buffer_24_grb[19] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|TempColorHolder[19]~feeder_combout ),
+	.d(\inst13|buffer_24_grb[19]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|TempColorHolder[17]~0_combout ),
+	.ena(\inst13|buffer_24_grb[17]~0_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [19]),
+	.q(\inst13|buffer_24_grb [19]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[19] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[19] .power_up = "low";
+defparam \inst13|buffer_24_grb[19] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[19] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y23_N42
 cyclonev_lcell_comb \inst13|Selector4~0 (
 // Equation(s):
-// \inst13|Selector4~0_combout  = ( \IO_DATA[6]~6_combout  & ( \inst13|process_1~1_combout  & ( (\inst13|ram_write_buffer[13]~0_combout ) # (\inst13|data_set_all [19]) ) ) ) # ( !\IO_DATA[6]~6_combout  & ( \inst13|process_1~1_combout  & ( 
-// (\inst13|data_set_all [19] & !\inst13|ram_write_buffer[13]~0_combout ) ) ) ) # ( \IO_DATA[6]~6_combout  & ( !\inst13|process_1~1_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (\inst13|data_set_all [19])) # 
-// (\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|TempColorHolder [19]))) ) ) ) # ( !\IO_DATA[6]~6_combout  & ( !\inst13|process_1~1_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (\inst13|data_set_all [19])) # 
-// (\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|TempColorHolder [19]))) ) ) )
+// \inst13|Selector4~0_combout  = ( \IO_DATA[6]~6_combout  & ( \inst13|process_1~1_combout  & ( (\inst13|ram_write_buffer[13]~0_combout ) # (\inst13|all_one_color_buffer [19]) ) ) ) # ( !\IO_DATA[6]~6_combout  & ( \inst13|process_1~1_combout  & ( 
+// (\inst13|all_one_color_buffer [19] & !\inst13|ram_write_buffer[13]~0_combout ) ) ) ) # ( \IO_DATA[6]~6_combout  & ( !\inst13|process_1~1_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (\inst13|all_one_color_buffer [19])) # 
+// (\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|buffer_24_grb [19]))) ) ) ) # ( !\IO_DATA[6]~6_combout  & ( !\inst13|process_1~1_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (\inst13|all_one_color_buffer [19])) # 
+// (\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|buffer_24_grb [19]))) ) ) )
 
-	.dataa(!\inst13|data_set_all [19]),
+	.dataa(!\inst13|all_one_color_buffer [19]),
 	.datab(!\inst13|ram_write_buffer[13]~0_combout ),
-	.datac(!\inst13|TempColorHolder [19]),
+	.datac(!\inst13|buffer_24_grb [19]),
 	.datad(gnd),
 	.datae(!\IO_DATA[6]~6_combout ),
 	.dataf(!\inst13|process_1~1_combout ),
@@ -23752,7 +23752,7 @@ defparam \inst13|ram_write_buffer[19] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X30_Y25_N1
-dffeas \inst13|data_set_all[20] (
+dffeas \inst13|all_one_color_buffer[20] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\IO_DATA[7]~7_combout ),
@@ -23760,20 +23760,20 @@ dffeas \inst13|data_set_all[20] (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\inst13|data_set_all[23]~1_combout ),
+	.ena(\inst13|all_one_color_buffer[23]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|data_set_all [20]),
+	.q(\inst13|all_one_color_buffer [20]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|data_set_all[20] .is_wysiwyg = "true";
-defparam \inst13|data_set_all[20] .power_up = "low";
+defparam \inst13|all_one_color_buffer[20] .is_wysiwyg = "true";
+defparam \inst13|all_one_color_buffer[20] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y24_N15
-cyclonev_lcell_comb \inst13|TempColorHolder[20]~feeder (
+cyclonev_lcell_comb \inst13|buffer_24_grb[20]~feeder (
 // Equation(s):
-// \inst13|TempColorHolder[20]~feeder_combout  = ( \IO_DATA[4]~4_combout  )
+// \inst13|buffer_24_grb[20]~feeder_combout  = ( \IO_DATA[4]~4_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -23784,47 +23784,47 @@ cyclonev_lcell_comb \inst13|TempColorHolder[20]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|TempColorHolder[20]~feeder_combout ),
+	.combout(\inst13|buffer_24_grb[20]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|TempColorHolder[20]~feeder .extended_lut = "off";
-defparam \inst13|TempColorHolder[20]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|TempColorHolder[20]~feeder .shared_arith = "off";
+defparam \inst13|buffer_24_grb[20]~feeder .extended_lut = "off";
+defparam \inst13|buffer_24_grb[20]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|buffer_24_grb[20]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y24_N16
-dffeas \inst13|TempColorHolder[20] (
+dffeas \inst13|buffer_24_grb[20] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|TempColorHolder[20]~feeder_combout ),
+	.d(\inst13|buffer_24_grb[20]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|TempColorHolder[17]~0_combout ),
+	.ena(\inst13|buffer_24_grb[17]~0_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [20]),
+	.q(\inst13|buffer_24_grb [20]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[20] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[20] .power_up = "low";
+defparam \inst13|buffer_24_grb[20] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[20] .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X30_Y23_N6
 cyclonev_lcell_comb \inst13|Selector3~0 (
 // Equation(s):
-// \inst13|Selector3~0_combout  = ( \inst13|process_1~1_combout  & ( \IO_DATA[7]~7_combout  & ( (\inst13|ram_write_buffer[13]~0_combout ) # (\inst13|data_set_all [20]) ) ) ) # ( !\inst13|process_1~1_combout  & ( \IO_DATA[7]~7_combout  & ( 
-// (!\inst13|ram_write_buffer[13]~0_combout  & (\inst13|data_set_all [20])) # (\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|TempColorHolder [20]))) ) ) ) # ( \inst13|process_1~1_combout  & ( !\IO_DATA[7]~7_combout  & ( (\inst13|data_set_all [20] & 
-// !\inst13|ram_write_buffer[13]~0_combout ) ) ) ) # ( !\inst13|process_1~1_combout  & ( !\IO_DATA[7]~7_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (\inst13|data_set_all [20])) # (\inst13|ram_write_buffer[13]~0_combout  & 
-// ((\inst13|TempColorHolder [20]))) ) ) )
+// \inst13|Selector3~0_combout  = ( \inst13|process_1~1_combout  & ( \IO_DATA[7]~7_combout  & ( (\inst13|ram_write_buffer[13]~0_combout ) # (\inst13|all_one_color_buffer [20]) ) ) ) # ( !\inst13|process_1~1_combout  & ( \IO_DATA[7]~7_combout  & ( 
+// (!\inst13|ram_write_buffer[13]~0_combout  & (\inst13|all_one_color_buffer [20])) # (\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|buffer_24_grb [20]))) ) ) ) # ( \inst13|process_1~1_combout  & ( !\IO_DATA[7]~7_combout  & ( 
+// (\inst13|all_one_color_buffer [20] & !\inst13|ram_write_buffer[13]~0_combout ) ) ) ) # ( !\inst13|process_1~1_combout  & ( !\IO_DATA[7]~7_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (\inst13|all_one_color_buffer [20])) # 
+// (\inst13|ram_write_buffer[13]~0_combout  & ((\inst13|buffer_24_grb [20]))) ) ) )
 
-	.dataa(!\inst13|data_set_all [20]),
+	.dataa(!\inst13|all_one_color_buffer [20]),
 	.datab(gnd),
 	.datac(!\inst13|ram_write_buffer[13]~0_combout ),
-	.datad(!\inst13|TempColorHolder [20]),
+	.datad(!\inst13|buffer_24_grb [20]),
 	.datae(!\inst13|process_1~1_combout ),
 	.dataf(!\IO_DATA[7]~7_combout ),
 	.datag(gnd),
@@ -23860,9 +23860,9 @@ defparam \inst13|ram_write_buffer[20] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y24_N12
-cyclonev_lcell_comb \inst13|TempColorHolder[21]~feeder (
+cyclonev_lcell_comb \inst13|buffer_24_grb[21]~feeder (
 // Equation(s):
-// \inst13|TempColorHolder[21]~feeder_combout  = ( \IO_DATA[5]~5_combout  )
+// \inst13|buffer_24_grb[21]~feeder_combout  = ( \IO_DATA[5]~5_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -23873,37 +23873,37 @@ cyclonev_lcell_comb \inst13|TempColorHolder[21]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|TempColorHolder[21]~feeder_combout ),
+	.combout(\inst13|buffer_24_grb[21]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|TempColorHolder[21]~feeder .extended_lut = "off";
-defparam \inst13|TempColorHolder[21]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|TempColorHolder[21]~feeder .shared_arith = "off";
+defparam \inst13|buffer_24_grb[21]~feeder .extended_lut = "off";
+defparam \inst13|buffer_24_grb[21]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|buffer_24_grb[21]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y24_N13
-dffeas \inst13|TempColorHolder[21] (
+dffeas \inst13|buffer_24_grb[21] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|TempColorHolder[21]~feeder_combout ),
+	.d(\inst13|buffer_24_grb[21]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|TempColorHolder[17]~0_combout ),
+	.ena(\inst13|buffer_24_grb[17]~0_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [21]),
+	.q(\inst13|buffer_24_grb [21]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[21] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[21] .power_up = "low";
+defparam \inst13|buffer_24_grb[21] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[21] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X30_Y25_N56
-dffeas \inst13|data_set_all[21] (
+dffeas \inst13|all_one_color_buffer[21] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\IO_DATA[8]~8_combout ),
@@ -23911,26 +23911,26 @@ dffeas \inst13|data_set_all[21] (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\inst13|data_set_all[23]~1_combout ),
+	.ena(\inst13|all_one_color_buffer[23]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|data_set_all [21]),
+	.q(\inst13|all_one_color_buffer [21]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|data_set_all[21] .is_wysiwyg = "true";
-defparam \inst13|data_set_all[21] .power_up = "low";
+defparam \inst13|all_one_color_buffer[21] .is_wysiwyg = "true";
+defparam \inst13|all_one_color_buffer[21] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y27_N39
 cyclonev_lcell_comb \inst13|Selector2~0 (
 // Equation(s):
-// \inst13|Selector2~0_combout  = ( \IO_DATA[8]~8_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|data_set_all [21])))) # (\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|TempColorHolder [21])) # (\inst13|process_1~1_combout ))) ) ) 
-// # ( !\IO_DATA[8]~8_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|data_set_all [21])))) # (\inst13|ram_write_buffer[13]~0_combout  & (!\inst13|process_1~1_combout  & (\inst13|TempColorHolder [21]))) ) )
+// \inst13|Selector2~0_combout  = ( \IO_DATA[8]~8_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|all_one_color_buffer [21])))) # (\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|buffer_24_grb [21])) # (\inst13|process_1~1_combout 
+// ))) ) ) # ( !\IO_DATA[8]~8_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|all_one_color_buffer [21])))) # (\inst13|ram_write_buffer[13]~0_combout  & (!\inst13|process_1~1_combout  & (\inst13|buffer_24_grb [21]))) ) )
 
 	.dataa(!\inst13|process_1~1_combout ),
 	.datab(!\inst13|ram_write_buffer[13]~0_combout ),
-	.datac(!\inst13|TempColorHolder [21]),
-	.datad(!\inst13|data_set_all [21]),
+	.datac(!\inst13|buffer_24_grb [21]),
+	.datad(!\inst13|all_one_color_buffer [21]),
 	.datae(gnd),
 	.dataf(!\IO_DATA[8]~8_combout ),
 	.datag(gnd),
@@ -23966,7 +23966,7 @@ defparam \inst13|ram_write_buffer[21] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X27_Y27_N13
-dffeas \inst13|data_set_all[22] (
+dffeas \inst13|all_one_color_buffer[22] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\IO_DATA[9]~9_combout ),
@@ -23974,18 +23974,18 @@ dffeas \inst13|data_set_all[22] (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\inst13|data_set_all[23]~1_combout ),
+	.ena(\inst13|all_one_color_buffer[23]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|data_set_all [22]),
+	.q(\inst13|all_one_color_buffer [22]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|data_set_all[22] .is_wysiwyg = "true";
-defparam \inst13|data_set_all[22] .power_up = "low";
+defparam \inst13|all_one_color_buffer[22] .is_wysiwyg = "true";
+defparam \inst13|all_one_color_buffer[22] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X28_Y24_N34
-dffeas \inst13|TempColorHolder[22] (
+dffeas \inst13|buffer_24_grb[22] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
 	.asdata(\IO_DATA[6]~6_combout ),
@@ -23993,26 +23993,26 @@ dffeas \inst13|TempColorHolder[22] (
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(vcc),
-	.ena(\inst13|TempColorHolder[17]~0_combout ),
+	.ena(\inst13|buffer_24_grb[17]~0_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [22]),
+	.q(\inst13|buffer_24_grb [22]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[22] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[22] .power_up = "low";
+defparam \inst13|buffer_24_grb[22] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[22] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y27_N36
 cyclonev_lcell_comb \inst13|Selector1~0 (
 // Equation(s):
-// \inst13|Selector1~0_combout  = ( \IO_DATA[9]~9_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|data_set_all [22])))) # (\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|TempColorHolder [22])) # (\inst13|process_1~1_combout ))) ) ) 
-// # ( !\IO_DATA[9]~9_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|data_set_all [22])))) # (\inst13|ram_write_buffer[13]~0_combout  & (!\inst13|process_1~1_combout  & ((\inst13|TempColorHolder [22])))) ) )
+// \inst13|Selector1~0_combout  = ( \IO_DATA[9]~9_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|all_one_color_buffer [22])))) # (\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|buffer_24_grb [22])) # (\inst13|process_1~1_combout 
+// ))) ) ) # ( !\IO_DATA[9]~9_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|all_one_color_buffer [22])))) # (\inst13|ram_write_buffer[13]~0_combout  & (!\inst13|process_1~1_combout  & ((\inst13|buffer_24_grb [22])))) ) )
 
 	.dataa(!\inst13|process_1~1_combout ),
 	.datab(!\inst13|ram_write_buffer[13]~0_combout ),
-	.datac(!\inst13|data_set_all [22]),
-	.datad(!\inst13|TempColorHolder [22]),
+	.datac(!\inst13|all_one_color_buffer [22]),
+	.datad(!\inst13|buffer_24_grb [22]),
 	.datae(gnd),
 	.dataf(!\IO_DATA[9]~9_combout ),
 	.datag(gnd),
@@ -24048,9 +24048,9 @@ defparam \inst13|ram_write_buffer[22] .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X30_Y23_N54
-cyclonev_lcell_comb \inst13|TempColorHolder[23]~feeder (
+cyclonev_lcell_comb \inst13|buffer_24_grb[23]~feeder (
 // Equation(s):
-// \inst13|TempColorHolder[23]~feeder_combout  = ( \IO_DATA[7]~7_combout  )
+// \inst13|buffer_24_grb[23]~feeder_combout  = ( \IO_DATA[7]~7_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -24061,39 +24061,39 @@ cyclonev_lcell_comb \inst13|TempColorHolder[23]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|TempColorHolder[23]~feeder_combout ),
+	.combout(\inst13|buffer_24_grb[23]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|TempColorHolder[23]~feeder .extended_lut = "off";
-defparam \inst13|TempColorHolder[23]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|TempColorHolder[23]~feeder .shared_arith = "off";
+defparam \inst13|buffer_24_grb[23]~feeder .extended_lut = "off";
+defparam \inst13|buffer_24_grb[23]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|buffer_24_grb[23]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X30_Y23_N56
-dffeas \inst13|TempColorHolder[23] (
+dffeas \inst13|buffer_24_grb[23] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|TempColorHolder[23]~feeder_combout ),
+	.d(\inst13|buffer_24_grb[23]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|TempColorHolder[17]~0_combout ),
+	.ena(\inst13|buffer_24_grb[17]~0_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [23]),
+	.q(\inst13|buffer_24_grb [23]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[23] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[23] .power_up = "low";
+defparam \inst13|buffer_24_grb[23] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[23] .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X27_Y25_N6
-cyclonev_lcell_comb \inst13|data_set_all[23]~feeder (
+cyclonev_lcell_comb \inst13|all_one_color_buffer[23]~feeder (
 // Equation(s):
-// \inst13|data_set_all[23]~feeder_combout  = ( \IO_DATA[10]~10_combout  )
+// \inst13|all_one_color_buffer[23]~feeder_combout  = ( \IO_DATA[10]~10_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -24104,46 +24104,46 @@ cyclonev_lcell_comb \inst13|data_set_all[23]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|data_set_all[23]~feeder_combout ),
+	.combout(\inst13|all_one_color_buffer[23]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|data_set_all[23]~feeder .extended_lut = "off";
-defparam \inst13|data_set_all[23]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|data_set_all[23]~feeder .shared_arith = "off";
+defparam \inst13|all_one_color_buffer[23]~feeder .extended_lut = "off";
+defparam \inst13|all_one_color_buffer[23]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|all_one_color_buffer[23]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X27_Y25_N7
-dffeas \inst13|data_set_all[23] (
+dffeas \inst13|all_one_color_buffer[23] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|data_set_all[23]~feeder_combout ),
+	.d(\inst13|all_one_color_buffer[23]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|data_set_all[23]~1_combout ),
+	.ena(\inst13|all_one_color_buffer[23]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|data_set_all [23]),
+	.q(\inst13|all_one_color_buffer [23]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|data_set_all[23] .is_wysiwyg = "true";
-defparam \inst13|data_set_all[23] .power_up = "low";
+defparam \inst13|all_one_color_buffer[23] .is_wysiwyg = "true";
+defparam \inst13|all_one_color_buffer[23] .power_up = "low";
 // synopsys translate_on
 
 // Location: LABCELL_X30_Y23_N48
 cyclonev_lcell_comb \inst13|Selector0~0 (
 // Equation(s):
 // \inst13|Selector0~0_combout  = ( \inst13|ram_write_buffer[13]~0_combout  & ( \inst13|process_1~1_combout  & ( (\IO_DATA[10]~23_combout ) # (\IO_DATA[10]~24_combout ) ) ) ) # ( !\inst13|ram_write_buffer[13]~0_combout  & ( \inst13|process_1~1_combout  & ( 
-// \inst13|data_set_all [23] ) ) ) # ( \inst13|ram_write_buffer[13]~0_combout  & ( !\inst13|process_1~1_combout  & ( \inst13|TempColorHolder [23] ) ) ) # ( !\inst13|ram_write_buffer[13]~0_combout  & ( !\inst13|process_1~1_combout  & ( \inst13|data_set_all 
-// [23] ) ) )
+// \inst13|all_one_color_buffer [23] ) ) ) # ( \inst13|ram_write_buffer[13]~0_combout  & ( !\inst13|process_1~1_combout  & ( \inst13|buffer_24_grb [23] ) ) ) # ( !\inst13|ram_write_buffer[13]~0_combout  & ( !\inst13|process_1~1_combout  & ( 
+// \inst13|all_one_color_buffer [23] ) ) )
 
-	.dataa(!\inst13|TempColorHolder [23]),
+	.dataa(!\inst13|buffer_24_grb [23]),
 	.datab(!\IO_DATA[10]~24_combout ),
 	.datac(!\IO_DATA[10]~23_combout ),
-	.datad(!\inst13|data_set_all [23]),
+	.datad(!\inst13|all_one_color_buffer [23]),
 	.datae(!\inst13|ram_write_buffer[13]~0_combout ),
 	.dataf(!\inst13|process_1~1_combout ),
 	.datag(gnd),
@@ -24731,9 +24731,9 @@ defparam \inst13|pixel_buffer[4]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y24_N42
-cyclonev_lcell_comb \inst13|TempColorHolder[0]~feeder (
+cyclonev_lcell_comb \inst13|buffer_24_grb[0]~feeder (
 // Equation(s):
-// \inst13|TempColorHolder[0]~feeder_combout  = ( \IO_DATA[0]~0_combout  )
+// \inst13|buffer_24_grb[0]~feeder_combout  = ( \IO_DATA[0]~0_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -24744,40 +24744,40 @@ cyclonev_lcell_comb \inst13|TempColorHolder[0]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|TempColorHolder[0]~feeder_combout ),
+	.combout(\inst13|buffer_24_grb[0]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|TempColorHolder[0]~feeder .extended_lut = "off";
-defparam \inst13|TempColorHolder[0]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|TempColorHolder[0]~feeder .shared_arith = "off";
+defparam \inst13|buffer_24_grb[0]~feeder .extended_lut = "off";
+defparam \inst13|buffer_24_grb[0]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|buffer_24_grb[0]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y24_N43
-dffeas \inst13|TempColorHolder[0] (
+dffeas \inst13|buffer_24_grb[0] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|TempColorHolder[0]~feeder_combout ),
+	.d(\inst13|buffer_24_grb[0]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|TempColorHolder[12]~1_combout ),
+	.ena(\inst13|buffer_24_grb[12]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [0]),
+	.q(\inst13|buffer_24_grb [0]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[0] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[0] .power_up = "low";
+defparam \inst13|buffer_24_grb[0] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[0] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X31_Y25_N10
 dffeas \inst13|ram_write_buffer[0] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
-	.asdata(\inst13|TempColorHolder [0]),
+	.asdata(\inst13|buffer_24_grb [0]),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(\inst13|ram_write_buffer[16]~3_combout ),
@@ -24793,9 +24793,9 @@ defparam \inst13|ram_write_buffer[0] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y24_N45
-cyclonev_lcell_comb \inst13|TempColorHolder[1]~feeder (
+cyclonev_lcell_comb \inst13|buffer_24_grb[1]~feeder (
 // Equation(s):
-// \inst13|TempColorHolder[1]~feeder_combout  = ( \IO_DATA[1]~1_combout  )
+// \inst13|buffer_24_grb[1]~feeder_combout  = ( \IO_DATA[1]~1_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -24806,40 +24806,40 @@ cyclonev_lcell_comb \inst13|TempColorHolder[1]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|TempColorHolder[1]~feeder_combout ),
+	.combout(\inst13|buffer_24_grb[1]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|TempColorHolder[1]~feeder .extended_lut = "off";
-defparam \inst13|TempColorHolder[1]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|TempColorHolder[1]~feeder .shared_arith = "off";
+defparam \inst13|buffer_24_grb[1]~feeder .extended_lut = "off";
+defparam \inst13|buffer_24_grb[1]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|buffer_24_grb[1]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y24_N46
-dffeas \inst13|TempColorHolder[1] (
+dffeas \inst13|buffer_24_grb[1] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|TempColorHolder[1]~feeder_combout ),
+	.d(\inst13|buffer_24_grb[1]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|TempColorHolder[12]~1_combout ),
+	.ena(\inst13|buffer_24_grb[12]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [1]),
+	.q(\inst13|buffer_24_grb [1]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[1] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[1] .power_up = "low";
+defparam \inst13|buffer_24_grb[1] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[1] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X31_Y23_N55
 dffeas \inst13|ram_write_buffer[1] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
-	.asdata(\inst13|TempColorHolder [1]),
+	.asdata(\inst13|buffer_24_grb [1]),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(\inst13|ram_write_buffer[16]~3_combout ),
@@ -24855,9 +24855,9 @@ defparam \inst13|ram_write_buffer[1] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y24_N27
-cyclonev_lcell_comb \inst13|TempColorHolder[2]~feeder (
+cyclonev_lcell_comb \inst13|buffer_24_grb[2]~feeder (
 // Equation(s):
-// \inst13|TempColorHolder[2]~feeder_combout  = ( \IO_DATA[2]~2_combout  )
+// \inst13|buffer_24_grb[2]~feeder_combout  = ( \IO_DATA[2]~2_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -24868,40 +24868,40 @@ cyclonev_lcell_comb \inst13|TempColorHolder[2]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|TempColorHolder[2]~feeder_combout ),
+	.combout(\inst13|buffer_24_grb[2]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|TempColorHolder[2]~feeder .extended_lut = "off";
-defparam \inst13|TempColorHolder[2]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|TempColorHolder[2]~feeder .shared_arith = "off";
+defparam \inst13|buffer_24_grb[2]~feeder .extended_lut = "off";
+defparam \inst13|buffer_24_grb[2]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|buffer_24_grb[2]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y24_N28
-dffeas \inst13|TempColorHolder[2] (
+dffeas \inst13|buffer_24_grb[2] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|TempColorHolder[2]~feeder_combout ),
+	.d(\inst13|buffer_24_grb[2]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|TempColorHolder[12]~1_combout ),
+	.ena(\inst13|buffer_24_grb[12]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [2]),
+	.q(\inst13|buffer_24_grb [2]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[2] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[2] .power_up = "low";
+defparam \inst13|buffer_24_grb[2] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[2] .power_up = "low";
 // synopsys translate_on
 
 // Location: FF_X31_Y25_N52
 dffeas \inst13|ram_write_buffer[2] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
 	.d(gnd),
-	.asdata(\inst13|TempColorHolder [2]),
+	.asdata(\inst13|buffer_24_grb [2]),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(\inst13|ram_write_buffer[16]~3_combout ),
@@ -24917,9 +24917,9 @@ defparam \inst13|ram_write_buffer[2] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y24_N24
-cyclonev_lcell_comb \inst13|TempColorHolder[3]~feeder (
+cyclonev_lcell_comb \inst13|buffer_24_grb[3]~feeder (
 // Equation(s):
-// \inst13|TempColorHolder[3]~feeder_combout  = ( \IO_DATA[3]~3_combout  )
+// \inst13|buffer_24_grb[3]~feeder_combout  = ( \IO_DATA[3]~3_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -24930,39 +24930,39 @@ cyclonev_lcell_comb \inst13|TempColorHolder[3]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|TempColorHolder[3]~feeder_combout ),
+	.combout(\inst13|buffer_24_grb[3]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|TempColorHolder[3]~feeder .extended_lut = "off";
-defparam \inst13|TempColorHolder[3]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|TempColorHolder[3]~feeder .shared_arith = "off";
+defparam \inst13|buffer_24_grb[3]~feeder .extended_lut = "off";
+defparam \inst13|buffer_24_grb[3]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|buffer_24_grb[3]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y24_N25
-dffeas \inst13|TempColorHolder[3] (
+dffeas \inst13|buffer_24_grb[3] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|TempColorHolder[3]~feeder_combout ),
+	.d(\inst13|buffer_24_grb[3]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(\inst1|pll_main_inst|altera_pll_i|locked_wire [0]),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|TempColorHolder[12]~1_combout ),
+	.ena(\inst13|buffer_24_grb[12]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|TempColorHolder [3]),
+	.q(\inst13|buffer_24_grb [3]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|TempColorHolder[3] .is_wysiwyg = "true";
-defparam \inst13|TempColorHolder[3] .power_up = "low";
+defparam \inst13|buffer_24_grb[3] .is_wysiwyg = "true";
+defparam \inst13|buffer_24_grb[3] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y23_N21
-cyclonev_lcell_comb \inst13|data_set_all[3]~feeder (
+cyclonev_lcell_comb \inst13|all_one_color_buffer[3]~feeder (
 // Equation(s):
-// \inst13|data_set_all[3]~feeder_combout  = ( \IO_DATA[0]~0_combout  )
+// \inst13|all_one_color_buffer[3]~feeder_combout  = ( \IO_DATA[0]~0_combout  )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -24973,45 +24973,45 @@ cyclonev_lcell_comb \inst13|data_set_all[3]~feeder (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst13|data_set_all[3]~feeder_combout ),
+	.combout(\inst13|all_one_color_buffer[3]~feeder_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst13|data_set_all[3]~feeder .extended_lut = "off";
-defparam \inst13|data_set_all[3]~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst13|data_set_all[3]~feeder .shared_arith = "off";
+defparam \inst13|all_one_color_buffer[3]~feeder .extended_lut = "off";
+defparam \inst13|all_one_color_buffer[3]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \inst13|all_one_color_buffer[3]~feeder .shared_arith = "off";
 // synopsys translate_on
 
 // Location: FF_X28_Y23_N23
-dffeas \inst13|data_set_all[3] (
+dffeas \inst13|all_one_color_buffer[3] (
 	.clk(\inst1|pll_main_inst|altera_pll_i|outclk_wire[0]~CLKENA0_outclk ),
-	.d(\inst13|data_set_all[3]~feeder_combout ),
+	.d(\inst13|all_one_color_buffer[3]~feeder_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
-	.ena(\inst13|data_set_all[23]~1_combout ),
+	.ena(\inst13|all_one_color_buffer[23]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\inst13|data_set_all [3]),
+	.q(\inst13|all_one_color_buffer [3]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \inst13|data_set_all[3] .is_wysiwyg = "true";
-defparam \inst13|data_set_all[3] .power_up = "low";
+defparam \inst13|all_one_color_buffer[3] .is_wysiwyg = "true";
+defparam \inst13|all_one_color_buffer[3] .power_up = "low";
 // synopsys translate_on
 
 // Location: MLABCELL_X28_Y23_N3
 cyclonev_lcell_comb \inst13|Selector20~0 (
 // Equation(s):
-// \inst13|Selector20~0_combout  = ( \IO_DATA[0]~0_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|data_set_all [3])))) # (\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|TempColorHolder [3])) # (\inst13|process_1~1_combout ))) ) ) # 
-// ( !\IO_DATA[0]~0_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|data_set_all [3])))) # (\inst13|ram_write_buffer[13]~0_combout  & (!\inst13|process_1~1_combout  & (\inst13|TempColorHolder [3]))) ) )
+// \inst13|Selector20~0_combout  = ( \IO_DATA[0]~0_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|all_one_color_buffer [3])))) # (\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|buffer_24_grb [3])) # (\inst13|process_1~1_combout ))) 
+// ) ) # ( !\IO_DATA[0]~0_combout  & ( (!\inst13|ram_write_buffer[13]~0_combout  & (((\inst13|all_one_color_buffer [3])))) # (\inst13|ram_write_buffer[13]~0_combout  & (!\inst13|process_1~1_combout  & (\inst13|buffer_24_grb [3]))) ) )
 
 	.dataa(!\inst13|process_1~1_combout ),
 	.datab(!\inst13|ram_write_buffer[13]~0_combout ),
-	.datac(!\inst13|TempColorHolder [3]),
-	.datad(!\inst13|data_set_all [3]),
+	.datac(!\inst13|buffer_24_grb [3]),
+	.datad(!\inst13|all_one_color_buffer [3]),
 	.datae(gnd),
 	.dataf(!\IO_DATA[0]~0_combout ),
 	.datag(gnd),

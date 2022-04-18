@@ -23,8 +23,7 @@ ENTITY IO_DECODER IS
 	 G_EN    		: OUT STD_LOGIC;
 	 ALL_EN   		: OUT STD_LOGIC;
 	 DIR_EN			: OUT STD_LOGIC;
-	 kEY0_EN			: OUT STD_LOGIC;
-	 kEY1_EN			: OUT STD_LOGIC
+	 GT_EN			: OUT STD_LOGIC
   );
 
 END ENTITY;
@@ -42,8 +41,7 @@ begin
   TIMER_EN     <= '1' WHEN (ADDR_INT = 16#002#) and (IO_CYCLE = '1') ELSE '0';
   HEX0_EN      <= '1' WHEN (ADDR_INT = 16#004#) and (IO_CYCLE = '1') ELSE '0';
   HEX1_EN      <= '1' WHEN (ADDR_INT = 16#005#) and (IO_CYCLE = '1') ELSE '0';
-  KEY0_EN	   <= '1' WHEN (ADDR_INT = 16#006#) and (IO_CYCLE = '1') ELSE '0';
-  KEY1_EN      <= '1' WHEN (ADDR_INT = 16#007#) and (IO_CYCLE = '1') ELSE '0';
+  
   
   
   
@@ -53,4 +51,6 @@ begin
   G_EN			<= '1' WHEN (ADDR_INT = 16#0B3#) and (IO_CYCLE = '1') ELSE '0';
   ALL_EN			<= '1' WHEN (ADDR_INT = 16#0B4#) and (IO_CYCLE = '1') ELSE '0';
   DIR_EN			<= '1' WHEN (ADDR_INT = 16#0B5#) and (IO_CYCLE = '1') ELSE '0';
+	GT_EN			<= '1' WHEN (ADDR_INT = 16#0B6#) and (IO_CYCLE = '1') ELSE '0';
+	
 END a;
