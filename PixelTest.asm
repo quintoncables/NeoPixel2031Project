@@ -8,7 +8,9 @@ SelectDemoMode:
 	IN    Switches
 	ADDI  -2
 	JZERO SetAllPixels
-	
+	IN Switches
+	ADDI -4
+	JZERO Breathe
 	OUT   CLEAR
 	CALL  Delay
 	JUMP  SelectDemoMode
@@ -52,6 +54,15 @@ SetAllPixels:
 	OUT   ALL_EN
 	
 	JUMP  SelectDemoMode
+	
+Breathe:
+	LOADI 1
+	OUT   CLEAR
+	LOADI Blue16Bit
+	OUT Breathe_Sig
+	LOADI 100
+	Call DelayAC
+	Jump SelectDemoMode
 				
 Delay:
 	OUT    Timer
@@ -60,6 +71,17 @@ WaitingLoop:
 	ADDI   -10
 	JNEG   WaitingLoop
 	RETURN
+	
+
+DelayAC:
+	STORE  DelayTime   ; Save the desired delay
+	OUT    Timer       ; Reset the timer
+WaitingLoop:
+	IN     Timer       ; Get the current timer value
+	SUB    DelayTime
+	JNEG   WaitingLoop ; Repeat until timer = delay value
+	RETURN
+DelayTime: DW 0
 		
 ; IO address constants
 Switches:  EQU 000
@@ -75,6 +97,7 @@ DIR_EN:	EQU	&H0B5
 ALL_EN:   EQU &H0B4
 GT_EN:	EQU &H0B6
 CLEAR: EQU &H0B7
+Breathe_Sig: EQU &H0BX
 
 Blue16Bit:  DW &B0000000000011111
 YellowRB:   DW &HFF00
