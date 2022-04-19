@@ -23,7 +23,9 @@ ENTITY IO_DECODER IS
 	 G_EN    		: OUT STD_LOGIC;
 	 ALL_EN   		: OUT STD_LOGIC;
 	 DIR_EN			: OUT STD_LOGIC;
-	 GT_EN			: OUT STD_LOGIC
+	 GT_EN			: OUT STD_LOGIC;
+	 CLEAR_EN      : OUT STD_LOGIC;
+	 BREATHE_EN    : OUT STD_LOGIC
   );
 
 END ENTITY;
@@ -52,5 +54,7 @@ begin
   ALL_EN			<= '1' WHEN (ADDR_INT = 16#0B4#) and (IO_CYCLE = '1') ELSE '0';
   DIR_EN			<= '1' WHEN (ADDR_INT = 16#0B5#) and (IO_CYCLE = '1') ELSE '0';
 	GT_EN			<= '1' WHEN (ADDR_INT = 16#0B6#) and (IO_CYCLE = '1') ELSE '0';
+	CLEAR_EN    <= '1' WHEN (ADDR_INT = 16#0B7#) and (IO_CYCLE = '1') ELSE '0';
+	BREATHE_EN  <= '1' WHEN (ADDR_INT = 16#0B8#) and (IO_CYCLE = '1') ELSE '0';
 	
 END a;
