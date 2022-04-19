@@ -275,9 +275,8 @@ process(clk_10M, resetn, cs_addr)
 					
 				elsif (io_write = '1') and (ALL_EN ='1') then
 					-- store data_in into a signal to hold its value
-					all_one_color_buffer <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000";
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-					ram_write_buffer <= all_one_color_buffer;
+					ram_write_buffer <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000";
+					ram_write_addr <= x"00";
 					ram_we <= '1';
 					wstate <= allOneColor; -- jump to allOneColor state
 				
@@ -308,88 +307,16 @@ process(clk_10M, resetn, cs_addr)
 				end if;
 						
 						
-						
-			
 				
 			
 			when allOneColor  =>
-				-- if after last pixel
-				if(ram_write_addr = 256) then 
+				if (ram_write_addr > x"FF") then
+					ram_write_addr <= x"00";
 					ram_we <= '0';
-					-- reset to address 0 and return to idle
 					wstate <= idle;
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-				
-				
-				-- if 16 bit data is written 
-				elsif (io_write = '1') and (cs_data='1') then
-					wstate <= storing;
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-					ram_write_buffer  <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000";
-					
-					
-				-- If an address is set
-				elsif (io_write = '1') and (cs_addr='1') then
-					wstate <= idle;
-					ram_we <= '0';
-					ram_write_addr <= data_in(7 downto 0);
-					
-					
-				-- If lower 16 bits of a 24 bit color are written	
-				elsif (io_write = '1') and (RB_EN = '1') then
-					wstate <= storing;
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-					
-					buffer_24_grb <= ((buffer_24_grb and "111111110000000000000000") or ("00000000" & data_in(15 downto 0)));
-					ram_write_buffer <= buffer_24_grb;
-					
-					
-				-- If upper 8 bits of a 24 bit color are written	
-				elsif (io_write = '1') and (G_EN = '1') then
-					buffer_24_grb <= ((buffer_24_grb and "000000001111111111111111") or (data_in(7 downto 0) & "0000000000000000"));
-					ram_we <= '0';
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-					wstate <= idle;
-
-					
-					
-				-- if increment direction is switched. Does not break out of the set all loop.	
-				elsif (io_write = '1') and (DIR_EN='1') then
-				
-					if(auto_inc_dir = '0') then
-						auto_inc_dir <= '1';
-					else
-						auto_inc_dir <= '0';
-					end if;
-					
-					
-				-- if the peripheral isn't interacted with and this isn't the last pixel	
 				else
-					-- goto next pixel and set data.
 					ram_write_addr <= ram_write_addr + 1;
-					ram_write_buffer <= all_one_color_buffer;
-					
 				end if;
-				
-				
-				
-			when GT =>
-				-- if after last pixel
-				if(ram_write_addr = 256) then 
-					ram_we <= '0';
-					-- reset to address 0 and return to idle
-					wstate <= idle;
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-				elsif (io_write = '1') and (GT_EN = '1') then
-					--temp_buffer <= (GT_vector and first_24);
-					temp_buffer <= GT_vector(23 downto 0);
-					ram_write_buffer <= temp_buffer;
-					GT_vector <= std_logic_vector(shift_left(unsigned(GT_vector), 24));
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-				end if;	
-				
-				
-				
 			when storing =>
 				-- All that's needed here is to lower ram_we.  The RAM will be
 				-- storing data on this clock edge, so ram_we can go low at the

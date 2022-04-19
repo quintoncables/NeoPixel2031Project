@@ -4,7 +4,9 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Ign)
-		Device PartName(10M50DA) MfrSpec(OpMask(0));
+		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
+	P ActionCode(Cfg)
+		Device PartName(5CSXFC6D6F31) Path("C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/output_files/") File("SCOMP.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

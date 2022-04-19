@@ -113,4 +113,8 @@ CONTENT
            064 : 001F;  -- BlueOnly: DW &B0000000000011111
            065 : FFFF;  -- White: DW &B1111111111111111
            066 : 00FF;  -- Last8: DW &B11111111
+<<<<<<< Updated upstream
   END;
+=======
+  END;
+>>>>>>> Stashed changes
