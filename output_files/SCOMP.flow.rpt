@@ -1,5 +1,5 @@
 Flow report for SCOMP
-Mon Apr 18 21:01:40 2022
+Tue Apr 19 18:51:38 2022
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Apr 18 21:01:40 2022       ;
+; Flow Status                     ; Successful - Tue Apr 19 18:51:38 2022       ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                   ; SCOMP                                       ;
 ; Top-level Entity Name           ; SCOMP_System                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 380 / 41,910 ( < 1 % )                      ;
-; Total registers                 ; 403                                         ;
+; Logic utilization (in ALMs)     ; 387 / 41,910 ( < 1 % )                      ;
+; Total registers                 ; 410                                         ;
 ; Total pins                      ; 64 / 499 ( 13 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 38,912 / 5,662,720 ( < 1 % )                ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/18/2022 20:31:44 ;
+; Start date & time ; 04/19/2022 18:36:59 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; SCOMP               ;
 +-------------------+---------------------+
@@ -80,7 +80,7 @@ https://fpgasoftware.intel.com/eula.
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name  ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+--------------+-----------------------------------+
 ; ADVANCED_PHYSICAL_OPTIMIZATION      ; Off                                    ; On            ; --           ; --                                ;
-; COMPILER_SIGNATURE_ID               ; 48849910695917.165032830452796         ; --            ; --           ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 48849910695917.165040781926452         ; --            ; --           ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --           ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --           ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --           ; eda_board_design_signal_integrity ;
@@ -114,15 +114,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4912 MB             ; 00:00:31                           ;
-; Fitter               ; 00:01:37     ; 1.1                     ; 6772 MB             ; 00:02:17                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 4851 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:07     ; 1.8                     ; 5255 MB             ; 00:00:12                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4838 MB             ; 00:00:01                           ;
-; MIF/HEX Update       ; 00:00:02     ; 1.0                     ; 4882 MB             ; 00:00:03                           ;
-; MIF/HEX Update       ; 00:00:03     ; 1.0                     ; 4882 MB             ; 00:00:03                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4852 MB             ; 00:00:05                           ;
-; Total                ; 00:02:13     ; --                      ; --                  ; 00:03:18                           ;
+; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 4964 MB             ; 00:00:30                           ;
+; Fitter               ; 00:01:25     ; 1.1                     ; 6768 MB             ; 00:02:02                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4852 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:08     ; 1.6                     ; 5259 MB             ; 00:00:11                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4840 MB             ; 00:00:02                           ;
+; MIF/HEX Update       ; 00:00:03     ; 1.0                     ; 4880 MB             ; 00:00:03                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4855 MB             ; 00:00:06                           ;
+; MIF/HEX Update       ; 00:00:03     ; 1.0                     ; 4885 MB             ; 00:00:03                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 4859 MB             ; 00:00:06                           ;
+; MIF/HEX Update       ; 00:00:03     ; 1.0                     ; 4887 MB             ; 00:00:03                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4856 MB             ; 00:00:06                           ;
+; MIF/HEX Update       ; 00:00:03     ; 1.0                     ; 4890 MB             ; 00:00:03                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4865 MB             ; 00:00:06                           ;
+; Total                ; 00:02:32     ; --                      ; --                  ; 00:03:27                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -137,6 +142,11 @@ https://fpgasoftware.intel.com/eula.
 ; Timing Analyzer      ; DESKTOP-1RMELV3  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-1RMELV3  ; Windows 10 ; 10.0       ; x86_64         ;
 ; MIF/HEX Update       ; DESKTOP-1RMELV3  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-1RMELV3  ; Windows 10 ; 10.0       ; x86_64         ;
+; MIF/HEX Update       ; DESKTOP-1RMELV3  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-1RMELV3  ; Windows 10 ; 10.0       ; x86_64         ;
+; MIF/HEX Update       ; DESKTOP-1RMELV3  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-1RMELV3  ; Windows 10 ; 10.0       ; x86_64         ;
 ; MIF/HEX Update       ; DESKTOP-1RMELV3  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; DESKTOP-1RMELV3  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
@@ -151,6 +161,11 @@ quartus_asm --read_settings_files=off --write_settings_files=off SCOMP -c SCOMP
 quartus_sta SCOMP -c SCOMP
 quartus_eda --read_settings_files=off --write_settings_files=off SCOMP -c SCOMP
 quartus_cdb SCOMP -c SCOMP --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off SCOMP -c SCOMP
+quartus_cdb SCOMP -c SCOMP --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off SCOMP -c SCOMP
+quartus_cdb SCOMP -c SCOMP --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off SCOMP -c SCOMP
 quartus_cdb SCOMP -c SCOMP --update_mif
 quartus_asm --read_settings_files=on --write_settings_files=off SCOMP -c SCOMP
 

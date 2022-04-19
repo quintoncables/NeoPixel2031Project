@@ -24,6 +24,8 @@ entity NeoPixelController is
 		DIR_EN	 : in	  std_logic;
 		data_in   : in   std_logic_vector(15 downto 0);
 		GT_EN		 : in	  std_logic;
+		CLEAR_EN  : in   std_logic;
+		BREATHE_EN: in   std_logic;
 		sda       : out  std_logic
 	); 
 
@@ -54,6 +56,7 @@ architecture internals of NeoPixelController is
 
 	-- Signal SCOMP will write to before it gets stored into memory
 	signal ram_write_buffer : std_logic_vector(23 downto 0);
+	
 
 	-- RAM interface state machine signals
 	type write_states is (idle, allOneColor, GT, storing);
@@ -219,6 +222,9 @@ begin
 	
 	
 process(clk_10M, resetn, cs_addr)
+	variable timer_counter : integer 1 to 2147483647 -- counts clock cycles when needed 
+																	 -- (e.g., a value of 10,000,000 = 1 sec)
+	
 	begin
 
 	
@@ -280,6 +286,11 @@ process(clk_10M, resetn, cs_addr)
 					ram_we <= '1';
 					wstate <= allOneColor; -- jump to allOneColor state
 				
+				elsif (io_write = '1') and (CLEAR_EN = '1') then
+					ram_write_buffer <= (others => '0'); -- clear functionality just overwrites all pixels with zeroes
+					ram_write_addr <= x"00";
+					ram_we <= '1';
+					wstate <= allOneColor;
 				
 				
 				elsif (io_write = '1') and (GT_EN ='1') then
@@ -287,7 +298,11 @@ process(clk_10M, resetn, cs_addr)
 					ram_we <= '1';
 					wstate <= GT; -- jump to GT state
 				
-				
+				elsif (io_write = '1') and (BREATHE_EN = '1') then
+					buffer_24_grb <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000";
+					ram_write_addr <= x"00";
+					ram_we <= '1';
+					wstate <= 
 				
 				
 				elsif (io_write = '1') and (cs_addr='1') then
@@ -310,7 +325,7 @@ process(clk_10M, resetn, cs_addr)
 				
 			
 			when allOneColor  =>
-				if (ram_write_addr > x"FF") then
+				if (ram_write_addr = x"FF") then
 					ram_write_addr <= x"00";
 					ram_we <= '0';
 					wstate <= idle;
