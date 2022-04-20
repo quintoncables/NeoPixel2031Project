@@ -7,7 +7,47 @@ ORG 0
 	LOADI 1048576
     OUT    BIT_24
 
+<<<<<<< Updated upstream
 
+=======
+SetAllPixels:
+	LOADI 1
+	OUT   CLEAR
+	CALL  Delay
+	
+	LOAD  Blue16Bit
+	OUT   ALL_EN
+	
+	JUMP  SelectDemoMode
+	
+Breathe:
+	LOADI 1
+	OUT   CLEAR
+	OUT Breathe_Sig
+	LOADI 100
+	Call DelayAC
+	Jump SelectDemoMode
+				
+Delay:
+	OUT    Timer
+WaitingLoop:
+	IN     Timer
+	ADDI   -10
+	JNEG   WaitingLoop
+	RETURN
+	
+
+DelayAC:
+	STORE  DelayTime   ; Save the desired delay
+	OUT    Timer       ; Reset the timer
+WaitingLoop2:
+	IN     Timer       ; Get the current timer value
+	SUB    DelayTime
+	JNEG   WaitingLoop2 ; Repeat until timer = delay value
+	RETURN
+DelayTime: DW 0
+		
+>>>>>>> Stashed changes
 ; IO address constants
 Switches:  EQU 000
 LEDs:      EQU 001

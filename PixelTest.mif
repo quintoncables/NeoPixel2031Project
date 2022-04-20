@@ -1,0 +1,77 @@
+-- Altera Memory Initialization File (MIF)
+
+DEPTH = 2048;
+WIDTH = 16;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+  BEGIN
+    [000..7FF] : 0000;  -- Default to NOP
+
+           000 : 9000;  -- 	IN	  Switches
+           001 : 6FFF;  -- 	ADDI  -1
+           002 : 400C;  -- 	JZERO SetSinglePixels
+           003 : 9000;  -- 	IN    Switches
+           004 : 6FFE;  -- 	ADDI  -2
+           005 : 4023;  -- 	JZERO SetAllPixels
+           006 : 9000;  -- 	IN Switches
+           007 : 6FFC;  -- 	ADDI -4
+           008 : 4029;  -- 	JZERO Breathe
+           009 : 98B7;  -- 	OUT   CLEAR
+           00A : 802F;  -- 	CALL  Delay
+           00B : 2800;  -- 	JUMP  SelectDemoMode
+           00C : B801;  -- 	LOADI 1
+           00D : 98B7;  -- 	OUT   CLEAR
+           00E : 802F;  -- 	CALL  Delay
+           00F : B800;  -- 	LOADI 0
+           010 : 98B0;  -- 	OUT	  PXL_A
+           011 : 083B;  -- 	LOAD  Blue16Bit
+           012 : 98B1;  -- 	OUT   PXL_D
+           013 : 802F;  -- 	CALL  Delay
+           014 : B803;  -- 	LOADI 3
+           015 : 98B0;  -- 	OUT   PXL_A
+           016 : 083D;  -- 	LOAD  YellowG
+           017 : 98B3;  -- 	OUT   PXL_G
+           018 : 083C;  -- 	LOAD  YellowRB
+           019 : 98B2;  -- 	OUT   PXL_RB
+           01A : 802F;  -- 	CALL  Delay
+           01B : B807;  -- 	LOADI 7
+           01C : 98B0;  -- 	OUT   PXL_A
+           01D : B800;  -- 	LOADI 0
+           01E : 98B3;  -- 	OUT   PXL_G
+           01F : 083E;  -- 	LOAD  PurpleRB
+           020 : 98B2;  -- 	OUT   PXL_RB
+           021 : 802F;  -- 	CALL  Delay
+           022 : 2800;  -- 	JUMP  SelectDemoMode
+           023 : B801;  -- 	LOADI 1
+           024 : 98B7;  -- 	OUT   CLEAR
+           025 : 802F;  -- 	CALL  Delay
+           026 : 083B;  -- 	LOAD  Blue16Bit
+           027 : 98B4;  -- 	OUT   ALL_EN
+           028 : 2800;  -- 	JUMP  SelectDemoMode
+           029 : B801;  -- 	LOADI 1
+           02A : 98B7;  -- 	OUT   CLEAR
+           02B : 98B8;  -- 	OUT Breathe_Sig
+           02C : B864;  -- 	LOADI 100
+           02D : 8034;  -- 	Call DelayAC
+           02E : 2800;  -- 	Jump SelectDemoMode
+           02F : 9802;  -- 	OUT    Timer
+           030 : 9002;  -- 	IN     Timer
+           031 : 6FF6;  -- 	ADDI   -10
+           032 : 3030;  -- 	JNEG   WaitingLoop
+           033 : 8800;  -- 	RETURN
+           034 : 103A;  -- 	STORE  DelayTime   ; Save the desired delay
+           035 : 9802;  -- 	OUT    Timer       ; Reset the timer
+           036 : 9002;  -- 	IN     Timer       ; Get the current timer value
+           037 : 203A;  -- 	SUB    DelayTime
+           038 : 3036;  -- 	JNEG   WaitingLoop2 ; Repeat until timer = delay value
+           039 : 8800;  -- 	RETURN
+           03A : 0000;  -- DelayTime: DW 0
+           03B : 001F;  -- Blue16Bit:  DW &B0000000000011111
+           03C : FF00;  -- YellowRB:   DW &HFF00
+           03D : 00FF;  -- YellowG:    DW &H00FF
+           03E : FFFF;  -- PurpleRB:   DW &HFFFF
+           03F : 0000;  -- SwitchValues: DW 0
+  END;
