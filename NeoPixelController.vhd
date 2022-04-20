@@ -56,12 +56,12 @@ architecture internals of NeoPixelController is
 	signal ram_write_buffer : std_logic_vector(23 downto 0);
 
 	-- RAM interface state machine signals
-	type write_states is (idle, allOneColor, GT, storing);
+	type write_states is (idle, allOneColor, GT, breathe, storing);
 	signal wstate: write_states;
 	
 	
 	-- vector for GT array
-	signal GT_vector : std_logic_vector(6143 downto 0) := x"B3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369";
+	--signal GT_vector : std_logic_vector(6143 downto 0) := x"B3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369003057FFFFFFB3A369";
 	
 	-- will store 24 bits of GT_vector at a time (MSB first)
 	signal temp_buffer : std_logic_vector(23 downto 0) := "000000000000000000000000";
@@ -219,6 +219,17 @@ begin
 	
 	
 process(clk_10M, resetn, cs_addr)
+
+	variable timer_counter : integer 1 to 2147483647 -- counts clock cycles when needed 
+																	 -- (e.g., a value of 10,000,000 = 1 sec)
+	type direction_type is (fwd,bwd);
+	signal direction   : direction_type;
+	type breathe_state_type is (s0,s1,s2,s3,s4,s5,s6,s7);
+	signal breathe_state : breathe_state_type;
+					
+	direction <= fwd;
+	breathe_state <= s0;
+	
 	begin
 
 	
@@ -275,9 +286,8 @@ process(clk_10M, resetn, cs_addr)
 					
 				elsif (io_write = '1') and (ALL_EN ='1') then
 					-- store data_in into a signal to hold its value
-					all_one_color_buffer <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000";
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-					ram_write_buffer <= all_one_color_buffer;
+					ram_write_buffer <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000";
+					ram_write_addr <= x"00";
 					ram_we <= '1';
 					wstate <= allOneColor; -- jump to allOneColor state
 				
@@ -288,7 +298,13 @@ process(clk_10M, resetn, cs_addr)
 					ram_we <= '1';
 					wstate <= GT; -- jump to GT state
 				
-				
+				elsif (io_write = '1') and (BREATHE_EN = '1') then
+					-- save input color into buffer_24_grb
+					ram_write_buffer <= (others => '0');
+					ram_write_addr <= x"00";
+					ram_we <= '1';
+					wstate <= breathe;
+
 				
 				
 				elsif (io_write = '1') and (cs_addr='1') then
@@ -308,87 +324,100 @@ process(clk_10M, resetn, cs_addr)
 				end if;
 						
 						
-						
-			
 				
 			
 			when allOneColor  =>
-				-- if after last pixel
-				if(ram_write_addr = 256) then 
+				if (ram_write_addr > x"FF") then
+					ram_write_addr <= x"00";
 					ram_we <= '0';
-					-- reset to address 0 and return to idle
 					wstate <= idle;
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-				
-				
-				-- if 16 bit data is written 
-				elsif (io_write = '1') and (cs_data='1') then
-					wstate <= storing;
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-					ram_write_buffer  <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000";
-					
-					
-				-- If an address is set
-				elsif (io_write = '1') and (cs_addr='1') then
-					wstate <= idle;
-					ram_we <= '0';
-					ram_write_addr <= data_in(7 downto 0);
-					
-					
-				-- If lower 16 bits of a 24 bit color are written	
-				elsif (io_write = '1') and (RB_EN = '1') then
-					wstate <= storing;
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-					
-					buffer_24_grb <= ((buffer_24_grb and "111111110000000000000000") or ("00000000" & data_in(15 downto 0)));
-					ram_write_buffer <= buffer_24_grb;
-					
-					
-				-- If upper 8 bits of a 24 bit color are written	
-				elsif (io_write = '1') and (G_EN = '1') then
-					buffer_24_grb <= ((buffer_24_grb and "000000001111111111111111") or (data_in(7 downto 0) & "0000000000000000"));
-					ram_we <= '0';
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-					wstate <= idle;
-
-					
-					
-				-- if increment direction is switched. Does not break out of the set all loop.	
-				elsif (io_write = '1') and (DIR_EN='1') then
-				
-					if(auto_inc_dir = '0') then
-						auto_inc_dir <= '1';
-					else
-						auto_inc_dir <= '0';
-					end if;
-					
-					
-				-- if the peripheral isn't interacted with and this isn't the last pixel	
 				else
-					-- goto next pixel and set data.
 					ram_write_addr <= ram_write_addr + 1;
-					ram_write_buffer <= all_one_color_buffer;
-					
 				end if;
 				
+			when breathe =>
+				case breathe_state is
+					when s0 =>
+						ram_write_addr <= x"00";
+						ram_we <= '1';
+						ram_write_buffer <= x"000000";
+						wait for 1 s
+						breathe_state <= s1;
+					when s1 =>
+						ram_write_addr <= x"00";
+						ram_we <= '1';
+						ram_write_buffer <= "000000010000000100000001";
+						wait for 1 s
+						if direction = fwd then
+						breathe_state <= s2;
+						else
+						breathe_state <=s0;
+					when s2 =>
+						ram_write_addr <= x"00";
+						ram_we <= '1';
+						ram_write_buffer <= "000000110000001100000011";
+						wait for 1 s
+						if direction = fwd then
+						breathe_state <= s3;
+						else
+						breathe_state <=s1;
+					when s3 =>
+						ram_write_addr <= x"00";
+						ram_we <= '1';
+						ram_write_buffer <= "000001110000011100000111";
+						wait for 1 s
+						if direction = fwd then
+						breathe_state <= s4;
+						else
+						breathe_state <=s2;			
+					when s4 =>
+						ram_write_addr <= x"00";
+						ram_we <= '1';
+						ram_write_buffer <= "000011110000111100001111";
+						wait for 1 s
+						if direction = fwd then
+						breathe_state <= s5;
+						else
+						breathe_state <=s3;							
+					when s5 =>
+						ram_write_addr <= x"00";
+						ram_we <= '1';
+						ram_write_buffer <= "000111110001111100011111";
+						wait for 1 s
+						if direction = fwd then
+						breathe_state <= s6;
+						else
+						breathe_state <=s4;	
+					when s6 =>
+						ram_write_addr <= x"00";
+						ram_we <= '1';
+						ram_write_buffer <= "001111110011111100111111";
+						wait for 1 s
+						if direction = fwd then
+						breathe_state <= s7;
+						else
+						breathe_state <=s5;
+					when s7 =>
+						ram_write_addr <= x"00";
+						ram_we <= '1';
+						ram_write_buffer <= "011111110111111101111111";
+						wait for 1 s
+						if direction = fwd then
+						breathe_state <= s8;
+						else
+						breathe_state <=s6;	
+					when s8 =>
+						ram_write_addr <= x"00";
+						ram_we <= '1';
+						ram_write_buffer <= "111111111111111111111111";
+						wait for 1 s
+						direction <=bwd;
+						breathe_state <=s7;							
+						
+					
 				
-				
-			when GT =>
-				-- if after last pixel
-				if(ram_write_addr = 256) then 
-					ram_we <= '0';
-					-- reset to address 0 and return to idle
-					wstate <= idle;
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-				elsif (io_write = '1') and (GT_EN = '1') then
-					--temp_buffer <= (GT_vector and first_24);
-					temp_buffer <= GT_vector(23 downto 0);
-					ram_write_buffer <= temp_buffer;
-					GT_vector <= std_logic_vector(shift_left(unsigned(GT_vector), 24));
-					ram_write_addr <= ram_write_addr - ram_write_addr;
-				end if;	
-				
-				
+				timer_counter = timer_counter + 1;
+				variable fade_direction : integer 0 to 1         -- 0 = getting dimmer, 1 = getting brighter
 				
 			when storing =>
 				-- All that's needed here is to lower ram_we.  The RAM will be
