@@ -18,65 +18,75 @@ CONTENT
            005 : 4026;  -- 	JZERO SetAllPixels
            006 : 9000;  -- 	IN    Switches
            007 : 6FFC;  -- 	ADDI  -4
-           008 : 402C;  -- 	JZERO PartyMode
+           008 : 4034;  -- 	JZERO PartyMode
            009 : 9000;  -- 	IN    Switches
            00A : 6FF8;  -- 	ADDI  -8
-           00B : 4033;  -- 	JZERO GTMode
+           00B : 403B;  -- 	JZERO GTMode
            00C : 98B7;  -- 	OUT   CLEAR
-           00D : 803A;  -- 	CALL  Delay
+           00D : 8042;  -- 	CALL  Delay
            00E : 2800;  -- 	JUMP  SelectDemoMode
            00F : B801;  -- 	LOADI 1
            010 : 98B7;  -- 	OUT   CLEAR
-           011 : 803A;  -- 	CALL  Delay
+           011 : 8042;  -- 	CALL  Delay
            012 : B800;  -- 	LOADI 0
            013 : 98B0;  -- 	OUT	  PXL_A
-           014 : 083F;  -- 	LOAD  Blue16Bit
+           014 : 0847;  -- 	LOAD  Blue16Bit
            015 : 98B1;  -- 	OUT   PXL_D
-           016 : 803A;  -- 	CALL  Delay
+           016 : 8042;  -- 	CALL  Delay
            017 : B803;  -- 	LOADI 3
            018 : 98B0;  -- 	OUT   PXL_A
-           019 : 0840;  -- 	LOAD  YellowR
+           019 : 084A;  -- 	LOAD  YellowR
            01A : 98B2;  -- 	OUT   PXL_R
-           01B : 0841;  -- 	LOAD  YellowGB
+           01B : 084B;  -- 	LOAD  YellowGB
            01C : 98B3;  -- 	OUT   PXL_GB
-           01D : 803A;  -- 	CALL  Delay
+           01D : 8042;  -- 	CALL  Delay
            01E : B807;  -- 	LOADI 7
            01F : 98B0;  -- 	OUT   PXL_A
-           020 : 0842;  -- 	LOAD  PurpleR
+           020 : 084C;  -- 	LOAD  PurpleR
            021 : 98B2;  -- 	OUT   PXL_R
-           022 : 0843;  -- 	LOAD  PurpleGB
+           022 : 084D;  -- 	LOAD  PurpleGB
            023 : 98B3;  -- 	OUT   PXL_GB
-           024 : 803A;  -- 	CALL  Delay
+           024 : 8042;  -- 	CALL  Delay
            025 : 2800;  -- 	JUMP  SelectDemoMode
            026 : B801;  -- 	LOADI 1
            027 : 98B7;  -- 	OUT   CLEAR
-           028 : 803A;  -- 	CALL  Delay
-           029 : 083F;  -- 	LOAD  Blue16Bit
+           028 : 8042;  -- 	CALL  Delay
+           029 : 0847;  -- 	LOAD  Blue16Bit
            02A : 98B4;  -- 	OUT   ALL_EN
-           02B : 2800;  -- 	JUMP  SelectDemoMode
+           02B : 8042;  -- 	CALL  Delay
            02C : B801;  -- 	LOADI 1
-           02D : 98B7;  -- 	OUT   CLEAR
-           02E : 803A;  -- 	CALL  Delay
-           02F : B80A;  -- 	LOADI 10
-           030 : 98B9;  -- 	OUT PARTY_EN
-           031 : 803A;  -- 	CALL  Delay
-           032 : 2800;  -- 	JUMP  SelectDemoMode
-           033 : B801;  -- 	LOADI 1
-           034 : 98B7;  -- 	OUT   CLEAR
-           035 : 803A;  -- 	CALL  Delay
-           036 : B80A;  -- 	LOADI 10
-           037 : 98B6;  -- 	OUT GT_EN
-           038 : 803A;  -- 	CALL  Delay
-           039 : 2800;  -- 	JUMP  SelectDemoMode
-           03A : 9802;  -- 	OUT    Timer
-           03B : 9002;  -- 	IN     Timer
-           03C : 6FF6;  -- 	ADDI   -10
-           03D : 303B;  -- 	JNEG   WaitingLoop
-           03E : 8800;  -- 	RETURN
-           03F : 001F;  -- Blue16Bit:  DW &B0000000000011111
-           040 : 00FF;  -- YellowR: DW &H00FF
-           041 : FF00;  -- YellowGB: DW &HFF00
-           042 : 00FF;  -- PurpleR: DW &H00FF
-           043 : 00FF;  -- PurpleGB: DW &H00FF
-           044 : 0000;  -- SwitchValues: DW 0
+           02D : 98B4;  -- 	OUT ALL_EN
+           02E : B848;  -- 	LOADI PinkR
+           02F : 98B2;  -- 	OUT PXL_R
+           030 : B849;  -- 	LOADI PINKGB
+           031 : 98B3;  -- 	OUT PXL_GB
+           032 : 8042;  -- 	CALL Delay
+           033 : 2800;  -- 	JUMP  SelectDemoMode
+           034 : B801;  -- 	LOADI 1
+           035 : 98B7;  -- 	OUT   CLEAR
+           036 : 8042;  -- 	CALL  Delay
+           037 : B80A;  -- 	LOADI 10
+           038 : 98B9;  -- 	OUT PARTY_EN
+           039 : 8042;  -- 	CALL  Delay
+           03A : 2800;  -- 	JUMP  SelectDemoMode
+           03B : B801;  -- 	LOADI 1
+           03C : 98B7;  -- 	OUT   CLEAR
+           03D : 8042;  -- 	CALL  Delay
+           03E : B80A;  -- 	LOADI 10
+           03F : 98B6;  -- 	OUT GT_EN
+           040 : 8042;  -- 	CALL  Delay
+           041 : 2800;  -- 	JUMP  SelectDemoMode
+           042 : 9802;  -- 	OUT    Timer
+           043 : 9002;  -- 	IN     Timer
+           044 : 6FF6;  -- 	ADDI   -10
+           045 : 3043;  -- 	JNEG   WaitingLoop
+           046 : 8800;  -- 	RETURN
+           047 : 001F;  -- Blue16Bit:  DW &B0000000000011111
+           048 : 00FF;  -- PinkR:   DW &H00FF
+           049 : C0CB;  -- PinkGB:  DW &HC0CB
+           04A : 00FF;  -- YellowR:  DW &H00FF
+           04B : FF00;  -- YellowGB: DW &HFF00
+           04C : 00FF;  -- PurpleR:  DW &H00FF
+           04D : 00FF;  -- PurpleGB: DW &H00FF
+           04E : 0000;  -- SwitchValues: DW 0
   END;
