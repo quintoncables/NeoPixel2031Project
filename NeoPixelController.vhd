@@ -56,7 +56,7 @@ architecture internals of NeoPixelController is
 	signal ram_write_buffer : std_logic_vector(23 downto 0);
 
 	-- RAM interface state machine signals
-	type write_states is (idle, allOneColor, GT, storing);
+	type write_states is (idle, allOneColor, GT, breathe, storing);
 	signal wstate: write_states;
 	
 	
@@ -219,6 +219,13 @@ begin
 	
 	
 process(clk_10M, resetn, cs_addr)
+<<<<<<< Updated upstream
+=======
+	variable timer_counter : integer 1 to 2147483647 -- counts clock cycles when needed 
+																	 -- (e.g., a value of 10,000,000 = 1 sec)
+	variable fade_direction : integer 0 to 1         -- 0 = getting dimmer, 1 = getting brighter
+	
+>>>>>>> Stashed changes
 	begin
 
 	
@@ -287,7 +294,16 @@ process(clk_10M, resetn, cs_addr)
 					ram_we <= '1';
 					wstate <= GT; -- jump to GT state
 				
+<<<<<<< Updated upstream
 				
+=======
+				elsif (io_write = '1') and (BREATHE_EN = '1') then
+					-- save input color into buffer_24_grb
+					ram_write_buffer <= (others => '0');
+					ram_write_addr <= x"00";
+					ram_we <= '1';
+					wstate <= breathe;
+>>>>>>> Stashed changes
 				
 				
 				elsif (io_write = '1') and (cs_addr='1') then
@@ -317,6 +333,14 @@ process(clk_10M, resetn, cs_addr)
 				else
 					ram_write_addr <= ram_write_addr + 1;
 				end if;
+			when breathe =>
+				if (timer_counter = 20000000) then
+					fade_direction := 1;
+				elsif (timer_counter = 20000000) or (ram_write_buffer = x"000000") then
+					fade_direction := 0;
+				timer_counter = timer_counter + 1;
+					
+				
 			when storing =>
 				-- All that's needed here is to lower ram_we.  The RAM will be
 				-- storing data on this clock edge, so ram_we can go low at the
