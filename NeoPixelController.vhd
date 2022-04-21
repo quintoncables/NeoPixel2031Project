@@ -307,11 +307,6 @@ process(clk_10M, resetn, cs_addr)
 				
 				
 				
-				
-				
-				
-				
-				
 				elsif (io_write = '1') and (PARTY_EN ='1') then
 					-- store data_in into a signal to hold its value
 					--ram_write_addr <= ram_write_addr - ram_write_addr;
