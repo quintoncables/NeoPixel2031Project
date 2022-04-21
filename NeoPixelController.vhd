@@ -18,14 +18,15 @@ entity NeoPixelController is
 		io_write  : in   std_logic;
 		cs_addr   : in   std_logic;
 		cs_data   : in   std_logic;
-		RB_EN 	 : in   std_logic;
-		G_EN	    : in   std_logic;
+		R_EN 		 : in   std_logic;
+		GB_EN	    : in   std_logic;
 		ALL_EN	 : in   std_logic;
 		DIR_EN	 : in	  std_logic;
 		data_in   : in   std_logic_vector(15 downto 0);
 		GT_EN		 : in	  std_logic;
 		CLEAR_EN  : in   std_logic;
 		BREATHE_EN: in   std_logic;
+		PARTY_EN	 : in   std_logic;
 		sda       : out  std_logic
 	); 
 
@@ -56,10 +57,9 @@ architecture internals of NeoPixelController is
 
 	-- Signal SCOMP will write to before it gets stored into memory
 	signal ram_write_buffer : std_logic_vector(23 downto 0);
-	
 
 	-- RAM interface state machine signals
-	type write_states is (idle, allOneColor, GT, storing);
+	type write_states is (idle, allOneColor, GT, party, storing);
 	signal wstate: write_states;
 	
 	
@@ -68,9 +68,6 @@ architecture internals of NeoPixelController is
 	
 	-- will store 24 bits of GT_vector at a time (MSB first)
 	signal temp_buffer : std_logic_vector(23 downto 0) := "000000000000000000000000";
-	
-	signal first_24 : std_logic_vector(6143 downto 0) := x"111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
-	signal modified_vector : std_logic_vector(6143 downto 0) := GT_vector;
 	
 begin
 
@@ -222,10 +219,14 @@ begin
 	
 	
 process(clk_10M, resetn, cs_addr)
-	variable timer_counter : integer 1 to 2147483647 -- counts clock cycles when needed 
-																	 -- (e.g., a value of 10,000,000 = 1 sec)
-	
+	-- which bit in the 24 bits is being sent
+		variable party_counter : std_logic  := '0';
+		variable gt_counter : integer range 0 to 2  := 0;
+		
+
+
 	begin
+	
 
 	
 		-- The sequnce of events needed to store data into memory will be
@@ -262,22 +263,34 @@ process(clk_10M, resetn, cs_addr)
 					ram_we <= '1';
 					-- Change state
 					wstate <= storing;
+				
+				
+				
+				
+				elsif (io_write = '1') and (R_EN = '1') and (ALL_EN ='1') then
+					buffer_24_grb <= ((buffer_24_grb and "111111110000000011111111") or ("00000000" & data_in(7 downto 0) & "00000000"));
 					
-				elsif (io_write = '1') and (RB_EN = '1') then
-					-- Add the datainput to the lower 16 bits of the TempColorHolder and update the pixel with 
-					-- The current Temp Color Holder
-					
-					-- Users should set the green component of the pixel first
-					buffer_24_grb <= ((buffer_24_grb and "111111110000000000000000") or ("00000000" & data_in(15 downto 0)));
+				elsif (io_write = '1') and (GB_EN = '1') and (ALL_EN ='1') then
+					buffer_24_grb <= ((buffer_24_grb and "000000001111111100000000") or (data_in(15 downto 8) & "00000000" & data_in(7 downto 0)));
 					ram_write_buffer <= buffer_24_grb;
-					ram_we <= '1';
-					wstate <= storing;-- store and auto inc
+					ram_we <= '1'; -- write
+					wstate <= storing; -- store and auto inc.
+				
+				
+				
+				
+				
+				
+				
+				
+				elsif (io_write = '1') and (R_EN = '1') then
+					buffer_24_grb <= ((buffer_24_grb and "111111110000000011111111") or ("00000000" & data_in(7 downto 0) & "00000000"));
 					
-				elsif (io_write = '1') and (G_EN = '1') then
-					-- Set upper 8 bits of the 24 bit color. Does not update the pixel
-					buffer_24_grb <= ((buffer_24_grb and "000000001111111111111111") or (data_in(7 downto 0) & "0000000000000000"));
-				
-				
+				elsif (io_write = '1') and (GB_EN = '1') then
+					buffer_24_grb <= ((buffer_24_grb and "000000001111111100000000") or (data_in(15 downto 8) & "00000000" & data_in(7 downto 0)));
+					ram_write_buffer <= buffer_24_grb;
+					ram_we <= '1'; -- write
+					wstate <= storing; -- store and auto inc.
 					
 				elsif (io_write = '1') and (ALL_EN ='1') then
 					-- store data_in into a signal to hold its value
@@ -285,7 +298,7 @@ process(clk_10M, resetn, cs_addr)
 					ram_write_addr <= x"00";
 					ram_we <= '1';
 					wstate <= allOneColor; -- jump to allOneColor state
-				
+					
 				elsif (io_write = '1') and (CLEAR_EN = '1') then
 					ram_write_buffer <= (others => '0'); -- clear functionality just overwrites all pixels with zeroes
 					ram_write_addr <= x"00";
@@ -293,16 +306,25 @@ process(clk_10M, resetn, cs_addr)
 					wstate <= allOneColor;
 				
 				
-				elsif (io_write = '1') and (GT_EN ='1') then
-					-- store data_in into a signal to hold its value
-					ram_we <= '1';
-					wstate <= GT; -- jump to GT state
 				
-				elsif (io_write = '1') and (BREATHE_EN = '1') then
-					buffer_24_grb <= data_in(10 downto 5) & "00" & data_in(15 downto 11) & "000" & data_in(4 downto 0) & "000";
+				
+				
+				
+				
+				
+				elsif (io_write = '1') and (PARTY_EN ='1') then
+					-- store data_in into a signal to hold its value
+					--ram_write_addr <= ram_write_addr - ram_write_addr;
 					ram_write_addr <= x"00";
 					ram_we <= '1';
-					wstate <= 
+					wstate <= party; -- jump to party state
+				
+				elsif (io_write = '1') and (GT_EN ='1') then
+					-- store data_in into a signal to hold its value
+					--ram_write_addr <= ram_write_addr - ram_write_addr;
+					ram_write_addr <= x"00";
+					ram_we <= '1';
+					wstate <= GT; -- jump to GT state
 				
 				
 				elsif (io_write = '1') and (cs_addr='1') then
@@ -322,6 +344,8 @@ process(clk_10M, resetn, cs_addr)
 				end if;
 						
 						
+						
+			
 				
 			
 			when allOneColor  =>
@@ -332,6 +356,57 @@ process(clk_10M, resetn, cs_addr)
 				else
 					ram_write_addr <= ram_write_addr + 1;
 				end if;
+				
+				
+				
+			when GT =>
+				-- if after last pixel
+				if (ram_write_addr = x"FF") then
+					ram_write_addr <= x"00";
+					ram_we <= '0';
+					wstate <= idle;
+				elsif (gt_counter = 0) then
+					ram_write_buffer <= x"B3A369";
+					gt_counter := 1;
+					ram_write_addr <= ram_write_addr + 1;
+				elsif (gt_counter = 1) then
+					ram_write_buffer <= x"0000FF";
+					gt_counter := 2;
+					ram_write_addr <= ram_write_addr + 1;
+				elsif (gt_counter = 2) then
+					ram_write_buffer <= x"FFFFFF";
+					gt_counter := 0;
+					ram_write_addr <= ram_write_addr + 1;
+				-- if the peripheral isn't interacted with and this isn't the last pixel	
+				else
+					-- goto next pixel and set data.
+					ram_write_addr <= ram_write_addr + 1;
+				end if;
+			
+			
+			when party =>
+				-- if after last pixel
+				if (ram_write_addr = x"FF") then
+					ram_write_addr <= x"00";
+					ram_we <= '0';
+					wstate <= idle;
+				elsif (party_counter = '0') then
+					ram_write_buffer <= x"FFA500";
+					party_counter := '1';
+					ram_write_addr <= ram_write_addr + 1;
+				elsif (party_counter = '1') then
+					ram_write_buffer <= x"00FF00";
+					party_counter := '0';
+					ram_write_addr <= ram_write_addr + 1;
+				-- if the peripheral isn't interacted with and this isn't the last pixel	
+				else
+					-- goto next pixel and set data.
+					ram_write_addr <= ram_write_addr + 1;
+				end if;
+				
+				
+				
+				
 			when storing =>
 				-- All that's needed here is to lower ram_we.  The RAM will be
 				-- storing data on this clock edge, so ram_we can go low at the
@@ -343,6 +418,7 @@ process(clk_10M, resetn, cs_addr)
 				elsif auto_inc_dir = '1' then
 					ram_write_addr <= ram_write_addr - 1;
 				end if;
+				
 				
 				
 				ram_we <= '0';
@@ -359,4 +435,3 @@ process(clk_10M, resetn, cs_addr)
 	
 	
 end internals;
-

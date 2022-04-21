@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SCOMP
-Tue Apr 19 18:37:14 2022
+Thu Apr 21 08:53:41 2022
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -61,13 +61,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 19 18:37:14 2022       ;
+; Analysis & Synthesis Status     ; Successful - Thu Apr 21 08:53:41 2022       ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                   ; SCOMP                                       ;
 ; Top-level Entity Name           ; SCOMP_System                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 381                                         ;
+; Total registers                 ; 385                                         ;
 ; Total pins                      ; 64                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 38,912                                      ;
@@ -174,59 +174,53 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 8           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                         ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+----------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                          ; Library  ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+----------+
-; NeoPixelController.vhd           ; yes             ; User VHDL File                         ; C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/NeoPixelController.vhd   ;          ;
-; HEX_DISP.vhd                     ; yes             ; User VHDL File                         ; C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd             ;          ;
-; DIG_OUT.vhd                      ; yes             ; User VHDL File                         ; C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/DIG_OUT.vhd              ;          ;
-; DIG_IN.vhd                       ; yes             ; User VHDL File                         ; C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/DIG_IN.vhd               ;          ;
-; clk_div.vhd                      ; yes             ; User VHDL File                         ; C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/clk_div.vhd              ;          ;
-; TIMER.vhd                        ; yes             ; User VHDL File                         ; C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd                ;          ;
-; IO_DECODER.vhd                   ; yes             ; User VHDL File                         ; C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/IO_DECODER.vhd           ;          ;
-; SCOMP.vhd                        ; yes             ; User VHDL File                         ; C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/SCOMP.vhd                ;          ;
-; SCOMP_System.bdf                 ; yes             ; User Block Diagram/Schematic File      ; C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/SCOMP_System.bdf         ;          ;
-; HEX_DISP_6.bdf                   ; yes             ; User Block Diagram/Schematic File      ; C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP_6.bdf           ;          ;
-; PLL_main.vhd                     ; yes             ; User Wizard-Generated File             ; C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/PLL_main.vhd             ; PLL_main ;
-; PLL_main/PLL_main_0002.v         ; yes             ; User Verilog HDL File                  ; C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/PLL_main/PLL_main_0002.v ; PLL_main ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf                 ;          ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratix_ram_block.inc          ;          ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_mux.inc                    ;          ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_decode.inc                 ;          ;
-; aglobal191.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/aglobal191.inc                 ;          ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/a_rdenreg.inc                  ;          ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altrom.inc                     ;          ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altram.inc                     ;          ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altdpram.inc                   ;          ;
-; db/altsyncram_2c24.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/db/altsyncram_2c24.tdf   ;          ;
-; pixeldata.mif                    ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/pixeldata.mif            ;          ;
-; altera_pll.v                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altera_pll.v                   ;          ;
-; db/altsyncram_qm24.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/db/altsyncram_qm24.tdf   ;          ;
-; PixelTest.mif                    ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/PixelTest.mif            ;          ;
-; lpm_clshift.tdf                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_clshift.tdf                ;          ;
-; db/lpm_clshift_fuc.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/db/lpm_clshift_fuc.tdf   ;          ;
-; lpm_bustri.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_bustri.tdf                 ;          ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+----------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                 ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------+----------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                  ; Library  ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------+----------+
+; NeoPixelController.vhd           ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/NeoPixelController.vhd   ;          ;
+; HEX_DISP.vhd                     ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd             ;          ;
+; DIG_OUT.vhd                      ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/DIG_OUT.vhd              ;          ;
+; DIG_IN.vhd                       ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/DIG_IN.vhd               ;          ;
+; clk_div.vhd                      ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/clk_div.vhd              ;          ;
+; TIMER.vhd                        ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd                ;          ;
+; IO_DECODER.vhd                   ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/IO_DECODER.vhd           ;          ;
+; SCOMP.vhd                        ; yes             ; User VHDL File                         ; //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/SCOMP.vhd                ;          ;
+; SCOMP_System.bdf                 ; yes             ; User Block Diagram/Schematic File      ; //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/SCOMP_System.bdf         ;          ;
+; HEX_DISP_6.bdf                   ; yes             ; User Block Diagram/Schematic File      ; //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP_6.bdf           ;          ;
+; PLL_main.vhd                     ; yes             ; User Wizard-Generated File             ; //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/PLL_main.vhd             ; PLL_main ;
+; PLL_main/PLL_main_0002.v         ; yes             ; User Verilog HDL File                  ; //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/PLL_main/PLL_main_0002.v ; PLL_main ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf                         ;          ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratix_ram_block.inc                  ;          ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_mux.inc                            ;          ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_decode.inc                         ;          ;
+; aglobal191.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/aglobal191.inc                         ;          ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/a_rdenreg.inc                          ;          ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altrom.inc                             ;          ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altram.inc                             ;          ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altdpram.inc                           ;          ;
+; db/altsyncram_2c24.tdf           ; yes             ; Auto-Generated Megafunction            ; //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/db/altsyncram_2c24.tdf   ;          ;
+; pixeldata.mif                    ; yes             ; Auto-Found Memory Initialization File  ; //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/pixeldata.mif            ;          ;
+; altera_pll.v                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altera_pll.v                           ;          ;
+; db/altsyncram_qm24.tdf           ; yes             ; Auto-Generated Megafunction            ; //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/db/altsyncram_qm24.tdf   ;          ;
+; pixeltest.mif                    ; yes             ; Auto-Found Memory Initialization File  ; //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/pixeltest.mif            ;          ;
+; lpm_clshift.tdf                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_clshift.tdf                        ;          ;
+; db/lpm_clshift_fuc.tdf           ; yes             ; Auto-Generated Megafunction            ; //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/db/lpm_clshift_fuc.tdf   ;          ;
+; lpm_bustri.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_bustri.tdf                         ;          ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------+----------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------+
@@ -234,16 +228,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                             ;
 +---------------------------------------------+-----------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 385                                                                               ;
+; Estimate of Logic utilization (ALMs needed) ; 434                                                                               ;
 ;                                             ;                                                                                   ;
-; Combinational ALUT usage for logic          ; 531                                                                               ;
+; Combinational ALUT usage for logic          ; 591                                                                               ;
 ;     -- 7 input functions                    ; 1                                                                                 ;
-;     -- 6 input functions                    ; 104                                                                               ;
-;     -- 5 input functions                    ; 171                                                                               ;
-;     -- 4 input functions                    ; 90                                                                                ;
-;     -- <=3 input functions                  ; 165                                                                               ;
+;     -- 6 input functions                    ; 144                                                                               ;
+;     -- 5 input functions                    ; 187                                                                               ;
+;     -- 4 input functions                    ; 95                                                                                ;
+;     -- <=3 input functions                  ; 164                                                                               ;
 ;                                             ;                                                                                   ;
-; Dedicated logic registers                   ; 381                                                                               ;
+; Dedicated logic registers                   ; 385                                                                               ;
 ;                                             ;                                                                                   ;
 ; I/O pins                                    ; 64                                                                                ;
 ; Total MLAB memory bits                      ; 0                                                                                 ;
@@ -255,9 +249,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                                                                                 ;
 ;                                             ;                                                                                   ;
 ; Maximum fan-out node                        ; PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 405                                                                               ;
-; Total fan-out                               ; 4468                                                                              ;
-; Average fan-out                             ; 4.13                                                                              ;
+; Maximum fan-out                             ; 412                                                                               ;
+; Total fan-out                               ; 4795                                                                              ;
+; Average fan-out                             ; 4.19                                                                              ;
 +---------------------------------------------+-----------------------------------------------------------------------------------+
 
 
@@ -266,29 +260,29 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                        ; Entity Name        ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------+--------------------+--------------+
-; |SCOMP_System                             ; 531 (30)            ; 381 (0)                   ; 38912             ; 0          ; 64   ; 0            ; |SCOMP_System                                                                              ; SCOMP_System       ; work         ;
+; |SCOMP_System                             ; 591 (43)            ; 385 (0)                   ; 38912             ; 0          ; 64   ; 0            ; |SCOMP_System                                                                              ; SCOMP_System       ; work         ;
 ;    |DIG_IN:inst7|                         ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|DIG_IN:inst7                                                                 ; DIG_IN             ; work         ;
 ;    |DIG_OUT:inst6|                        ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|DIG_OUT:inst6                                                                ; DIG_OUT            ; work         ;
-;    |HEX_DISP_6:inst9|                     ; 46 (4)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9                                                             ; HEX_DISP_6         ; work         ;
+;    |HEX_DISP_6:inst9|                     ; 44 (2)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9                                                             ; HEX_DISP_6         ; work         ;
 ;       |HEX_DISP:inst1|                    ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst1                                              ; HEX_DISP           ; work         ;
 ;       |HEX_DISP:inst2|                    ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst2                                              ; HEX_DISP           ; work         ;
 ;       |HEX_DISP:inst3|                    ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst3                                              ; HEX_DISP           ; work         ;
 ;       |HEX_DISP:inst4|                    ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst4                                              ; HEX_DISP           ; work         ;
 ;       |HEX_DISP:inst5|                    ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst5                                              ; HEX_DISP           ; work         ;
 ;       |HEX_DISP:inst6|                    ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst6                                              ; HEX_DISP           ; work         ;
-;    |IO_DECODER:inst3|                     ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|IO_DECODER:inst3                                                             ; IO_DECODER         ; work         ;
-;    |NeoPixelController:inst13|            ; 125 (125)           ; 123 (123)                 ; 6144              ; 0          ; 0    ; 0            ; |SCOMP_System|NeoPixelController:inst13                                                    ; NeoPixelController ; work         ;
+;    |IO_DECODER:inst3|                     ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|IO_DECODER:inst3                                                             ; IO_DECODER         ; work         ;
+;    |NeoPixelController:inst13|            ; 185 (185)           ; 127 (127)                 ; 6144              ; 0          ; 0    ; 0            ; |SCOMP_System|NeoPixelController:inst13                                                    ; NeoPixelController ; work         ;
 ;       |altsyncram:pixelRAM|               ; 0 (0)               ; 0 (0)                     ; 6144              ; 0          ; 0    ; 0            ; |SCOMP_System|NeoPixelController:inst13|altsyncram:pixelRAM                                ; altsyncram         ; work         ;
 ;          |altsyncram_2c24:auto_generated| ; 0 (0)               ; 0 (0)                     ; 6144              ; 0          ; 0    ; 0            ; |SCOMP_System|NeoPixelController:inst13|altsyncram:pixelRAM|altsyncram_2c24:auto_generated ; altsyncram_2c24    ; work         ;
 ;    |PLL_main:inst1|                       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|PLL_main:inst1                                                               ; PLL_main           ; pll_main     ;
 ;       |PLL_main_0002:pll_main_inst|       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|PLL_main:inst1|PLL_main_0002:pll_main_inst                                   ; PLL_main_0002      ; PLL_main     ;
 ;          |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i           ; altera_pll         ; work         ;
-;    |SCOMP:inst|                           ; 266 (223)           ; 178 (178)                 ; 32768             ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst                                                                   ; SCOMP              ; work         ;
+;    |SCOMP:inst|                           ; 252 (212)           ; 178 (178)                 ; 32768             ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst                                                                   ; SCOMP              ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component                                   ; altsyncram         ; work         ;
 ;          |altsyncram_qm24:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_qm24:auto_generated    ; altsyncram_qm24    ; work         ;
-;       |lpm_clshift:shifter|               ; 43 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter                                               ; lpm_clshift        ; work         ;
-;          |lpm_clshift_fuc:auto_generated| ; 43 (43)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter|lpm_clshift_fuc:auto_generated                ; lpm_clshift_fuc    ; work         ;
-;    |TIMER:inst4|                          ; 33 (33)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|TIMER:inst4                                                                  ; TIMER              ; work         ;
+;       |lpm_clshift:shifter|               ; 40 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter                                               ; lpm_clshift        ; work         ;
+;          |lpm_clshift_fuc:auto_generated| ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter|lpm_clshift_fuc:auto_generated                ; lpm_clshift_fuc    ; work         ;
+;    |TIMER:inst4|                          ; 34 (34)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|TIMER:inst4                                                                  ; TIMER              ; work         ;
 ;    |clk_div:inst5|                        ; 25 (25)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |SCOMP_System|clk_div:inst5                                                                ; clk_div            ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -351,16 +345,17 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------+
-; State Machine - |SCOMP_System|NeoPixelController:inst13|wstate                     ;
-+--------------------+----------------+-----------+--------------------+-------------+
-; Name               ; wstate.storing ; wstate.GT ; wstate.allOneColor ; wstate.idle ;
-+--------------------+----------------+-----------+--------------------+-------------+
-; wstate.idle        ; 0              ; 0         ; 0                  ; 0           ;
-; wstate.allOneColor ; 0              ; 0         ; 1                  ; 1           ;
-; wstate.GT          ; 0              ; 1         ; 0                  ; 1           ;
-; wstate.storing     ; 1              ; 0         ; 0                  ; 1           ;
-+--------------------+----------------+-----------+--------------------+-------------+
++---------------------------------------------------------------------------------------------------+
+; State Machine - |SCOMP_System|NeoPixelController:inst13|wstate                                    ;
++--------------------+----------------+--------------+-----------+--------------------+-------------+
+; Name               ; wstate.storing ; wstate.party ; wstate.GT ; wstate.allOneColor ; wstate.idle ;
++--------------------+----------------+--------------+-----------+--------------------+-------------+
+; wstate.idle        ; 0              ; 0            ; 0         ; 0                  ; 0           ;
+; wstate.allOneColor ; 0              ; 0            ; 0         ; 1                  ; 1           ;
+; wstate.GT          ; 0              ; 0            ; 1         ; 0                  ; 1           ;
+; wstate.party       ; 0              ; 1            ; 0         ; 0                  ; 1           ;
+; wstate.storing     ; 1              ; 0            ; 0         ; 0                  ; 1           ;
++--------------------+----------------+--------------+-----------+--------------------+-------------+
 
 
 +----------------------------------------------------------------------------------------------------------+
@@ -405,12 +400,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 381   ;
-; Number of registers using Synchronous Clear  ; 78    ;
-; Number of registers using Synchronous Load   ; 138   ;
-; Number of registers using Asynchronous Clear ; 159   ;
+; Total registers                              ; 385   ;
+; Number of registers using Synchronous Clear  ; 70    ;
+; Number of registers using Synchronous Load   ; 131   ;
+; Number of registers using Asynchronous Clear ; 160   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 247   ;
+; Number of registers using Clock Enable       ; 250   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -439,21 +434,23 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |SCOMP_System|NeoPixelController:inst13|pixel_count[7]       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |SCOMP_System|NeoPixelController:inst13|ram_read_addr[2]     ;
-; 3:1                ; 99 bits   ; 198 LEs       ; 0 LEs                ; 198 LEs                ; Yes        ; |SCOMP_System|SCOMP:inst|PC_stack[7][5]                      ;
-; 4:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |SCOMP_System|NeoPixelController:inst13|pixel_buffer[19]     ;
-; 6:1                ; 16 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |SCOMP_System|NeoPixelController:inst13|ram_write_buffer[4]  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |SCOMP_System|NeoPixelController:inst13|ram_write_buffer[16] ;
-; 9:1                ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|NeoPixelController:inst13|ram_write_addr[3]    ;
-; 11:1               ; 11 bits   ; 77 LEs        ; 22 LEs               ; 55 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC[2]                               ;
-; 12:1               ; 16 bits   ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|AC[10]                              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |SCOMP_System|NeoPixelController:inst13|pixel_count[1]       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |SCOMP_System|NeoPixelController:inst13|ram_read_addr[5]     ;
+; 3:1                ; 99 bits   ; 198 LEs       ; 0 LEs                ; 198 LEs                ; Yes        ; |SCOMP_System|SCOMP:inst|PC_stack[2][0]                      ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |SCOMP_System|NeoPixelController:inst13|pixel_buffer[4]      ;
+; 11:1               ; 11 bits   ; 77 LEs        ; 22 LEs               ; 55 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC[5]                               ;
+; 12:1               ; 16 bits   ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|AC[2]                               ;
+; 10:1               ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|NeoPixelController:inst13|ram_write_addr[5]    ;
+; 16:1               ; 5 bits    ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |SCOMP_System|NeoPixelController:inst13|ram_write_buffer[0]  ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 28 LEs               ; 42 LEs                 ; Yes        ; |SCOMP_System|NeoPixelController:inst13|ram_write_buffer[7]  ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |SCOMP_System|NeoPixelController:inst13|ram_write_buffer[16] ;
+; 16:1               ; 9 bits    ; 90 LEs        ; 27 LEs               ; 63 LEs                 ; Yes        ; |SCOMP_System|NeoPixelController:inst13|ram_write_buffer[12] ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |SCOMP_System|NeoPixelController:inst13|enc_count            ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |SCOMP_System|NeoPixelController:inst13|reset_count          ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |SCOMP_System|IO_DATA[8]                                     ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |SCOMP_System|IO_DATA[0]                                     ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |SCOMP_System|NeoPixelController:inst13|bit_count            ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |SCOMP_System|NeoPixelController:inst13|wstate               ;
 ; 12:1               ; 16 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |SCOMP_System|SCOMP:inst|Add1                                ;
+; 13:1               ; 5 bits    ; 40 LEs        ; 30 LEs               ; 10 LEs                 ; No         ; |SCOMP_System|NeoPixelController:inst13|Selector26           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
 
 
@@ -924,37 +921,38 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 381                         ;
-;     CLR               ; 103                         ;
+; arriav_ff             ; 385                         ;
+;     CLR               ; 100                         ;
+;     CLR SCLR          ; 1                           ;
 ;     ENA               ; 42                          ;
-;     ENA CLR           ; 24                          ;
-;     ENA CLR SCLR      ; 16                          ;
-;     ENA CLR SCLR SLD  ; 16                          ;
+;     ENA CLR           ; 36                          ;
+;     ENA CLR SCLR      ; 14                          ;
+;     ENA CLR SCLR SLD  ; 9                           ;
 ;     ENA SCLR          ; 27                          ;
 ;     ENA SLD           ; 122                         ;
 ;     SCLR              ; 19                          ;
-;     plain             ; 12                          ;
-; arriav_lcell_comb     ; 537                         ;
+;     plain             ; 15                          ;
+; arriav_lcell_comb     ; 597                         ;
 ;     arith             ; 104                         ;
 ;         1 data inputs ; 80                          ;
 ;         2 data inputs ; 8                           ;
 ;         5 data inputs ; 16                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 432                         ;
+;     normal            ; 492                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 7                           ;
-;         2 data inputs ; 25                          ;
+;         2 data inputs ; 24                          ;
 ;         3 data inputs ; 50                          ;
-;         4 data inputs ; 90                          ;
-;         5 data inputs ; 155                         ;
-;         6 data inputs ; 104                         ;
+;         4 data inputs ; 95                          ;
+;         5 data inputs ; 171                         ;
+;         6 data inputs ; 144                         ;
 ; boundary_port         ; 64                          ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 40                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.50                        ;
-; Average LUT depth     ; 2.28                        ;
+; Average LUT depth     ; 2.37                        ;
 +-----------------------+-----------------------------+
 
 
@@ -963,7 +961,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -973,49 +971,47 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Tue Apr 19 18:36:58 2022
+    Info: Processing started: Thu Apr 21 08:53:05 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SCOMP -c SCOMP
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file neopixelcontroller.vhd
-    Info (12022): Found design unit 1: NeoPixelController-internals File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/NeoPixelController.vhd Line: 33
-    Info (12023): Found entity 1: NeoPixelController File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/NeoPixelController.vhd Line: 13
+    Info (12022): Found design unit 1: NeoPixelController-internals File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/NeoPixelController.vhd Line: 35
+    Info (12023): Found entity 1: NeoPixelController File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/NeoPixelController.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file hex_disp.vhd
-    Info (12022): Found design unit 1: HEX_DISP-a File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd Line: 17
-    Info (12023): Found entity 1: HEX_DISP File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd Line: 9
+    Info (12022): Found design unit 1: HEX_DISP-a File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd Line: 17
+    Info (12023): Found entity 1: HEX_DISP File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file dig_out.vhd
-    Info (12022): Found design unit 1: DIG_OUT-a File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/DIG_OUT.vhd Line: 26
-    Info (12023): Found entity 1: DIG_OUT File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/DIG_OUT.vhd Line: 16
+    Info (12022): Found design unit 1: DIG_OUT-a File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/DIG_OUT.vhd Line: 26
+    Info (12023): Found entity 1: DIG_OUT File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/DIG_OUT.vhd Line: 16
 Info (12021): Found 2 design units, including 1 entities, in source file dig_in.vhd
-    Info (12022): Found design unit 1: DIG_IN-a File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/DIG_IN.vhd Line: 19
-    Info (12023): Found entity 1: DIG_IN File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/DIG_IN.vhd Line: 10
+    Info (12022): Found design unit 1: DIG_IN-a File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/DIG_IN.vhd Line: 19
+    Info (12023): Found entity 1: DIG_IN File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/DIG_IN.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file clk_div.vhd
-    Info (12022): Found design unit 1: clk_div-a File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/clk_div.vhd Line: 26
-    Info (12023): Found entity 1: clk_div File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/clk_div.vhd Line: 11
+    Info (12022): Found design unit 1: clk_div-a File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/clk_div.vhd Line: 26
+    Info (12023): Found entity 1: clk_div File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/clk_div.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file timer.vhd
-    Info (12022): Found design unit 1: TIMER-a File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 27
-    Info (12023): Found entity 1: TIMER File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 17
+    Info (12022): Found design unit 1: TIMER-a File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 27
+    Info (12023): Found entity 1: TIMER File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 17
 Info (12021): Found 2 design units, including 1 entities, in source file io_decoder.vhd
-    Info (12022): Found design unit 1: IO_DECODER-a File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/IO_DECODER.vhd Line: 32
-    Info (12023): Found entity 1: IO_DECODER File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/IO_DECODER.vhd Line: 9
+    Info (12022): Found design unit 1: IO_DECODER-a File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/IO_DECODER.vhd Line: 35
+    Info (12023): Found entity 1: IO_DECODER File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/IO_DECODER.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file scomp.vhd
-    Info (12022): Found design unit 1: SCOMP-a File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/SCOMP.vhd Line: 33
-    Info (12023): Found entity 1: SCOMP File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/SCOMP.vhd Line: 16
+    Info (12022): Found design unit 1: SCOMP-a File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/SCOMP.vhd Line: 33
+    Info (12023): Found entity 1: SCOMP File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/SCOMP.vhd Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file scomp_system.bdf
     Info (12023): Found entity 1: SCOMP_System
 Info (12021): Found 1 design units, including 1 entities, in source file hex_disp_6.bdf
     Info (12023): Found entity 1: HEX_DISP_6
 Info (12021): Found 2 design units, including 1 entities, in source file pll_main.vhd
-    Info (12022): Found design unit 1: PLL_main-rtl File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/PLL_main.vhd Line: 20
-    Info (12023): Found entity 1: PLL_main File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/PLL_main.vhd Line: 11
+    Info (12022): Found design unit 1: PLL_main-rtl File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/PLL_main.vhd Line: 20
+    Info (12023): Found entity 1: PLL_main File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/PLL_main.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file pll_main/pll_main_0002.v
-    Info (12023): Found entity 1: PLL_main_0002 File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/PLL_main/PLL_main_0002.v Line: 2
+    Info (12023): Found entity 1: PLL_main_0002 File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/PLL_main/PLL_main_0002.v Line: 2
 Info (12127): Elaborating entity "SCOMP_System" for the top level hierarchy
-Warning (275011): Block or symbol "AND2" of instance "inst12" overlaps another block or symbol
 Info (12128): Elaborating entity "NeoPixelController" for hierarchy "NeoPixelController:inst13"
-Warning (10540): VHDL Signal Declaration warning at NeoPixelController.vhd(65): used explicit default value for signal "GT_vector" because signal was never assigned a value File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/NeoPixelController.vhd Line: 65
-Info (12128): Elaborating entity "altsyncram" for hierarchy "NeoPixelController:inst13|altsyncram:pixelRAM" File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/NeoPixelController.vhd Line: 78
-Info (12130): Elaborated megafunction instantiation "NeoPixelController:inst13|altsyncram:pixelRAM" File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/NeoPixelController.vhd Line: 78
-Info (12133): Instantiated megafunction "NeoPixelController:inst13|altsyncram:pixelRAM" with the following parameter: File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/NeoPixelController.vhd Line: 78
+Info (12128): Elaborating entity "altsyncram" for hierarchy "NeoPixelController:inst13|altsyncram:pixelRAM" File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/NeoPixelController.vhd Line: 77
+Info (12130): Elaborated megafunction instantiation "NeoPixelController:inst13|altsyncram:pixelRAM" File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/NeoPixelController.vhd Line: 77
+Info (12133): Instantiated megafunction "NeoPixelController:inst13|altsyncram:pixelRAM" with the following parameter: File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/NeoPixelController.vhd Line: 77
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK0"
@@ -1067,14 +1063,14 @@ Info (12133): Instantiated megafunction "NeoPixelController:inst13|altsyncram:pi
     Info (12134): Parameter "lpm_hint" = "UNUSED"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2c24.tdf
-    Info (12023): Found entity 1: altsyncram_2c24 File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/db/altsyncram_2c24.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_2c24 File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/db/altsyncram_2c24.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_2c24" for hierarchy "NeoPixelController:inst13|altsyncram:pixelRAM|altsyncram_2c24:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "PLL_main" for hierarchy "PLL_main:inst1"
-Info (12128): Elaborating entity "PLL_main_0002" for hierarchy "PLL_main:inst1|PLL_main_0002:pll_main_inst" File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/PLL_main.vhd Line: 32
-Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/PLL_main/PLL_main_0002.v Line: 85
+Info (12128): Elaborating entity "PLL_main_0002" for hierarchy "PLL_main:inst1|PLL_main_0002:pll_main_inst" File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/PLL_main.vhd Line: 32
+Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/PLL_main/PLL_main_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/PLL_main/PLL_main_0002.v Line: 85
-Info (12133): Instantiated megafunction "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/PLL_main/PLL_main_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/PLL_main/PLL_main_0002.v Line: 85
+Info (12133): Instantiated megafunction "PLL_main:inst1|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" with the following parameter: File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/PLL_main/PLL_main_0002.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -1136,9 +1132,9 @@ Info (12133): Instantiated megafunction "PLL_main:inst1|PLL_main_0002:pll_main_i
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "SCOMP" for hierarchy "SCOMP:inst"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component" File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/SCOMP.vhd Line: 61
-Info (12130): Elaborated megafunction instantiation "SCOMP:inst|altsyncram:altsyncram_component" File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/SCOMP.vhd Line: 61
-Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/SCOMP.vhd Line: 61
+Info (12128): Elaborating entity "altsyncram" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component" File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/SCOMP.vhd Line: 61
+Info (12130): Elaborated megafunction instantiation "SCOMP:inst|altsyncram:altsyncram_component" File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/SCOMP.vhd Line: 61
+Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_component" with the following parameter: File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/SCOMP.vhd Line: 61
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1190,54 +1186,43 @@ Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_compon
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_qm24.tdf
-    Info (12023): Found entity 1: altsyncram_qm24 File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/db/altsyncram_qm24.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_qm24 File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/db/altsyncram_qm24.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_qm24" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component|altsyncram_qm24:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Warning (113031): 32 out of 2048 addresses are reinitialized. The latest initialized data will replace the existing data. There are 32 warnings found, and 10 warnings are reported. File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/PixelTest.mif Line: 1
-    Warning (113030): Memory Initialization File address 0 is reinitialized File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/ Line: 13
-    Warning (113030): Memory Initialization File address 1 is reinitialized File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/ Line: 14
-    Warning (113030): Memory Initialization File address 2 is reinitialized File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/ Line: 15
-    Warning (113030): Memory Initialization File address 3 is reinitialized File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/ Line: 16
-    Warning (113030): Memory Initialization File address 4 is reinitialized File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/ Line: 17
-    Warning (113030): Memory Initialization File address 5 is reinitialized File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/ Line: 18
-    Warning (113030): Memory Initialization File address 6 is reinitialized File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/ Line: 19
-    Warning (113030): Memory Initialization File address 7 is reinitialized File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/ Line: 20
-    Warning (113030): Memory Initialization File address 8 is reinitialized File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/ Line: 21
-    Warning (113030): Memory Initialization File address 9 is reinitialized File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/ Line: 22
-Info (12128): Elaborating entity "LPM_CLSHIFT" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/SCOMP.vhd Line: 88
-Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/SCOMP.vhd Line: 88
-Info (12133): Instantiated megafunction "SCOMP:inst|LPM_CLSHIFT:shifter" with the following parameter: File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/SCOMP.vhd Line: 88
+Info (12128): Elaborating entity "LPM_CLSHIFT" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter" File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/SCOMP.vhd Line: 88
+Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_CLSHIFT:shifter" File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/SCOMP.vhd Line: 88
+Info (12133): Instantiated megafunction "SCOMP:inst|LPM_CLSHIFT:shifter" with the following parameter: File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/SCOMP.vhd Line: 88
     Info (12134): Parameter "LPM_WIDTH" = "16"
     Info (12134): Parameter "LPM_WIDTHDIST" = "4"
     Info (12134): Parameter "LPM_SHIFTTYPE" = "arithmetic"
     Info (12134): Parameter "LPM_TYPE" = "LPM_CLSHIFT"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_clshift_fuc.tdf
-    Info (12023): Found entity 1: lpm_clshift_fuc File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/db/lpm_clshift_fuc.tdf Line: 23
+    Info (12023): Found entity 1: lpm_clshift_fuc File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/db/lpm_clshift_fuc.tdf Line: 23
 Info (12128): Elaborating entity "lpm_clshift_fuc" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter|lpm_clshift_fuc:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_clshift.tdf Line: 54
-Info (12128): Elaborating entity "LPM_BUSTRI" for hierarchy "SCOMP:inst|LPM_BUSTRI:io_bus" File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/SCOMP.vhd Line: 115
-Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_BUSTRI:io_bus" File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/SCOMP.vhd Line: 115
-Info (12133): Instantiated megafunction "SCOMP:inst|LPM_BUSTRI:io_bus" with the following parameter: File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/SCOMP.vhd Line: 115
+Info (12128): Elaborating entity "LPM_BUSTRI" for hierarchy "SCOMP:inst|LPM_BUSTRI:io_bus" File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/SCOMP.vhd Line: 115
+Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_BUSTRI:io_bus" File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/SCOMP.vhd Line: 115
+Info (12133): Instantiated megafunction "SCOMP:inst|LPM_BUSTRI:io_bus" with the following parameter: File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/SCOMP.vhd Line: 115
     Info (12134): Parameter "LPM_WIDTH" = "16"
     Info (12134): Parameter "LPM_TYPE" = "LPM_BUSTRI"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
 Info (12128): Elaborating entity "TIMER" for hierarchy "TIMER:inst4"
-Warning (10631): VHDL Process Statement warning at TIMER.vhd(59): inferring latch(es) for signal or variable "IO_COUNT", which holds its previous value in one or more paths through the process File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[0]" at TIMER.vhd(59) File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[1]" at TIMER.vhd(59) File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[2]" at TIMER.vhd(59) File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[3]" at TIMER.vhd(59) File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[4]" at TIMER.vhd(59) File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[5]" at TIMER.vhd(59) File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[6]" at TIMER.vhd(59) File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[7]" at TIMER.vhd(59) File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[8]" at TIMER.vhd(59) File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[9]" at TIMER.vhd(59) File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[10]" at TIMER.vhd(59) File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[11]" at TIMER.vhd(59) File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[12]" at TIMER.vhd(59) File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[13]" at TIMER.vhd(59) File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[14]" at TIMER.vhd(59) File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 59
-Info (10041): Inferred latch for "IO_COUNT[15]" at TIMER.vhd(59) File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/TIMER.vhd Line: 59
+Warning (10631): VHDL Process Statement warning at TIMER.vhd(59): inferring latch(es) for signal or variable "IO_COUNT", which holds its previous value in one or more paths through the process File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 59
+Info (10041): Inferred latch for "IO_COUNT[0]" at TIMER.vhd(59) File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 59
+Info (10041): Inferred latch for "IO_COUNT[1]" at TIMER.vhd(59) File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 59
+Info (10041): Inferred latch for "IO_COUNT[2]" at TIMER.vhd(59) File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 59
+Info (10041): Inferred latch for "IO_COUNT[3]" at TIMER.vhd(59) File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 59
+Info (10041): Inferred latch for "IO_COUNT[4]" at TIMER.vhd(59) File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 59
+Info (10041): Inferred latch for "IO_COUNT[5]" at TIMER.vhd(59) File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 59
+Info (10041): Inferred latch for "IO_COUNT[6]" at TIMER.vhd(59) File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 59
+Info (10041): Inferred latch for "IO_COUNT[7]" at TIMER.vhd(59) File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 59
+Info (10041): Inferred latch for "IO_COUNT[8]" at TIMER.vhd(59) File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 59
+Info (10041): Inferred latch for "IO_COUNT[9]" at TIMER.vhd(59) File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 59
+Info (10041): Inferred latch for "IO_COUNT[10]" at TIMER.vhd(59) File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 59
+Info (10041): Inferred latch for "IO_COUNT[11]" at TIMER.vhd(59) File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 59
+Info (10041): Inferred latch for "IO_COUNT[12]" at TIMER.vhd(59) File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 59
+Info (10041): Inferred latch for "IO_COUNT[13]" at TIMER.vhd(59) File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 59
+Info (10041): Inferred latch for "IO_COUNT[14]" at TIMER.vhd(59) File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 59
+Info (10041): Inferred latch for "IO_COUNT[15]" at TIMER.vhd(59) File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/TIMER.vhd Line: 59
 Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:inst5"
 Info (12128): Elaborating entity "IO_DECODER" for hierarchy "IO_DECODER:inst3"
 Info (12128): Elaborating entity "DIG_IN" for hierarchy "DIG_IN:inst7"
@@ -1245,47 +1230,47 @@ Info (12128): Elaborating entity "HEX_DISP_6" for hierarchy "HEX_DISP_6:inst9"
 Info (12128): Elaborating entity "HEX_DISP" for hierarchy "HEX_DISP_6:inst9|HEX_DISP:inst1"
 Info (12128): Elaborating entity "DIG_OUT" for hierarchy "DIG_OUT:inst6"
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13048): Converted tri-state node "IO_DATA[15]" into a selector File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[14]" into a selector File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[13]" into a selector File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[12]" into a selector File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[11]" into a selector File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[10]" into a selector File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[9]" into a selector File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[8]" into a selector File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[7]" into a selector File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[6]" into a selector File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[5]" into a selector File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[4]" into a selector File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[3]" into a selector File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[2]" into a selector File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[1]" into a selector File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd Line: 25
-    Warning (13048): Converted tri-state node "IO_DATA[0]" into a selector File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/HEX_DISP.vhd Line: 25
+    Warning (13048): Converted tri-state node "IO_DATA[15]" into a selector File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd Line: 25
+    Warning (13048): Converted tri-state node "IO_DATA[14]" into a selector File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd Line: 25
+    Warning (13048): Converted tri-state node "IO_DATA[13]" into a selector File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd Line: 25
+    Warning (13048): Converted tri-state node "IO_DATA[12]" into a selector File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd Line: 25
+    Warning (13048): Converted tri-state node "IO_DATA[11]" into a selector File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd Line: 25
+    Warning (13048): Converted tri-state node "IO_DATA[10]" into a selector File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd Line: 25
+    Warning (13048): Converted tri-state node "IO_DATA[9]" into a selector File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd Line: 25
+    Warning (13048): Converted tri-state node "IO_DATA[8]" into a selector File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd Line: 25
+    Warning (13048): Converted tri-state node "IO_DATA[7]" into a selector File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd Line: 25
+    Warning (13048): Converted tri-state node "IO_DATA[6]" into a selector File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd Line: 25
+    Warning (13048): Converted tri-state node "IO_DATA[5]" into a selector File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd Line: 25
+    Warning (13048): Converted tri-state node "IO_DATA[4]" into a selector File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd Line: 25
+    Warning (13048): Converted tri-state node "IO_DATA[3]" into a selector File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd Line: 25
+    Warning (13048): Converted tri-state node "IO_DATA[2]" into a selector File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd Line: 25
+    Warning (13048): Converted tri-state node "IO_DATA[1]" into a selector File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd Line: 25
+    Warning (13048): Converted tri-state node "IO_DATA[0]" into a selector File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/HEX_DISP.vhd Line: 25
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register NeoPixelController:inst13|reset_count[9] will power up to High File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/NeoPixelController.vhd Line: 145
-    Critical Warning (18010): Register NeoPixelController:inst13|reset_count[8] will power up to High File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/NeoPixelController.vhd Line: 145
-    Critical Warning (18010): Register NeoPixelController:inst13|reset_count[7] will power up to High File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/NeoPixelController.vhd Line: 145
-    Critical Warning (18010): Register NeoPixelController:inst13|reset_count[6] will power up to High File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/NeoPixelController.vhd Line: 145
-    Critical Warning (18010): Register NeoPixelController:inst13|reset_count[5] will power up to High File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/NeoPixelController.vhd Line: 145
-    Critical Warning (18010): Register NeoPixelController:inst13|reset_count[3] will power up to High File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/NeoPixelController.vhd Line: 145
-    Critical Warning (18010): Register NeoPixelController:inst13|bit_count[4] will power up to High File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/NeoPixelController.vhd Line: 145
-    Critical Warning (18010): Register NeoPixelController:inst13|bit_count[2] will power up to High File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/NeoPixelController.vhd Line: 145
-    Critical Warning (18010): Register NeoPixelController:inst13|bit_count[1] will power up to High File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/NeoPixelController.vhd Line: 145
-    Critical Warning (18010): Register NeoPixelController:inst13|bit_count[0] will power up to High File: C:/Users/ishan/OneDrive/Documents/GitHub/NeoPixel2031Project/NeoPixelController.vhd Line: 145
+    Critical Warning (18010): Register NeoPixelController:inst13|reset_count[9] will power up to High File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/NeoPixelController.vhd Line: 144
+    Critical Warning (18010): Register NeoPixelController:inst13|reset_count[8] will power up to High File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/NeoPixelController.vhd Line: 144
+    Critical Warning (18010): Register NeoPixelController:inst13|reset_count[7] will power up to High File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/NeoPixelController.vhd Line: 144
+    Critical Warning (18010): Register NeoPixelController:inst13|reset_count[6] will power up to High File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/NeoPixelController.vhd Line: 144
+    Critical Warning (18010): Register NeoPixelController:inst13|reset_count[5] will power up to High File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/NeoPixelController.vhd Line: 144
+    Critical Warning (18010): Register NeoPixelController:inst13|reset_count[3] will power up to High File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/NeoPixelController.vhd Line: 144
+    Critical Warning (18010): Register NeoPixelController:inst13|bit_count[4] will power up to High File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/NeoPixelController.vhd Line: 144
+    Critical Warning (18010): Register NeoPixelController:inst13|bit_count[2] will power up to High File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/NeoPixelController.vhd Line: 144
+    Critical Warning (18010): Register NeoPixelController:inst13|bit_count[1] will power up to High File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/NeoPixelController.vhd Line: 144
+    Critical Warning (18010): Register NeoPixelController:inst13|bit_count[0] will power up to High File: //vmware-host/Shared Folders/Desktop/ECE2031Labs/NeoPixel2031Project/NeoPixelController.vhd Line: 144
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 888 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 924 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 783 logic cells
+    Info (21061): Implemented 819 logic cells
     Info (21064): Implemented 40 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 4964 megabytes
-    Info: Processing ended: Tue Apr 19 18:37:14 2022
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:31
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4891 megabytes
+    Info: Processing ended: Thu Apr 21 08:53:41 2022
+    Info: Elapsed time: 00:00:36
+    Info: Total CPU time (on all processors): 00:00:32
 
 

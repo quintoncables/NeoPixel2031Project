@@ -21,9 +21,9 @@ https://fpgasoftware.intel.com/eula.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 192 256)
+	(rect 16 16 200 288)
 	(text "NeoPixelController" (rect 5 0 76 12)(font "Arial" ))
-	(text "inst" (rect 8 224 20 236)(font "Arial" ))
+	(text "inst" (rect 8 256 20 268)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -62,15 +62,15 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 112)
 		(input)
-		(text "RB_EN" (rect 0 0 34 12)(font "Arial" ))
-		(text "RB_EN" (rect 21 107 55 119)(font "Arial" ))
+		(text "R_EN" (rect 0 0 28 12)(font "Arial" ))
+		(text "R_EN" (rect 21 107 49 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112)(line_width 1))
 	)
 	(port
 		(pt 0 128)
 		(input)
-		(text "G_EN" (rect 0 0 27 12)(font "Arial" ))
-		(text "G_EN" (rect 21 123 48 135)(font "Arial" ))
+		(text "GB_EN" (rect 0 0 33 12)(font "Arial" ))
+		(text "GB_EN" (rect 21 123 54 135)(font "Arial" ))
 		(line (pt 0 128)(pt 16 128)(line_width 1))
 	)
 	(port
@@ -109,13 +109,27 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 208)(pt 16 208)(line_width 1))
 	)
 	(port
-		(pt 176 32)
+		(pt 0 224)
+		(input)
+		(text "BREATHE_EN" (rect 0 0 69 12)(font "Arial" ))
+		(text "BREATHE_EN" (rect 21 219 90 231)(font "Arial" ))
+		(line (pt 0 224)(pt 16 224)(line_width 1))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "PARTY_EN" (rect 0 0 55 12)(font "Arial" ))
+		(text "PARTY_EN" (rect 21 235 76 247)(font "Arial" ))
+		(line (pt 0 240)(pt 16 240)(line_width 1))
+	)
+	(port
+		(pt 184 32)
 		(output)
 		(text "sda" (rect 0 0 14 12)(font "Arial" ))
-		(text "sda" (rect 141 27 155 39)(font "Arial" ))
-		(line (pt 176 32)(pt 160 32)(line_width 1))
+		(text "sda" (rect 149 27 163 39)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32)(line_width 1))
 	)
 	(drawing
-		(rectangle (rect 16 16 160 224)(line_width 1))
+		(rectangle (rect 16 16 168 256)(line_width 1))
 	)
 )

@@ -57,8 +57,15 @@ SetAllPixels:
 	OUT   CLEAR
 	CALL  Delay
 	
-	LOAD  Blue16Bit
-	OUT   ALL_EN
+	;LOAD  Blue16Bit
+	;OUT   ALL_EN
+	
+	LOADI 1
+	OUT ALL_EN
+	LOADI PinkR
+	OUT PXL_R
+	LOADI PINKGB
+	OUT PXL_GB
 	
 	JUMP  SelectDemoMode
 
@@ -110,13 +117,15 @@ BREATHE_EN: EQU &H0B8
 PARTY_EN:  EQU &H0B9
 
 Blue16Bit:  DW &B0000000000011111
+PinkR:   DW &H00FF
+PinkGB:  DW &HC0CB
 ;YellowRB:   DW &HFF00
 ;YellowG:    DW &H00FF
 
-YellowR: DW &H00FF
+YellowR:  DW &H00FF
 YellowGB: DW &HFF00
 
-PurpleR: DW &H00FF
+PurpleR:  DW &H00FF
 PurpleGB: DW &H00FF
 
 ;PurpleRB:   DW &HFFFF

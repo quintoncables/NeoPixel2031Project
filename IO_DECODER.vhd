@@ -19,13 +19,15 @@ ENTITY IO_DECODER IS
     HEX1_EN       : OUT STD_LOGIC;
     PXL_A_EN      : OUT STD_LOGIC;
     PXL_D_EN      : OUT STD_LOGIC;
-	 RB_EN     		: OUT STD_LOGIC;
-	 G_EN    		: OUT STD_LOGIC;
+	 R_EN     		: OUT STD_LOGIC;
+	 GB_EN    		: OUT STD_LOGIC;
 	 ALL_EN   		: OUT STD_LOGIC;
 	 DIR_EN			: OUT STD_LOGIC;
 	 GT_EN			: OUT STD_LOGIC;
-	 CLEAR_EN      : OUT STD_LOGIC;
-	 BREATHE_EN    : OUT STD_LOGIC
+	 CLEAR_EN  		: OUT STD_LOGIC;
+	 BREATHE_EN		: OUT STD_LOGIC;
+	 PARTY_EN		: OUT STD_LOGIC
+	 
   );
 
 END ENTITY;
@@ -49,12 +51,13 @@ begin
   
   PXL_A_EN     <= '1' WHEN (ADDR_INT = 16#0B0#) and (IO_CYCLE = '1') ELSE '0';
   PXL_D_EN     <= '1' WHEN (ADDR_INT = 16#0B1#) and (IO_CYCLE = '1') ELSE '0';
-  RB_EN  		<= '1' WHEN (ADDR_INT = 16#0B2#) and (IO_CYCLE = '1') ELSE '0';
-  G_EN			<= '1' WHEN (ADDR_INT = 16#0B3#) and (IO_CYCLE = '1') ELSE '0';
+  R_EN  			<= '1' WHEN (ADDR_INT = 16#0B2#) and (IO_CYCLE = '1') ELSE '0';
+  GB_EN			<= '1' WHEN (ADDR_INT = 16#0B3#) and (IO_CYCLE = '1') ELSE '0';
   ALL_EN			<= '1' WHEN (ADDR_INT = 16#0B4#) and (IO_CYCLE = '1') ELSE '0';
   DIR_EN			<= '1' WHEN (ADDR_INT = 16#0B5#) and (IO_CYCLE = '1') ELSE '0';
-	GT_EN			<= '1' WHEN (ADDR_INT = 16#0B6#) and (IO_CYCLE = '1') ELSE '0';
-	CLEAR_EN    <= '1' WHEN (ADDR_INT = 16#0B7#) and (IO_CYCLE = '1') ELSE '0';
-	BREATHE_EN  <= '1' WHEN (ADDR_INT = 16#0B8#) and (IO_CYCLE = '1') ELSE '0';
+  GT_EN			<= '1' WHEN (ADDR_INT = 16#0B6#) and (IO_CYCLE = '1') ELSE '0';
+  CLEAR_EN     <= '1' WHEN (ADDR_INT = 16#0B7#) and (IO_CYCLE = '1') ELSE '0';
+  BREATHE_EN   <= '1' WHEN (ADDR_INT = 16#0B8#) and (IO_CYCLE = '1') ELSE '0';
+  PARTY_EN     <= '1' WHEN (ADDR_INT = 16#0B9#) and (IO_CYCLE = '1') ELSE '0';
 	
 END a;
